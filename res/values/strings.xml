@@ -4,6 +4,7 @@
     <string name="app_name">Ultimate Theme UI</string>
     <string name="what_else">What else?</string>
     <string name="themeheader">How Would You Like To Apply?</string>
+    <string name="extrasheader">Second CardListView in Extras</string>
     <string name="apply">Apply Theme</string>
     <string name="action_contact">Contact</string>
     <string name="tab1">Theme</string>

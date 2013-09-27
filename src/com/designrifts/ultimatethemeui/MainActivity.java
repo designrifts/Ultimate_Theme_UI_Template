@@ -19,12 +19,8 @@ package com.designrifts.ultimatethemeui;
 
 import java.util.Locale;
 
-import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
-import android.graphics.drawable.LayerDrawable;
-import android.graphics.drawable.TransitionDrawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -35,18 +31,11 @@ import android.support.v4.view.ViewPager;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
-
-import com.afollestad.cardsui.Card;
-import com.afollestad.cardsui.CardAdapter;
-import com.afollestad.cardsui.CardHeader;
-import com.afollestad.cardsui.CardListView;
 
 import com.astuetz.viewpager.extensions.PagerSlidingTabStrip;
 
 
-public class MainActivity extends FragmentActivity implements Card.CardMenuListener<Card>{
+public class MainActivity extends FragmentActivity{
 
 	private final Handler handler = new Handler();
 
@@ -73,23 +62,6 @@ public class MainActivity extends FragmentActivity implements Card.CardMenuListe
 
 			pager.setAdapter(adapter);
 			
-	        // Initializes a CardAdapter with a blue accent color and basic popup menu for each card
-	        CardAdapter<Card> cardsAdapter = new CardAdapter<Card>(this)
-	                .setAccentColorRes(android.R.color.holo_blue_light)
-	                .setPopupMenu(R.menu.card_popup, this);
-
-	        cardsAdapter.add(new CardHeader(this, R.string.themeheader));
-	        cardsAdapter.add(new Card("Action", "Launcher")
-	        		.setThumbnail(this, R.drawable.apps_actionlauncherpro));  // sets a thumbnail image from drawable resources
-	        cardsAdapter.add(new Card("ADW", "Launcher")
-					.setThumbnail(this, R.drawable.apps_adwex));  // sets a thumbnail image from drawable resources
-	        cardsAdapter.add(new Card("Apex", "Launcher")
-					.setThumbnail(this, R.drawable.apps_apexlauncher));  // sets a thumbnail image from drawable resources
-	        cardsAdapter.add(new Card("Nova", "Launcher")
-					.setThumbnail(this, R.drawable.apps_novalauncher));  // sets a thumbnail image from drawable resources
-
-	        CardListView cardsList = (CardListView) findViewById(R.id.cardsList);
-	        cardsList.setAdapter(cardsAdapter);
 
 			final int pageMargin = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4, getResources()
 					.getDisplayMetrics());
@@ -100,10 +72,6 @@ public class MainActivity extends FragmentActivity implements Card.CardMenuListe
 	    }
 	
 
-	    @Override
-	    public void onMenuItemClick(Card card, MenuItem item) {
-	        Toast.makeText(this, card.getTitle() + ": " + item.getTitle(), Toast.LENGTH_SHORT).show();
-	    }
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

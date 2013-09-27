@@ -6,10 +6,12 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 import android.widget.Toast;
 
-import com.designrifts.ultimatethemeui.QuickContactFragment.ContactPagerAdapter;
+import com.afollestad.cardsui.Card;
+import com.afollestad.cardsui.CardAdapter;
+import com.afollestad.cardsui.CardHeader;
+import com.afollestad.cardsui.CardListView;
 
 public class FragmentExtras extends Fragment  implements Card.CardMenuListener<Card> {
 
@@ -34,20 +36,32 @@ public class FragmentExtras extends Fragment  implements Card.CardMenuListener<C
 				.setAccentColorRes(android.R.color.holo_blue_light)
 				.setPopupMenu(R.menu.card_popup, this);
 
-		cardsAdapter.add(new CardHeader(this, R.string.themeheader));
-		cardsAdapter.add(new Card("Item 1", "Extra").setThumbnail(this,
+		cardsAdapter.add(new CardHeader(getActivity(), R.string.extrasheader));
+		cardsAdapter.add(new Card("Item 1", "Extra").setThumbnail(getActivity(),
 				R.drawable.apps_actionlauncherpro)); // sets a thumbnail image
 														// from drawable
 														// resources
-		cardsAdapter.add(new Card("Item 2", "Extra").setThumbnail(this,
+		cardsAdapter.add(new Card("Item 2", "Extra").setThumbnail(getActivity(),
 				R.drawable.apps_adwex)); // sets a thumbnail image from drawable
 											// resources
-		cardsAdapter.add(new Card("Item 3", "Extra").setThumbnail(this,
+		cardsAdapter.add(new Card("Item 3", "Extra").setThumbnail(getActivity(),
 				R.drawable.apps_apexlauncher)); // sets a thumbnail image from
 												// drawable resources
-		cardsAdapter.add(new Card("Item 4", "Extra").setThumbnail(this,
+		cardsAdapter.add(new Card("Item 4", "Extra").setThumbnail(getActivity(),
 				R.drawable.apps_novalauncher)); // sets a thumbnail image from
 												// drawable resources
+		cardsAdapter.add(new Card("Item 5", "Extra").setThumbnail(getActivity(),
+				R.drawable.apps_actionlauncherpro)); // sets a thumbnail image
+														// from drawable
+														// resources
+		cardsAdapter.add(new Card("Item 6", "Extra").setThumbnail(getActivity(),
+				R.drawable.apps_actionlauncherpro)); // sets a thumbnail image
+														// from drawable
+														// resources
+		cardsAdapter.add(new Card("Item 7", "Extra").setThumbnail(getActivity(),
+				R.drawable.apps_actionlauncherpro)); // sets a thumbnail image
+														// from drawable
+														// resources
 
 		list.setAdapter(cardsAdapter);
 	}
@@ -55,6 +69,6 @@ public class FragmentExtras extends Fragment  implements Card.CardMenuListener<C
 
     @Override
     public void onMenuItemClick(Card card, MenuItem item) {
-        Toast.makeText(this, card.getTitle() + ": " + item.getTitle(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), card.getTitle() + ": " + item.getTitle(), Toast.LENGTH_SHORT).show();
     }
 }

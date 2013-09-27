@@ -181,43 +181,48 @@ containing a value of this type.
         public static final int wp=0x7f02001e;
     }
     public static final class id {
-        public static final int action_contact=0x7f0a000b;
-        public static final int apply=0x7f0a000a;
-        public static final int cardsList=0x7f0a0002;
-        public static final int day=0x7f0a0008;
-        public static final int image=0x7f0a0004;
-        public static final int inner_frame=0x7f0a0005;
-        public static final int month=0x7f0a0007;
+        public static final int ListView=0x7f0a0003;
+        public static final int action_contact=0x7f0a000c;
+        public static final int apply=0x7f0a000b;
+        public static final int day=0x7f0a0009;
+        public static final int image=0x7f0a0005;
+        public static final int inner_frame=0x7f0a0006;
+        public static final int month=0x7f0a0008;
         public static final int pager=0x7f0a0001;
-        public static final int pagerStrip=0x7f0a0003;
+        public static final int pagerStrip=0x7f0a0004;
         public static final int tabs=0x7f0a0000;
-        public static final int titleFrame=0x7f0a0006;
-        public static final int year=0x7f0a0009;
+        public static final int titleFrame=0x7f0a0007;
+        public static final int txtExample=0x7f0a0002;
+        public static final int year=0x7f0a000a;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int fragment_list=0x7f030001;
-        public static final int fragment_pager=0x7f030002;
-        public static final int fragment_quick_contact=0x7f030003;
-        public static final int list_item_card=0x7f030004;
-        public static final int list_item_card_nocontent=0x7f030005;
-        public static final int list_item_header=0x7f030006;
-        public static final int silk_date_picker=0x7f030007;
-        public static final int spinner_item=0x7f030008;
-        public static final int spinner_item_dropdown=0x7f030009;
+        public static final int fragment_contact=0x7f030001;
+        public static final int fragment_extras=0x7f030002;
+        public static final int fragment_list=0x7f030003;
+        public static final int fragment_pager=0x7f030004;
+        public static final int fragment_quick_contact=0x7f030005;
+        public static final int fragment_theme=0x7f030006;
+        public static final int list_item_card=0x7f030007;
+        public static final int list_item_card_nocontent=0x7f030008;
+        public static final int list_item_header=0x7f030009;
+        public static final int silk_date_picker=0x7f03000a;
+        public static final int spinner_item=0x7f03000b;
+        public static final int spinner_item_dropdown=0x7f03000c;
     }
     public static final class menu {
         public static final int card_popup=0x7f090000;
         public static final int main=0x7f090001;
     }
     public static final class string {
-        public static final int action_contact=0x7f070006;
+        public static final int action_contact=0x7f070007;
         public static final int app_name=0x7f070002;
-        public static final int apply=0x7f070005;
+        public static final int apply=0x7f070006;
+        public static final int extrasheader=0x7f070005;
         public static final int see_more=0x7f070000;
-        public static final int tab1=0x7f070007;
-        public static final int tab2=0x7f070008;
-        public static final int tab3=0x7f070009;
+        public static final int tab1=0x7f070008;
+        public static final int tab2=0x7f070009;
+        public static final int tab3=0x7f07000a;
         public static final int themeheader=0x7f070004;
         public static final int todo=0x7f070001;
         public static final int what_else=0x7f070003;
@@ -288,7 +293,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:dividerColor
+          @attr name com.designrifts.ultimatethemeui:dividerColor
         */
         public static final int PagerSlidingTabStrip_dividerColor = 2;
         /**
@@ -304,7 +309,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:dividerPadding
+          @attr name com.designrifts.ultimatethemeui:dividerPadding
         */
         public static final int PagerSlidingTabStrip_dividerPadding = 5;
         /**
@@ -319,7 +324,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:indicatorColor
+          @attr name com.designrifts.ultimatethemeui:indicatorColor
         */
         public static final int PagerSlidingTabStrip_indicatorColor = 0;
         /**
@@ -335,7 +340,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:indicatorHeight
+          @attr name com.designrifts.ultimatethemeui:indicatorHeight
         */
         public static final int PagerSlidingTabStrip_indicatorHeight = 3;
         /**
@@ -351,7 +356,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:scrollOffset
+          @attr name com.designrifts.ultimatethemeui:scrollOffset
         */
         public static final int PagerSlidingTabStrip_scrollOffset = 7;
         /**
@@ -365,7 +370,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:shouldExpand
+          @attr name com.designrifts.ultimatethemeui:shouldExpand
         */
         public static final int PagerSlidingTabStrip_shouldExpand = 9;
         /**
@@ -375,7 +380,7 @@ containing a value of this type.
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:tabBackground
+          @attr name com.designrifts.ultimatethemeui:tabBackground
         */
         public static final int PagerSlidingTabStrip_tabBackground = 8;
         /**
@@ -391,7 +396,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:tabPaddingLeftRight
+          @attr name com.designrifts.ultimatethemeui:tabPaddingLeftRight
         */
         public static final int PagerSlidingTabStrip_tabPaddingLeftRight = 6;
         /**
@@ -405,7 +410,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:textAllCaps
+          @attr name com.designrifts.ultimatethemeui:textAllCaps
         */
         public static final int PagerSlidingTabStrip_textAllCaps = 10;
         /**
@@ -420,7 +425,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:underlineColor
+          @attr name com.designrifts.ultimatethemeui:underlineColor
         */
         public static final int PagerSlidingTabStrip_underlineColor = 1;
         /**
@@ -436,7 +441,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:underlineHeight
+          @attr name com.designrifts.ultimatethemeui:underlineHeight
         */
         public static final int PagerSlidingTabStrip_underlineHeight = 4;
     };
