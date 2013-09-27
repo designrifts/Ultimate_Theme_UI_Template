@@ -178,10 +178,13 @@ public class MainActivity extends FragmentActivity implements Card.CardMenuListe
 			Fragment f = new Fragment();
 			switch(position){
 			case 0:
-				f=ThemeCardFragment.newInstance(position);	
+				f= new FragmentTheme();	
 				break;
 			case 1:
-				f=ThemeCardFragment.newInstance(position);	
+				f= new FragmentExtras();
+				break;
+			case 2:
+				f= new FragmentContact();	
 				break;
 			}
 			return f;
