@@ -46,7 +46,7 @@ public class FragmentContact extends Fragment  implements Card.CardMenuListener<
 				R.drawable.apps_twitter)); // sets a thumbnail image from drawable
 											// resources
 		cardsAdapter.add(new Card("Facebook", "Is Where I Pretend We Are Friends").setThumbnail(getActivity(),
-				R.drawable.apps_zooperwidget)); // sets a thumbnail image from
+				R.drawable.apps_facebook)); // sets a thumbnail image from
 												// drawable resources
 		cardsAdapter.add(new CardHeader(getActivity(), R.string.emailheader));
 		cardsAdapter.add(new Card("Gmail", "Me Feet Pics").setThumbnail(getActivity(),
