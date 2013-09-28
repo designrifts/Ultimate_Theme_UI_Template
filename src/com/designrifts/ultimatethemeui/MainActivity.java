@@ -121,7 +121,7 @@ public class MainActivity extends FragmentActivity{
 
 	public class MyPagerAdapter extends FragmentPagerAdapter {
 
-		private final int[] TITLES = { R.string.tab1, R.string.tab2, R.string.tab3 };
+		private final int[] TITLES = { R.string.tab1, R.string.tab2, R.string.tab3, R.string.tab4 };
 
 		public MyPagerAdapter(FragmentManager fm) {
 			super(fm);
@@ -137,6 +137,8 @@ public class MainActivity extends FragmentActivity{
 				return getString(R.string.tab2).toUpperCase(l);
 			case 2:
 				return getString(R.string.tab3).toUpperCase(l);
+			case 3:
+				return getString(R.string.tab4).toUpperCase(l);	
 			}
 			return null;
 		}
@@ -154,6 +156,9 @@ public class MainActivity extends FragmentActivity{
 			case 2:
 				f= new FragmentContact();	
 				break;
+			case 3:
+				f= new FragmentText();	
+				break;	
 			}
 			return f;
 		}

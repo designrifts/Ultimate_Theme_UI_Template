@@ -42,34 +42,34 @@ public final class R {
 		public static final int spinner_item_text = 0x7f050001;
 	}
 	public static final class drawable {
-		public static final int card_header_selector = 0x7f02000a;
-		public static final int card_menu_button = 0x7f02000b;
-		public static final int card_selector = 0x7f02000c;
-		public static final int card_shadow = 0x7f02000d;
-		public static final int ic_menu_moreoverflow_card_dark_normal = 0x7f020015;
-		public static final int ic_menu_moreoverflow_card_dark_pressed = 0x7f020016;
-		public static final int list_focused = 0x7f020019;
-		public static final int pressed_background = 0x7f02001a;
-		public static final int unpressed_background = 0x7f02001d;
+		public static final int card_header_selector = 0x7f020013;
+		public static final int card_menu_button = 0x7f020014;
+		public static final int card_selector = 0x7f020015;
+		public static final int card_shadow = 0x7f020016;
+		public static final int ic_menu_moreoverflow_card_dark_normal = 0x7f02001e;
+		public static final int ic_menu_moreoverflow_card_dark_pressed = 0x7f02001f;
+		public static final int list_focused = 0x7f020023;
+		public static final int pressed_background = 0x7f020024;
+		public static final int unpressed_background = 0x7f020029;
 	}
 	public static final class id {
 		public static final int day = 0x7f0a0009;
 		public static final int inner_frame = 0x7f0a0006;
 		public static final int month = 0x7f0a0008;
 		public static final int pager = 0x7f0a0001;
-		public static final int pagerStrip = 0x7f0a0004;
+		public static final int pagerStrip = 0x7f0a0003;
 		public static final int titleFrame = 0x7f0a0007;
 		public static final int year = 0x7f0a000a;
 	}
 	public static final class layout {
 		public static final int fragment_list = 0x7f030003;
 		public static final int fragment_pager = 0x7f030004;
-		public static final int list_item_card = 0x7f030007;
-		public static final int list_item_card_nocontent = 0x7f030008;
-		public static final int list_item_header = 0x7f030009;
-		public static final int silk_date_picker = 0x7f03000a;
-		public static final int spinner_item = 0x7f03000b;
-		public static final int spinner_item_dropdown = 0x7f03000c;
+		public static final int list_item_card = 0x7f030008;
+		public static final int list_item_card_nocontent = 0x7f030009;
+		public static final int list_item_header = 0x7f03000a;
+		public static final int silk_date_picker = 0x7f03000b;
+		public static final int spinner_item = 0x7f03000c;
+		public static final int spinner_item_dropdown = 0x7f03000d;
 	}
 	public static final class menu {
 		public static final int card_popup = 0x7f090000;

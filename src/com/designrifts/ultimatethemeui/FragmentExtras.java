@@ -37,29 +37,24 @@ public class FragmentExtras extends Fragment  implements Card.CardMenuListener<C
 				.setPopupMenu(R.menu.card_popup, this);
 
 		cardsAdapter.add(new CardHeader(getActivity(), R.string.extrasheader));
-		cardsAdapter.add(new Card("Item 1", "Extra").setThumbnail(getActivity(),
-				R.drawable.apps_actionlauncherpro)); // sets a thumbnail image
+		cardsAdapter.add(new Card("Wallpapers", "Are Sexy").setThumbnail(getActivity(),
+				R.drawable.system_gallery)); // sets a thumbnail image
 														// from drawable
 														// resources
-		cardsAdapter.add(new Card("Item 2", "Extra").setThumbnail(getActivity(),
-				R.drawable.apps_adwex)); // sets a thumbnail image from drawable
+		cardsAdapter.add(new Card("Want To Make A Request?", "This will scan your phone for the installed apps").setThumbnail(getActivity(),
+				R.drawable.apps_androidactivities)); // sets a thumbnail image from drawable
 											// resources
-		cardsAdapter.add(new Card("Item 3", "Extra").setThumbnail(getActivity(),
-				R.drawable.apps_apexlauncher)); // sets a thumbnail image from
+		cardsAdapter.add(new Card("UCCW", "Skins").setThumbnail(getActivity(),
+				R.drawable.apps_uccw)); // sets a thumbnail image from drawable
+											// resources
+		cardsAdapter.add(new Card("Zooper Widgets", "Extra").setThumbnail(getActivity(),
+				R.drawable.apps_zooperwidget)); // sets a thumbnail image from
 												// drawable resources
-		cardsAdapter.add(new Card("Item 4", "Extra").setThumbnail(getActivity(),
-				R.drawable.apps_novalauncher)); // sets a thumbnail image from
+		cardsAdapter.add(new Card("Your Mom", "Loves Me").setThumbnail(getActivity(),
+				R.drawable.jai)); // sets a thumbnail image from
 												// drawable resources
-		cardsAdapter.add(new Card("Item 5", "Extra").setThumbnail(getActivity(),
-				R.drawable.apps_actionlauncherpro)); // sets a thumbnail image
-														// from drawable
-														// resources
-		cardsAdapter.add(new Card("Item 6", "Extra").setThumbnail(getActivity(),
-				R.drawable.apps_actionlauncherpro)); // sets a thumbnail image
-														// from drawable
-														// resources
-		cardsAdapter.add(new Card("Item 7", "Extra").setThumbnail(getActivity(),
-				R.drawable.apps_actionlauncherpro)); // sets a thumbnail image
+		cardsAdapter.add(new Card("This Guy", "Loves Dildroid!").setThumbnail(getActivity(),
+				R.drawable.amasan25)); // sets a thumbnail image
 														// from drawable
 														// resources
 

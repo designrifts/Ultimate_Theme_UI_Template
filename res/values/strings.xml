@@ -4,11 +4,17 @@
     <string name="app_name">Ultimate Theme UI</string>
     <string name="what_else">What else?</string>
     <string name="themeheader">How Would You Like To Apply?</string>
-    <string name="extrasheader">Second CardListView in Extras</string>
+    <string name="extrasheader">What Do We Have Here?</string>
+    <string name="contactheader">Want To See More of Me?</string>
+    <string name="socialheader">Stalker!</string>
+    <string name="emailheader">Wanna Get Personal?</string>
+    <string name="webheader">That WWW Life Son!</string>
+    <string name="playheader">I Need That Diaper Money</string>
     <string name="apply">Apply Theme</string>
     <string name="action_contact">Contact</string>
     <string name="tab1">Theme</string>
     <string name="tab2">Extras</string>
     <string name="tab3">Contact</string>
-
+	<string name="tab4">Text</string>
+    
 </resources>
