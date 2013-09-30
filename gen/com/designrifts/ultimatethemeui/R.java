@@ -9,6 +9,7 @@ package com.designrifts.ultimatethemeui;
 
 public final class R {
     public static final class array {
+        public static final int contacts_array=0x7f060001;
         public static final int months=0x7f060000;
     }
     public static final class attr {
@@ -195,8 +196,9 @@ containing a value of this type.
     }
     public static final class id {
         public static final int ListView=0x7f0a0002;
-        public static final int action_contact=0x7f0a000c;
-        public static final int apply=0x7f0a000b;
+        public static final int action_contact=0x7f0a000d;
+        public static final int apply=0x7f0a000e;
+        public static final int contact=0x7f0a000c;
         public static final int day=0x7f0a0009;
         public static final int image=0x7f0a0005;
         public static final int inner_frame=0x7f0a0006;
@@ -205,6 +207,7 @@ containing a value of this type.
         public static final int pagerStrip=0x7f0a0004;
         public static final int tabs=0x7f0a0000;
         public static final int titleFrame=0x7f0a0007;
+        public static final int todo=0x7f0a000b;
         public static final int txtExample=0x7f0a0003;
         public static final int year=0x7f0a000a;
     }
@@ -227,27 +230,41 @@ containing a value of this type.
     }
     public static final class menu {
         public static final int card_popup=0x7f090000;
-        public static final int main=0x7f090001;
+        public static final int contact_popup=0x7f090001;
+        public static final int main=0x7f090002;
+        public static final int theme_popup=0x7f090003;
     }
     public static final class string {
-        public static final int action_contact=0x7f07000c;
+        public static final int action_contact=0x7f07000a;
         public static final int app_name=0x7f070002;
-        public static final int apply=0x7f07000b;
-        public static final int contactheader=0x7f070006;
-        public static final int emailheader=0x7f070008;
-        public static final int extrasheader=0x7f070005;
-        public static final int playheader=0x7f07000a;
+        public static final int apply=0x7f070005;
+        public static final int contact=0x7f070009;
+        public static final int contactheader=0x7f07000b;
+        public static final int email=0x7f070016;
+        public static final int email_extra=0x7f070017;
+        public static final int emailheader=0x7f07000d;
+        public static final int extrasheader=0x7f070007;
+        public static final int facebook=0x7f070014;
+        public static final int facebook_extra=0x7f070015;
+        public static final int gplus=0x7f070010;
+        public static final int gplus_extra=0x7f070011;
+        public static final int play=0x7f07001a;
+        public static final int play_extra=0x7f07001b;
+        public static final int playheader=0x7f07000f;
         public static final int see_more=0x7f070000;
-        public static final int socialheader=0x7f070007;
-        public static final int tab1=0x7f07000d;
-        public static final int tab2=0x7f07000e;
-        public static final int tab3=0x7f07000f;
-        public static final int tab4=0x7f070010;
-        public static final int tab5=0x7f070011;
+        public static final int socialheader=0x7f07000c;
+        public static final int tab1=0x7f070003;
+        public static final int tab2=0x7f070006;
+        public static final int tab3=0x7f070008;
+        public static final int tab4=0x7f07001c;
+        public static final int tab5=0x7f07001d;
         public static final int themeheader=0x7f070004;
         public static final int todo=0x7f070001;
-        public static final int webheader=0x7f070009;
-        public static final int what_else=0x7f070003;
+        public static final int twitter=0x7f070012;
+        public static final int twitter_extra=0x7f070013;
+        public static final int web=0x7f070018;
+        public static final int web_extra=0x7f070019;
+        public static final int webheader=0x7f07000e;
     }
     public static final class style {
         public static final int ActionBarStyle=0x7f08000f;

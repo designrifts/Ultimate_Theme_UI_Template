@@ -1,17 +1,24 @@
 package com.designrifts.ultimatethemeui;
 
+import java.util.List;
+
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.afollestad.cardsui.Card;
 import com.afollestad.cardsui.CardAdapter;
 import com.afollestad.cardsui.CardHeader;
 import com.afollestad.cardsui.CardListView;
+
+
 
 public class FragmentContact extends Fragment  implements Card.CardMenuListener<Card> {
 
@@ -24,44 +31,49 @@ public class FragmentContact extends Fragment  implements Card.CardMenuListener<
 		View view = inflater.inflate(R.layout.fragment_contact, container, false);
 
 		list = (CardListView) view.findViewById(R.id.ListView);
+		Resources res = getResources();
+		String[] contacts = res.getStringArray(R.array.contacts_array);
 
 		return view;
 	}
-
+	 
+	
 	@Override
 	public void onStart() {
 		super.onStart();
 
 		CardAdapter<Card> cardsAdapter = new CardAdapter<Card>(getActivity())
-				.setAccentColorRes(android.R.color.holo_blue_light)
-				.setPopupMenu(R.menu.card_popup, this);
-
-		cardsAdapter.add(new CardHeader(getActivity(), R.string.contactheader));
-		cardsAdapter.add(new CardHeader(getActivity(), R.string.socialheader));
-		cardsAdapter.add(new Card("Google Plus", "Is Whats Up").setThumbnail(getActivity(),
-				R.drawable.apps_googleplus)); // sets a thumbnail image
-														// from drawable
-														// resources
-		cardsAdapter.add(new Card("Twitter", "Is Where I post My Nudes").setThumbnail(getActivity(),
-				R.drawable.apps_twitter)); // sets a thumbnail image from drawable
-											// resources
-		cardsAdapter.add(new Card("Facebook", "Is Where I Pretend We Are Friends").setThumbnail(getActivity(),
-				R.drawable.apps_facebook)); // sets a thumbnail image from
-												// drawable resources
-		cardsAdapter.add(new CardHeader(getActivity(), R.string.emailheader));
-		cardsAdapter.add(new Card("Gmail", "Me Feet Pics").setThumbnail(getActivity(),
-				R.drawable.apps_googlemail)); // sets a thumbnail image from
-												// drawable resources
-		cardsAdapter.add(new CardHeader(getActivity(), R.string.webheader));
-		cardsAdapter.add(new Card("The Internet", "Is Always Right").setThumbnail(getActivity(),
-				R.drawable.system_browser)); // sets a thumbnail image
-														// from drawable
-														// resources
-		cardsAdapter.add(new CardHeader(getActivity(), R.string.playheader));
-		cardsAdapter.add(new Card("Play Store", "Buy More Stuff").setThumbnail(getActivity(),
-				R.drawable.apps_googleplaystore)); // sets a thumbnail image
-														// from drawable
-														// resources
+			.setAccentColorRes(android.R.color.holo_blue_light)
+			.setPopupMenu(R.menu.contact_popup, this)
+			;
+		cardsAdapter.add(new CardHeader(getActivity(), R.string.contactheader))
+			;
+		cardsAdapter.add(new CardHeader(getActivity(), R.string.socialheader))
+			;
+		cardsAdapter.add(new Card(getString(R.string.gplus), getString(R.string.gplus_extra))
+			.setThumbnail(getActivity(),R.drawable.apps_googleplus)) // sets a thumbnail image from drawable resources
+			;		
+		cardsAdapter.add(new Card(getString(R.string.twitter), getString(R.string.twitter_extra))
+			.setThumbnail(getActivity(),R.drawable.apps_twitter)) // sets a thumbnail image from drawable resources
+			;							
+		cardsAdapter.add(new Card(getString(R.string.facebook), getString(R.string.facebook_extra))
+			.setThumbnail(getActivity(),R.drawable.apps_facebook)) // sets a thumbnail image from drawable resources
+			;									
+		cardsAdapter.add(new CardHeader(getActivity(), R.string.emailheader))
+			;	
+		cardsAdapter.add(new Card(getString(R.string.email), getString(R.string.email_extra))
+			.setThumbnail(getActivity(),R.drawable.apps_googlemail)) // sets a thumbnail image from drawable resources
+			;									
+		cardsAdapter.add(new CardHeader(getActivity(), R.string.webheader))
+			;
+		cardsAdapter.add(new Card(getString(R.string.web), getString(R.string.web_extra))
+			.setThumbnail(getActivity(),R.drawable.system_browser)) // sets a thumbnail image from drawable resources
+			;											
+		cardsAdapter.add(new CardHeader(getActivity(), R.string.playheader))
+			;
+		cardsAdapter.add(new Card(getString(R.string.play), getString(R.string.play_extra))
+				.setThumbnail(getActivity(),R.drawable.apps_googleplaystore)) // sets a thumbnail image from drawable resources
+			;											
 
 		list.setAdapter(cardsAdapter);
 	}

@@ -59,6 +59,7 @@ public final class R {
 		public static final int pager = 0x7f0a0001;
 		public static final int pagerStrip = 0x7f0a0004;
 		public static final int titleFrame = 0x7f0a0007;
+		public static final int todo = 0x7f0a000b;
 		public static final int year = 0x7f0a000a;
 	}
 	public static final class layout {
