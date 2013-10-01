@@ -1,6 +1,7 @@
 package com.designrifts.ultimatethemeui;
 
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -20,7 +21,10 @@ import com.afollestad.cardsui.CardListView;
 import com.afollestad.cardsui.CardListView.CardClickListener;
 
 
+
 public class FragmentContact extends Fragment  implements Card.CardMenuListener<Card> {
+	
+	private final String [] TITLES = {"GPlus", "Twitter", "Facebook", "Email", "Web", "Play" };
 
 	private CardListView list;
 
@@ -38,16 +42,31 @@ public class FragmentContact extends Fragment  implements Card.CardMenuListener<
 			}
 
 			@Override
-			public void onCardClick(int index, CardBase card, View view) {
-				Uri gplusuriString = Uri.parse("http://gplus.to/designrifts");
-				Intent gplusIntent = new Intent("android.intent.action.VIEW", gplusuriString);
-				try {
-					startActivity(gplusIntent);
-				} catch (ActivityNotFoundException e2) {
-					e2.printStackTrace();
+			public void onCardClick(int position, CardBase card, View view) {
+				switch(position){
+				case 2:
+					actGPlus();	
+					break;
+				case 3:
+					actTwitter();
+					break;
+				case 4:
+					actFacebook();	
+					break;
+				case 6:
+					actEmail();	
+					break;	
+				case 8:
+					actWeb();	
+					break;	
+				case 10:
+					actPlay();	
+					break;	
 				}
-
 			}
+			public int getCount() {
+				return TITLES.length;
+			}	
 		});
 
 
@@ -68,8 +87,8 @@ public class FragmentContact extends Fragment  implements Card.CardMenuListener<
 		cardsAdapter.add(new CardHeader(getActivity(), R.string.socialheader))
 			;
 		cardsAdapter.add(new Card(getString(R.string.gplus), getString(R.string.gplus_extra))
-			.setThumbnail(getActivity(),R.drawable.apps_googleplus)) // sets a thumbnail image from drawable resources
-			;		
+			.setThumbnail(getActivity(),R.drawable.apps_googleplus) // sets a thumbnail image from drawable resources
+			);		
 		cardsAdapter.add(new Card(getString(R.string.twitter), getString(R.string.twitter_extra))
 			.setThumbnail(getActivity(),R.drawable.apps_twitter)) // sets a thumbnail image from drawable resources
 			;							
@@ -100,5 +119,66 @@ public class FragmentContact extends Fragment  implements Card.CardMenuListener<
     public void onMenuItemClick(Card card, MenuItem item) {
         Toast.makeText(getActivity(), card.getTitle() + ": " + item.getTitle(), Toast.LENGTH_SHORT).show();
     }
-        
+   
+    private void actGPlus() {
+   	 Uri twitteruriString = Uri.parse("http://gplus.to/designrifts");
+       Intent twitterIntent = new Intent("android.intent.action.VIEW", twitteruriString);
+       try {
+   		  startActivity(twitterIntent);
+   		} catch (ActivityNotFoundException e2) {
+   		  e2.printStackTrace();
+   		}
+   }
+    private void actTwitter() {
+   	 Uri twitteruriString = Uri.parse("http://twitter.com/designrifts");
+        Intent twitterIntent = new Intent("android.intent.action.VIEW", twitteruriString);
+        try {
+   		  startActivity(twitterIntent);
+   		} catch (ActivityNotFoundException e2) {
+   		  e2.printStackTrace();
+   		}
+   }
+    private void actFacebook() {
+      Uri facebookuriString = Uri.parse("http://facebook.com");
+         Intent facebookIntent = new Intent("android.intent.action.VIEW", facebookuriString);
+         try {
+      	  startActivity(facebookIntent);
+      	} catch (ActivityNotFoundException e2) {
+      	  e2.printStackTrace();
+      	}
+   }
+    private void actEmail() {
+      Uri emailuriString = Uri.parse("mailto:designrifts@gmail.com");
+         Intent emailIntent = new Intent("android.intent.action.VIEW", emailuriString);
+      	 try {
+      	  startActivity(emailIntent);
+      	} catch (ActivityNotFoundException e2) {
+      	  e2.printStackTrace();
+      	}
+   }
+    private void actWeb() {
+   	 Uri weburiString = Uri.parse("http://designrifts.com/");
+   	    Intent webIntent = new Intent("android.intent.action.VIEW", weburiString);
+   	    try {
+   		 startActivity(webIntent);
+   		} catch (ActivityNotFoundException e2) {
+   		 e2.printStackTrace();
+   		}
+   }
+    private void actPlay() {
+    	String marketuriString = "market://search?q=designrifts";
+    	Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(marketuriString));
+    	try {
+    		startActivity(intent);
+    	} catch (ActivityNotFoundException e2) {
+    		e2.printStackTrace();
+    		Toast.makeText(getApplicationContext(), "Play Store not found!", Toast.LENGTH_LONG).show();
+    	}
+    }
+
+
+	private Context getApplicationContext() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
