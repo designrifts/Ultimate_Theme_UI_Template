@@ -37,7 +37,7 @@ import android.widget.ShareActionProvider;
 import com.astuetz.viewpager.extensions.PagerSlidingTabStrip;
 
 
-public class MainActivity extends FragmentActivity{
+public class ThemeActivity extends FragmentActivity{
 
 	private final Handler handler = new Handler();
 

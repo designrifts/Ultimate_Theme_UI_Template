@@ -2,17 +2,23 @@
 <resources>
 
     <string name="app_name">Ultimate Theme UI</string>
-    <string name="share_this">Check This Shit Out Homie </string>    
+    
+    <!-- Share BUtton -->
+    <string name="share_this">Check This Shit Out Homie </string> 
+    
+    <!-- Basic theme information -->
+    <string name="theme_title">Ultimate Theme U</string>
+    <string name="icon_title">Ultimate Theme U</string>
+    <string name="developer_name">DesignRifts</string>
+    
+    <!-- This (optional) link will appear at the end of the theme description -->
+    <string name="developer_link">http://www.designrifts.com/</string>
+    <string name="theme_description">It is Fresh</string>
+      
+    <!-- Theme Tab -->
     <string name="tab1">Theme</string>
     <string name="themeheader">How Would You Like To Apply?</string>
 	<string name="apply">Apply</string>
-    <string-array name="theme_array">
-        <item>Action Launcher</item>
-        <item>ADW Launcher</item>
-        <item>Apex Launcher</item>
-        <item>Nova Launcher</item>
-        <item>Go Launcher</item>
-    </string-array>
     <string name="actionlauncher">Action</string>
     <string name="actionlauncher_extra">Launcher has bastard children on Jupiter</string>
     <string name="adwlauncher">ADW</string>
@@ -24,9 +30,11 @@
     <string name="golauncher">Go</string>
     <string name="golauncher_extra">Launcher needs to conform their mask</string>
    
+    <!-- Extras Tab -->
     <string name="tab2">Extras</string>
-    <string name="extrasheader">What Do We Have Here?</string> 
-    
+    <string name="extrasheader">What Do We Have Here?</string>
+     
+    <!-- Contact Tab -->
     <string name="tab3">Contact</string>
     <string name="contact">Contact Us</string>
     <string name="action_contact">Contact</string>
@@ -35,14 +43,6 @@
     <string name="emailheader">Wanna Get Personal?</string>
     <string name="webheader">That WWW Life Son!</string>
     <string name="playheader">I Need That Diaper Money</string>
-    <string-array name="contacts_array">
-        <item>Google Plus</item>
-        <item>Twitter</item>
-        <item>Facebook</item>
-        <item>Gmail</item>
-        <item>The Internet</item>
-        <item>Buy Moar Themes</item>
-    </string-array>
     <string name="gplus">Google Plus</string>
     <string name="gplus_extra">Is Whats Up</string>
     <string name="twitter">Twitter</string>
@@ -56,8 +56,10 @@
     <string name="play">Google Play</string>
     <string name="play_extra">Buy Moar Themes</string>               
     
+    <!-- Text Tab -->
 	<string name="tab4">Text</string>
 	
+	<!-- Icons Tab -->
     <string name="tab5">New Icons</string>
     
 
