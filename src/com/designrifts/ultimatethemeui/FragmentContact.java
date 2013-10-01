@@ -1,8 +1,8 @@
 package com.designrifts.ultimatethemeui;
 
-import java.util.List;
-
-import android.content.res.Resources;
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,8 +10,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.afollestad.cardsui.Card;
@@ -20,7 +18,6 @@ import com.afollestad.cardsui.CardBase;
 import com.afollestad.cardsui.CardHeader;
 import com.afollestad.cardsui.CardListView;
 import com.afollestad.cardsui.CardListView.CardClickListener;
-
 
 
 public class FragmentContact extends Fragment  implements Card.CardMenuListener<Card> {
@@ -34,24 +31,30 @@ public class FragmentContact extends Fragment  implements Card.CardMenuListener<
 		View view = inflater.inflate(R.layout.fragment_contact, container, false);
 
 		list = (CardListView) view.findViewById(R.id.ListView);
+
 		list.setOnCardClickListener(new CardClickListener() {
-			   public void onCardClick(AdapterView<?> adapter, View view, int position, long arg) {
-			      Object listItem = list.getItemAtPosition(position);
-			   }
+			public void onCardClick(AdapterView<?> adapter, View view, int position, long arg) {
+				Object listItem = list.getItemAtPosition(position);
+			}
 
 			@Override
 			public void onCardClick(int index, CardBase card, View view) {
-				// TODO Auto-generated method stub
-				
+				Uri gplusuriString = Uri.parse("http://gplus.to/designrifts");
+				Intent gplusIntent = new Intent("android.intent.action.VIEW", gplusuriString);
+				try {
+					startActivity(gplusIntent);
+				} catch (ActivityNotFoundException e2) {
+					e2.printStackTrace();
+				}
+
 			}
-			   });
-		Resources res = getResources();
-		String[] contacts = res.getStringArray(R.array.contacts_array);
+		});
+
 
 		return view;
 	}
-	 
-	
+
+
 	@Override
 	public void onStart() {
 		super.onStart();
@@ -91,10 +94,11 @@ public class FragmentContact extends Fragment  implements Card.CardMenuListener<
 
 		list.setAdapter(cardsAdapter);
 	}
-	
+
 
     @Override
     public void onMenuItemClick(Card card, MenuItem item) {
         Toast.makeText(getActivity(), card.getTitle() + ": " + item.getTitle(), Toast.LENGTH_SHORT).show();
     }
+        
 }
