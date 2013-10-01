@@ -9,14 +9,17 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.afollestad.cardsui.Card;
 import com.afollestad.cardsui.CardAdapter;
+import com.afollestad.cardsui.CardBase;
 import com.afollestad.cardsui.CardHeader;
 import com.afollestad.cardsui.CardListView;
+import com.afollestad.cardsui.CardListView.CardClickListener;
 
 
 
@@ -31,6 +34,17 @@ public class FragmentContact extends Fragment  implements Card.CardMenuListener<
 		View view = inflater.inflate(R.layout.fragment_contact, container, false);
 
 		list = (CardListView) view.findViewById(R.id.ListView);
+		list.setOnCardClickListener(new CardClickListener() {
+			   public void onCardClick(AdapterView<?> adapter, View view, int position, long arg) {
+			      Object listItem = list.getItemAtPosition(position);
+			   }
+
+			@Override
+			public void onCardClick(int index, CardBase card, View view) {
+				// TODO Auto-generated method stub
+				
+			}
+			   });
 		Resources res = getResources();
 		String[] contacts = res.getStringArray(R.array.contacts_array);
 

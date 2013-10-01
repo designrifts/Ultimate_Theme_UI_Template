@@ -9,8 +9,9 @@ package com.designrifts.ultimatethemeui;
 
 public final class R {
     public static final class array {
-        public static final int contacts_array=0x7f060001;
+        public static final int contacts_array=0x7f060002;
         public static final int months=0x7f060000;
+        public static final int theme_array=0x7f060001;
     }
     public static final class attr {
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
@@ -151,12 +152,12 @@ containing a value of this type.
     public static final class drawable {
         public static final int actionbar_bottom=0x7f020000;
         public static final int amasan25=0x7f020001;
-        public static final int android=0x7f020002;
-        public static final int apps_actionlauncherpro=0x7f020003;
-        public static final int apps_adwex=0x7f020004;
-        public static final int apps_androidactivities=0x7f020005;
-        public static final int apps_apexlauncher=0x7f020006;
-        public static final int apps_facebook=0x7f020007;
+        public static final int apps_actionlauncherpro=0x7f020002;
+        public static final int apps_adwex=0x7f020003;
+        public static final int apps_androidactivities=0x7f020004;
+        public static final int apps_apexlauncher=0x7f020005;
+        public static final int apps_facebook=0x7f020006;
+        public static final int apps_golauncher=0x7f020007;
         public static final int apps_googlemail=0x7f020008;
         public static final int apps_googleplaystore=0x7f020009;
         public static final int apps_googleplus=0x7f02000a;
@@ -172,44 +173,34 @@ containing a value of this type.
         public static final int card_menu_button=0x7f020014;
         public static final int card_selector=0x7f020015;
         public static final int card_shadow=0x7f020016;
-        public static final int contact=0x7f020017;
-        public static final int ic_action_share=0x7f020018;
-        public static final int ic_action_user=0x7f020019;
-        public static final int ic_launcher_actionbar=0x7f02001a;
-        public static final int ic_launcher_chrome=0x7f02001b;
-        public static final int ic_launcher_gmail=0x7f02001c;
-        public static final int ic_launcher_gmaps=0x7f02001d;
-        public static final int ic_launcher_gplus=0x7f02001e;
-        public static final int ic_menu_moreoverflow_card_dark_normal=0x7f02001f;
-        public static final int ic_menu_moreoverflow_card_dark_pressed=0x7f020020;
-        public static final int icon=0x7f020021;
-        public static final int ios=0x7f020022;
-        public static final int jai=0x7f020023;
-        public static final int list_focused=0x7f020024;
-        public static final int pressed_background=0x7f020025;
-        public static final int system_browser=0x7f020026;
-        public static final int system_gallery=0x7f020027;
-        public static final int tabs_pattern=0x7f020028;
-        public static final int tabs_pattern_diagonal=0x7f020029;
-        public static final int unpressed_background=0x7f02002a;
-        public static final int wp=0x7f02002b;
+        public static final int ic_launcher_actionbar=0x7f020017;
+        public static final int ic_menu_moreoverflow_card_dark_normal=0x7f020018;
+        public static final int ic_menu_moreoverflow_card_dark_pressed=0x7f020019;
+        public static final int icon=0x7f02001a;
+        public static final int jai=0x7f02001b;
+        public static final int list_focused=0x7f02001c;
+        public static final int pressed_background=0x7f02001d;
+        public static final int system_browser=0x7f02001e;
+        public static final int system_gallery=0x7f02001f;
+        public static final int tabs_pattern=0x7f020020;
+        public static final int tabs_pattern_diagonal=0x7f020021;
+        public static final int unpressed_background=0x7f020022;
     }
     public static final class id {
         public static final int ListView=0x7f0a0002;
-        public static final int action_contact=0x7f0a000d;
-        public static final int apply=0x7f0a000e;
-        public static final int contact=0x7f0a000c;
-        public static final int day=0x7f0a0009;
-        public static final int image=0x7f0a0005;
-        public static final int inner_frame=0x7f0a0006;
-        public static final int month=0x7f0a0008;
+        public static final int apply=0x7f0a000d;
+        public static final int contact=0x7f0a000b;
+        public static final int day=0x7f0a0008;
+        public static final int inner_frame=0x7f0a0005;
+        public static final int menu_item_share=0x7f0a000c;
+        public static final int month=0x7f0a0007;
         public static final int pager=0x7f0a0001;
         public static final int pagerStrip=0x7f0a0004;
         public static final int tabs=0x7f0a0000;
-        public static final int titleFrame=0x7f0a0007;
-        public static final int todo=0x7f0a000b;
+        public static final int titleFrame=0x7f0a0006;
+        public static final int todo=0x7f0a000a;
         public static final int txtExample=0x7f0a0003;
-        public static final int year=0x7f0a000a;
+        public static final int year=0x7f0a0009;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -218,53 +209,63 @@ containing a value of this type.
         public static final int fragment_list=0x7f030003;
         public static final int fragment_new=0x7f030004;
         public static final int fragment_pager=0x7f030005;
-        public static final int fragment_quick_contact=0x7f030006;
-        public static final int fragment_text=0x7f030007;
-        public static final int fragment_theme=0x7f030008;
-        public static final int list_item_card=0x7f030009;
-        public static final int list_item_card_nocontent=0x7f03000a;
-        public static final int list_item_header=0x7f03000b;
-        public static final int silk_date_picker=0x7f03000c;
-        public static final int spinner_item=0x7f03000d;
-        public static final int spinner_item_dropdown=0x7f03000e;
+        public static final int fragment_text=0x7f030006;
+        public static final int fragment_theme=0x7f030007;
+        public static final int list_item_card=0x7f030008;
+        public static final int list_item_card_nocontent=0x7f030009;
+        public static final int list_item_header=0x7f03000a;
+        public static final int silk_date_picker=0x7f03000b;
+        public static final int spinner_item=0x7f03000c;
+        public static final int spinner_item_dropdown=0x7f03000d;
     }
     public static final class menu {
         public static final int card_popup=0x7f090000;
         public static final int contact_popup=0x7f090001;
-        public static final int main=0x7f090002;
+        public static final int share_menu=0x7f090002;
         public static final int theme_popup=0x7f090003;
     }
     public static final class string {
-        public static final int action_contact=0x7f07000a;
+        public static final int action_contact=0x7f070015;
+        public static final int actionlauncher=0x7f070007;
+        public static final int actionlauncher_extra=0x7f070008;
+        public static final int adwlauncher=0x7f070009;
+        public static final int adwlauncher_extra=0x7f07000a;
+        public static final int apexlauncher=0x7f07000b;
+        public static final int apexlauncher_extra=0x7f07000c;
         public static final int app_name=0x7f070002;
-        public static final int apply=0x7f070005;
-        public static final int contact=0x7f070009;
-        public static final int contactheader=0x7f07000b;
-        public static final int email=0x7f070016;
-        public static final int email_extra=0x7f070017;
-        public static final int emailheader=0x7f07000d;
-        public static final int extrasheader=0x7f070007;
-        public static final int facebook=0x7f070014;
-        public static final int facebook_extra=0x7f070015;
-        public static final int gplus=0x7f070010;
-        public static final int gplus_extra=0x7f070011;
-        public static final int play=0x7f07001a;
-        public static final int play_extra=0x7f07001b;
-        public static final int playheader=0x7f07000f;
+        public static final int apply=0x7f070006;
+        public static final int contact=0x7f070014;
+        public static final int contactheader=0x7f070016;
+        public static final int email=0x7f070021;
+        public static final int email_extra=0x7f070022;
+        public static final int emailheader=0x7f070018;
+        public static final int extrasheader=0x7f070012;
+        public static final int facebook=0x7f07001f;
+        public static final int facebook_extra=0x7f070020;
+        public static final int golauncher=0x7f07000f;
+        public static final int golauncher_extra=0x7f070010;
+        public static final int gplus=0x7f07001b;
+        public static final int gplus_extra=0x7f07001c;
+        public static final int novalauncher=0x7f07000d;
+        public static final int novalauncher_extra=0x7f07000e;
+        public static final int play=0x7f070025;
+        public static final int play_extra=0x7f070026;
+        public static final int playheader=0x7f07001a;
         public static final int see_more=0x7f070000;
-        public static final int socialheader=0x7f07000c;
-        public static final int tab1=0x7f070003;
-        public static final int tab2=0x7f070006;
-        public static final int tab3=0x7f070008;
-        public static final int tab4=0x7f07001c;
-        public static final int tab5=0x7f07001d;
-        public static final int themeheader=0x7f070004;
+        public static final int share_this=0x7f070003;
+        public static final int socialheader=0x7f070017;
+        public static final int tab1=0x7f070004;
+        public static final int tab2=0x7f070011;
+        public static final int tab3=0x7f070013;
+        public static final int tab4=0x7f070027;
+        public static final int tab5=0x7f070028;
+        public static final int themeheader=0x7f070005;
         public static final int todo=0x7f070001;
-        public static final int twitter=0x7f070012;
-        public static final int twitter_extra=0x7f070013;
-        public static final int web=0x7f070018;
-        public static final int web_extra=0x7f070019;
-        public static final int webheader=0x7f07000e;
+        public static final int twitter=0x7f07001d;
+        public static final int twitter_extra=0x7f07001e;
+        public static final int web=0x7f070023;
+        public static final int web_extra=0x7f070024;
+        public static final int webheader=0x7f070019;
     }
     public static final class style {
         public static final int ActionBarStyle=0x7f08000f;

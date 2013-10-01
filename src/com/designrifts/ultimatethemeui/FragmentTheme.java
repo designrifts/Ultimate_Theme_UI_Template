@@ -1,5 +1,8 @@
 package com.designrifts.ultimatethemeui;
 
+import java.util.List;
+
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -24,7 +27,8 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 		View view = inflater.inflate(R.layout.fragment_theme, container, false);
 
 		list = (CardListView) view.findViewById(R.id.ListView);
-
+		Resources res = getResources();
+		String[] theme = res.getStringArray(R.array.theme_array);
 		return view;
 	}
 
@@ -36,20 +40,23 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 				.setAccentColorRes(android.R.color.holo_blue_light)
 				.setPopupMenu(R.menu.theme_popup, this);
 
-		cardsAdapter.add(new CardHeader(getActivity(), R.string.themeheader));
-		cardsAdapter.add(new Card("Action", "Launcher").setThumbnail(getActivity(),
-				R.drawable.apps_actionlauncherpro)); // sets a thumbnail image
-														// from drawable
-														// resources
-		cardsAdapter.add(new Card("ADW", "Launcher").setThumbnail(getActivity(),
-				R.drawable.apps_adwex)); // sets a thumbnail image from drawable
-											// resources
-		cardsAdapter.add(new Card("Apex", "Launcher").setThumbnail(getActivity(),
-				R.drawable.apps_apexlauncher)); // sets a thumbnail image from
-												// drawable resources
-		cardsAdapter.add(new Card("Nova", "Launcher").setThumbnail(getActivity(),
-				R.drawable.apps_novalauncher)); // sets a thumbnail image from
-												// drawable resources
+		cardsAdapter.add(new CardHeader(getActivity(), R.string.themeheader)
+				);
+		cardsAdapter.add(new Card(getString(R.string.actionlauncher), getString(R.string.actionlauncher_extra))
+				.setThumbnail(getActivity(),R.drawable.apps_actionlauncherpro) // sets a thumbnail image from drawable resources
+				);
+		cardsAdapter.add(new Card(getString(R.string.adwlauncher), getString(R.string.adwlauncher_extra))
+				.setThumbnail(getActivity(),R.drawable.apps_adwex) // sets a thumbnail image from drawable resources
+				);	
+		cardsAdapter.add(new Card(getString(R.string.apexlauncher), getString(R.string.apexlauncher_extra))
+				.setThumbnail(getActivity(),R.drawable.apps_apexlauncher) // sets a thumbnail image from drawable resources
+				);
+		cardsAdapter.add(new Card(getString(R.string.novalauncher), getString(R.string.novalauncher_extra))
+				.setThumbnail(getActivity(),R.drawable.apps_novalauncher) // sets a thumbnail image from drawable resources
+				); 
+		cardsAdapter.add(new Card(getString(R.string.golauncher), getString(R.string.golauncher_extra))
+				.setThumbnail(getActivity(),R.drawable.apps_golauncher) // sets a thumbnail image from drawable resources
+				);
 
 		list.setAdapter(cardsAdapter);
 	}

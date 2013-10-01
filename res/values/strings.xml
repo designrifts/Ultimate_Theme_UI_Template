@@ -2,11 +2,28 @@
 <resources>
 
     <string name="app_name">Ultimate Theme UI</string>
-        
+    <string name="share_this">Check This Shit Out Homie </string>    
     <string name="tab1">Theme</string>
     <string name="themeheader">How Would You Like To Apply?</string>
-	<string name="apply">Apply Theme</string>
-    
+	<string name="apply">Apply</string>
+    <string-array name="theme_array">
+        <item>Action Launcher</item>
+        <item>ADW Launcher</item>
+        <item>Apex Launcher</item>
+        <item>Nova Launcher</item>
+        <item>Go Launcher</item>
+    </string-array>
+    <string name="actionlauncher">Action</string>
+    <string name="actionlauncher_extra">Launcher has bastard children on Jupiter</string>
+    <string name="adwlauncher">ADW</string>
+    <string name="adwlauncher_extra">Launcher was the tits</string>
+    <string name="apexlauncher">Apex</string>
+    <string name="apexlauncher_extra">Launcher is a spy from Pluto</string>
+    <string name="novalauncher">Nova</string>
+    <string name="novalauncher_extra">Launcher touched me inapropriately</string>
+    <string name="golauncher">Go</string>
+    <string name="golauncher_extra">Launcher needs to conform their mask</string>
+   
     <string name="tab2">Extras</string>
     <string name="extrasheader">What Do We Have Here?</string> 
     

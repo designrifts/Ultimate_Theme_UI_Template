@@ -19,18 +19,20 @@ package com.designrifts.ultimatethemeui;
 
 import java.util.Locale;
 
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.ShareCompat;
 import android.support.v4.view.ViewPager;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ShareActionProvider;
 
 import com.astuetz.viewpager.extensions.PagerSlidingTabStrip;
 
@@ -42,9 +44,8 @@ public class MainActivity extends FragmentActivity{
 	private PagerSlidingTabStrip tabs;
 	private ViewPager pager;
 	private MyPagerAdapter adapter;
-
-	private Drawable oldBackground = null;
-	private int currentColor = 0xFF3F9FE0;
+	private ShareActionProvider mShareActionProvider;
+	private Intent mShareIntent;
 	
 	
 	   @Override
@@ -55,6 +56,10 @@ public class MainActivity extends FragmentActivity{
 
 	        super.onCreate(savedInstanceState);
 	        setContentView(R.layout.activity_main);
+			mShareIntent = new Intent();
+			mShareIntent.setAction(Intent.ACTION_SEND);
+			mShareIntent.setType("text/plain");
+			mShareIntent.putExtra(Intent.EXTRA_TEXT, "From me to you, this text is new.");
 	        
 	        tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
 			pager = (ViewPager) findViewById(R.id.pager);
@@ -73,51 +78,22 @@ public class MainActivity extends FragmentActivity{
 	
 
 
-	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
+	    // Inflate the menu; this adds items to the action bar if it is present.
+	    getMenuInflater().inflate(R.menu.share_menu, menu);
+	    MenuItem item = menu.findItem(R.id.menu_item_share);
+	    mShareActionProvider = (ShareActionProvider) item.getActionProvider();
+	    // Create the share Intent
+	    String playStoreLink = "https://play.google.com/store/apps/details?id=" +
+	        getPackageName();
+	    String yourShareText = getString(R.string.share_this) + playStoreLink;
+	    Intent shareIntent = ShareCompat.IntentBuilder.from(this)
+	        .setType("text/plain").setText(yourShareText).getIntent();
+	    // Set the share Intent
+	    mShareActionProvider.setShareIntent(shareIntent);
+	    return true;
 	}
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-
-		switch (item.getItemId()) {
-
-		case R.id.action_contact:
-			QuickContactFragment dialog = new QuickContactFragment();
-			dialog.show(getSupportFragmentManager(), "QuickContactFragment");
-			return true;
-
-		}
-
-		return super.onOptionsItemSelected(item);
-	}
-
-	
-	@Override
-	protected void onSaveInstanceState(Bundle outState) {
-		super.onSaveInstanceState(outState);
-		outState.putInt("currentColor", currentColor);
-	}
-
-
-	private Drawable.Callback drawableCallback = new Drawable.Callback() {
-		@Override
-		public void invalidateDrawable(Drawable who) {
-			getActionBar().setBackgroundDrawable(who);
-		}
-
-		@Override
-		public void scheduleDrawable(Drawable who, Runnable what, long when) {
-			handler.postAtTime(what, when);
-		}
-
-		@Override
-		public void unscheduleDrawable(Drawable who, Runnable what) {
-			handler.removeCallbacks(what);
-		}
-	};
 
 	public class MyPagerAdapter extends FragmentPagerAdapter {
 
