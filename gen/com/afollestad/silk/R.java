@@ -18,11 +18,11 @@ public final class R {
 		public static final int spinner_item_text = 0x7f060001;
 	}
 	public static final class id {
-		public static final int day = 0x7f0b0009;
-		public static final int month = 0x7f0b0008;
-		public static final int pager = 0x7f0b0001;
-		public static final int pagerStrip = 0x7f0b0004;
-		public static final int year = 0x7f0b000a;
+		public static final int day = 0x7f0c0009;
+		public static final int month = 0x7f0c0008;
+		public static final int pager = 0x7f0c0001;
+		public static final int pagerStrip = 0x7f0c0004;
+		public static final int year = 0x7f0c000a;
 	}
 	public static final class layout {
 		public static final int fragment_list = 0x7f030003;

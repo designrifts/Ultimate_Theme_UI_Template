@@ -97,7 +97,7 @@ public class ThemeActivity extends FragmentActivity{
 
 	public class MyPagerAdapter extends FragmentPagerAdapter {
 
-		private final int[] TITLES = { R.string.tab1, R.string.tab2, R.string.tab3, R.string.tab4, R.string.tab5 };
+		private final int[] TITLES = { R.string.tab1, R.string.tab2, R.string.tab3, R.string.tab4 };
 
 		public MyPagerAdapter(FragmentManager fm) {
 			super(fm);
@@ -115,8 +115,6 @@ public class ThemeActivity extends FragmentActivity{
 				return getString(R.string.tab3).toUpperCase(l);
 			case 3:
 				return getString(R.string.tab4).toUpperCase(l);	
-			case 4:
-				return getString(R.string.tab5).toUpperCase(l);	
 			}
 			return null;
 		}
@@ -136,9 +134,6 @@ public class ThemeActivity extends FragmentActivity{
 				break;
 			case 3:
 				f= new FragmentText();	
-				break;	
-			case 4:
-				f= new FragmentNew();	
 				break;	
 			}
 			return f;

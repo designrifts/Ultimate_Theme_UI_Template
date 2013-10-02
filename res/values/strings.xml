@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Ultimate Theme UI</string>
-    
-    <!-- Share BUtton -->
-    <string name="share_this">Check This Shit Out Homie </string> 
-    
     <!-- Basic theme information -->
+    <string name="app_name">Ultimate Theme UI</string>
     <string name="theme_title">Ultimate Theme U</string>
     <string name="icon_title">Ultimate Theme U</string>
     <string name="developer_name">DesignRifts</string>
+    <string name="pkg">com.designrifts.ultimatethemeui</string>
     
+    <!-- Theme settings -->
+    <bool name="config_iconpack">true</bool>
+    <bool name="config_apexskin">true</bool>
+    
+    <!-- The feature graphic will appear above the theme description -->
+    <string name="theme_feature">feature</string>
+    
+    <!-- Each theme may have up to 5 preview images -->
+    <string name="theme_preview1">preview1</string>
+    <string name="theme_preview2">preview2</string>
+    
+    <!-- Theme properties -->
+	<bool name="enableIconPack">true</bool>
+	<bool name="enableDockPack">true</bool>
+	<string name="authorName">DesignRifts</string>
+	<string name="developerName">DesignRifts</string>
+	<string name="authorLink">http://designrifts.com</string>
+        
+    <!-- Share Button -->
+    <string name="share_this">Check This Shit Out Homie </string> 
+   
     <!-- This (optional) link will appear at the end of the theme description -->
     <string name="developer_link">http://www.designrifts.com/</string>
     <string name="theme_description">It is Fresh</string>
@@ -32,8 +50,26 @@
    
     <!-- Extras Tab -->
     <string name="tab2">Extras</string>
-    <string name="extrasheader">What Do We Have Here?</string>
-     
+    <string name="playheader">I Need That Diaper Money</string>
+    <string name="play">Google Play</string>
+    <string name="play_extra">Buy Moar Themes</string> 
+    <string name="basicsheader">The Basics</string>    
+    <string name="wallpaper">Wallpapers</string>
+    <string name="wallpaper_extra">Are Sexy</string> 
+    <string name="icon">Icons</string>
+    <string name="icon_extra">See What is New</string> 
+    <string name="request">Suddenly</string>
+    <string name="request_extra">This will scan your device for the apps installed and sent us the names</string>
+    <string name="extrasheader">What Do We Have Here?</string>    
+    <string name="uccw">UCCW</string>
+    <string name="uccw_extra">To Match Ya Draws</string> 
+    <string name="zooper">Zooper</string>
+    <string name="zooper_extra">To Match Ya Socks</string>   
+    <string name="extras1">Your Mom</string>
+    <string name="extras1_extra">Loves Me!</string>     
+    <string name="extras2">This Guy</string>
+    <string name="extras2_extra">Loves Dildroid!</string>     
+    
     <!-- Contact Tab -->
     <string name="tab3">Contact</string>
     <string name="contact">Contact Us</string>
@@ -42,7 +78,6 @@
     <string name="socialheader">Stalker!</string>
     <string name="emailheader">Wanna Get Personal?</string>
     <string name="webheader">That WWW Life Son!</string>
-    <string name="playheader">I Need That Diaper Money</string>
     <string name="gplus">Google Plus</string>
     <string name="gplus_extra">Is Whats Up</string>
     <string name="twitter">Twitter</string>
@@ -53,15 +88,9 @@
     <string name="email_extra">Me For Feet Pics</string>
     <string name="web">The Interwebz</string>
     <string name="web_extra">Is Always Right</string>
-    <string name="play">Google Play</string>
-    <string name="play_extra">Buy Moar Themes</string>               
+              
     
     <!-- Text Tab -->
 	<string name="tab4">Text</string>
-	
-	<!-- Icons Tab -->
-    <string name="tab5">New Icons</string>
-    
-
-    
+        
 </resources>

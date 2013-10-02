@@ -58,10 +58,7 @@ public class FragmentContact extends Fragment  implements Card.CardMenuListener<
 					break;	
 				case 8:
 					actWeb();	
-					break;	
-				case 10:
-					actPlay();	
-					break;	
+					break;		
 				}
 			}
 			public int getCount() {
@@ -88,29 +85,29 @@ public class FragmentContact extends Fragment  implements Card.CardMenuListener<
 			;
 		cardsAdapter.add(new Card(getString(R.string.gplus), getString(R.string.gplus_extra))
 			.setThumbnail(getActivity(),R.drawable.apps_googleplus) // sets a thumbnail image from drawable resources
+			.setPopupMenu(-1, null) // -1 disables the popup menu for this individual card
 			);		
 		cardsAdapter.add(new Card(getString(R.string.twitter), getString(R.string.twitter_extra))
-			.setThumbnail(getActivity(),R.drawable.apps_twitter)) // sets a thumbnail image from drawable resources
-			;							
+			.setThumbnail(getActivity(),R.drawable.apps_twitter) // sets a thumbnail image from drawable resources
+			.setPopupMenu(-1, null) // -1 disables the popup menu for this individual card
+			);							
 		cardsAdapter.add(new Card(getString(R.string.facebook), getString(R.string.facebook_extra))
-			.setThumbnail(getActivity(),R.drawable.apps_facebook)) // sets a thumbnail image from drawable resources
-			;									
-		cardsAdapter.add(new CardHeader(getActivity(), R.string.emailheader))
-			;	
+			.setThumbnail(getActivity(),R.drawable.apps_facebook) // sets a thumbnail image from drawable resources
+			.setPopupMenu(-1, null) // -1 disables the popup menu for this individual card
+			);									
+		cardsAdapter.add(new CardHeader(getActivity(), R.string.emailheader)
+			);	
 		cardsAdapter.add(new Card(getString(R.string.email), getString(R.string.email_extra))
-			.setThumbnail(getActivity(),R.drawable.apps_googlemail)) // sets a thumbnail image from drawable resources
-			;									
-		cardsAdapter.add(new CardHeader(getActivity(), R.string.webheader))
-			;
+			.setThumbnail(getActivity(),R.drawable.apps_googlemail) // sets a thumbnail image from drawable resources
+			.setPopupMenu(-1, null) // -1 disables the popup menu for this individual card
+			);									
+		cardsAdapter.add(new CardHeader(getActivity(), R.string.webheader)
+			);
 		cardsAdapter.add(new Card(getString(R.string.web), getString(R.string.web_extra))
-			.setThumbnail(getActivity(),R.drawable.system_browser)) // sets a thumbnail image from drawable resources
-			;											
-		cardsAdapter.add(new CardHeader(getActivity(), R.string.playheader))
-			;
-		cardsAdapter.add(new Card(getString(R.string.play), getString(R.string.play_extra))
-				.setThumbnail(getActivity(),R.drawable.apps_googleplaystore)) // sets a thumbnail image from drawable resources
-			;											
-
+			.setThumbnail(getActivity(),R.drawable.system_browser) // sets a thumbnail image from drawable resources
+			.setPopupMenu(-1, null) // -1 disables the popup menu for this individual card
+			);											
+							
 		list.setAdapter(cardsAdapter);
 	}
 
@@ -165,17 +162,6 @@ public class FragmentContact extends Fragment  implements Card.CardMenuListener<
    		 e2.printStackTrace();
    		}
    }
-    private void actPlay() {
-    	String marketuriString = "market://search?q=designrifts";
-    	Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(marketuriString));
-    	try {
-    		startActivity(intent);
-    	} catch (ActivityNotFoundException e2) {
-    		e2.printStackTrace();
-    		Toast.makeText(getApplicationContext(), "Play Store not found!", Toast.LENGTH_LONG).show();
-    	}
-    }
-
 
 	private Context getApplicationContext() {
 		// TODO Auto-generated method stub
