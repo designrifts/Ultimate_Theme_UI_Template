@@ -33,7 +33,8 @@ import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ShareActionProvider;
-
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import com.astuetz.viewpager.extensions.PagerSlidingTabStrip;
 
 

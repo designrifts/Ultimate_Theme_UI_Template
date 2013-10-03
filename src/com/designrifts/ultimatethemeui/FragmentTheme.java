@@ -106,53 +106,56 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 		list.setAdapter(cardsAdapter);
 	}
 	
+	public void onMenuItemClick(Card card, MenuItem item) {
+	    Toast.makeText(getActivity(), card.getTitle() + ": " + item.getTitle(), Toast.LENGTH_SHORT).show();
+	}
+
+	
 private void applyActionLauncherTheme(){
+	String pkg = getResources().getString(R.string.pkg);
+	Intent action = new Intent ("com.chrislacy.actionlauncher.pro.ActionLauncher");
+	action.setPackage("com.chrislacy.actionlauncher.pro");
+	action.putExtra("apply_icon_pack", pkg);
 	try {
-		Intent intent = getPackageManager().getLaunchIntentForPackage("com.chrislacy.actionlauncher.pro");
-		if (intent != null) {
-            // TODO BY YOU: set this package name as appropriate. Eg "kov.theme.stark"
-            intent.putExtra("apply_icon_pack",getPackageName());
-            startActivity(intent);    // Action Launcher will take it from here...
-        } else {
-            // Direct users to get Action Launcher Pro
-            String playStoreUrl = "https://play.google.com/store/apps/details?id=com.chrislacy.actionlauncher.pro";
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(playStoreUrl)));
-        }
-	} catch (ActivityNotFoundException e7) {
-		e7.printStackTrace();
+		startActivity(action);
+		} 	
+	catch (ActivityNotFoundException e) {
+		Intent actionMarket = new Intent(Intent.ACTION_VIEW);
+		actionMarket.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.chrislacy.actionlauncher.pro"));
+		startActivity(actionMarket);
 		makeToast("Action Launcher is not installed!");
 	}
 	//finish();
-}
+};
+
+
 
 private void applyAdwTheme(){
-    String pkg = getResources().getString(R.string.pkg);
-	Intent adw = new Intent("org.adw.launcher.SET_THEME");
-	adw.putExtra("org.adw.launcher.theme.NAME",
-			pkg);
+	    String pkg = getResources().getString(R.string.pkg);
+		Intent adw = new Intent("org.adw.launcher.SET_THEME");
+		adw.putExtra("org.adw.launcher.theme.NAME",	pkg);
 	try {
-		startActivity(Intent.createChooser(adw,
-				"activating theme..."));
-	} catch (ActivityNotFoundException e) {
-			Intent adwMarket = new Intent(Intent.ACTION_VIEW);
-			adwMarket.setData(Uri
-					.parse("market://details?id=org.adw.launcher"));
-			startActivity(adwMarket);
-			makeToast("Can't Find ADW Launcher");
+		startActivity(Intent.createChooser(adw,	"activating theme..."));
+		} 
+	catch (ActivityNotFoundException e) {
+		Intent adwMarket = new Intent(Intent.ACTION_VIEW);
+		adwMarket.setData(Uri.parse("market://details?id=org.adw.launcher"));
+		startActivity(adwMarket);
+		makeToast("Can't Find ADW Launcher");
 	}
-
-    }; 
+	//finish();
+}; 
 
 private void applyAdwExTheme(){
-    String pkg = getResources().getString(R.string.pkg);
- Intent adwex = new Intent("org.adw.launcher.SET_THEME");
- adwex.putExtra("org.adw.launcher.theme.NAME", pkg);
+	    String pkg = getResources().getString(R.string.pkg);
+	    Intent adwex = new Intent("org.adw.launcher.SET_THEME");
+	    adwex.putExtra("org.adw.launcher.theme.NAME", pkg);
 	try {
 		startActivity(Intent.createChooser(adwex,"Starting ADWEX..."));
-	} catch (ActivityNotFoundException e) {
+		} 
+	catch (ActivityNotFoundException e) {
 		Intent apexMarket = new Intent(Intent.ACTION_VIEW);
-		apexMarket.setData(Uri
-				.parse("market://details?id=org.adwfreak.launcher"));
+		apexMarket.setData(Uri.parse("market://details?id=org.adwfreak.launcher"));
 		startActivity(apexMarket);
 		makeToast("Can't Find AdwEX");
 	}
@@ -160,17 +163,16 @@ private void applyAdwExTheme(){
  }; 
 
 private void applyApexTheme() {
-    String pkg = getResources().getString(R.string.pkg);
- Intent apex = new Intent("com.anddoes.launcher.SET_THEME");
- apex.putExtra("com.anddoes.launcher.THEME_PACKAGE_NAME", pkg);
-
- apex.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+	    String pkg = getResources().getString(R.string.pkg);
+	    Intent apex = new Intent("com.anddoes.launcher.SET_THEME");
+	    apex.putExtra("com.anddoes.launcher.THEME_PACKAGE_NAME", pkg);
+	    apex.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 	try {
 		startActivity(apex);
-	} catch (ActivityNotFoundException e) {
+		} 
+	catch (ActivityNotFoundException e) {
 		Intent apexMarket = new Intent(Intent.ACTION_VIEW);
-		apexMarket.setData(Uri
-				.parse("market://details?id=com.anddoes.launcher"));
+		apexMarket.setData(Uri.parse("market://details?id=com.anddoes.launcher"));
 		startActivity(apexMarket);
 		makeToast("Can't Find Apex Launcher");
 	}
@@ -178,30 +180,23 @@ private void applyApexTheme() {
  }; 
 
 private void applyNovaTheme(){
-	String pkg = getResources().getString(R.string.pkg);
-	  Intent nova = new Intent("com.teslacoilsw.launcher.APPLY_ICON_THEME");
+		String pkg = getResources().getString(R.string.pkg);
+		Intent nova = new Intent("com.teslacoilsw.launcher.APPLY_ICON_THEME");
 		nova.setPackage("com.teslacoilsw.launcher");
 		nova.putExtra("com.teslacoilsw.launcher.extra.ICON_THEME_TYPE", "GO");
-		nova.putExtra("com.teslacoilsw.launcher.extra.ICON_THEME_PACKAGE",
-				pkg);
+		nova.putExtra("com.teslacoilsw.launcher.extra.ICON_THEME_PACKAGE",pkg);
 	try {
-
-
 			startActivity(nova);
-
-		} catch (ActivityNotFoundException e) {
-			Intent novaMarket = new Intent(Intent.ACTION_VIEW);
-			novaMarket.setData(Uri
-					.parse("market://details?id=com.teslacoilsw.launcher"));
-			startActivity(novaMarket);
-			makeToast("Can't Nova Launcher");
+		} 
+	catch (ActivityNotFoundException e) {
+		Intent novaMarket = new Intent(Intent.ACTION_VIEW);
+		novaMarket.setData(Uri.parse("market://details?id=com.teslacoilsw.launcher"));
+		startActivity(novaMarket);
+		makeToast("Can't Nova Launcher");
 	}
 	//finish();
 };
 
-public void onMenuItemClick(Card card, MenuItem item) {
-    Toast.makeText(getActivity(), card.getTitle() + ": " + item.getTitle(), Toast.LENGTH_SHORT).show();
-}
 
 private void applyGoTheme() {
         String pkg = getResources().getString(R.string.pkg);	
@@ -209,7 +204,7 @@ private void applyGoTheme() {
 		go.putExtra("type", 1);
 		go.putExtra("pkgname",pkg);
 		sendBroadcast(go);	
-	Toast.makeText(getApplicationContext(), "Theme applied for GO LAUNCHER", Toast.LENGTH_SHORT).show();
+		Toast.makeText(getApplicationContext(), "Theme applied for GO LAUNCHER", Toast.LENGTH_SHORT).show();
 return;
 };
 
@@ -223,19 +218,10 @@ private void sendBroadcast(Intent intent) {
 	
 }
 
-private String getPackageName() {
-	// TODO Auto-generated method stub
-	return null;
-}
 
 private void makeToast(String string) {
 	// TODO Auto-generated method stub
 	
-}
-
-private PackageManager getPackageManager() {
-	// TODO Auto-generated method stub
-	return null;
 }
 
 }

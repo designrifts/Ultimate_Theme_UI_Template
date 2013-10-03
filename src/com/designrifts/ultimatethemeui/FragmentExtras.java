@@ -131,11 +131,11 @@ public class FragmentExtras extends Fragment  implements Card.CardMenuListener<C
     };
     private void actWallpapers() {
     	String pkg = getResources().getString(R.string.pkg);
-    	try {
-    		Intent intent = new Intent(Intent.ACTION_MAIN);
-            intent.setComponent(new ComponentName(getPackageName(),getPackageName()+".wallpaper"));
-            startActivity(intent);
-    	}
+    	Intent wallpapers = new Intent(Intent.ACTION_SET_WALLPAPER);
+    	wallpapers.putExtra(pkg,".wallpaper");
+    	try {        
+            startActivity(wallpapers);
+    		}
     	catch (RuntimeException wall) {
     		wall.printStackTrace();
     	}
