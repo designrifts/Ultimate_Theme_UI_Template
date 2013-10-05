@@ -113,8 +113,7 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 	
 private void applyActionLauncherTheme(){
 	String pkg = getResources().getString(R.string.pkg);
-	Intent action = new Intent ("com.chrislacy.actionlauncher.pro.ActionLauncher");
-	action.setPackage("com.chrislacy.actionlauncher.pro");
+	Intent action = getActivity().getPackageManager().getLaunchIntentForPackage("com.chrislacy.actionlauncher.pro");
 	action.putExtra("apply_icon_pack", pkg);
 	try {
 		startActivity(action);

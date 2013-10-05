@@ -7,6 +7,7 @@
     <string name="icon_title">Ultimate Theme U</string>
     <string name="developer_name">DesignRifts</string>
     <string name="pkg">com.designrifts.ultimatethemeui</string>
+    <string name="apply_wallpaper">Apply</string>
     
     <!-- Theme settings -->
     <bool name="config_iconpack">true</bool>

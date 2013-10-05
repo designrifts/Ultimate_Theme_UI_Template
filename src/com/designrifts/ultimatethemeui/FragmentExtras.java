@@ -49,6 +49,9 @@ public class FragmentExtras extends Fragment  implements Card.CardMenuListener<C
 				case 3:
 					actWallpapers();
 					break;
+				case 4:
+					actIcons();
+					break;
 				case 5:
 					actRequest();
 					break;	
@@ -131,10 +134,23 @@ public class FragmentExtras extends Fragment  implements Card.CardMenuListener<C
     };
     private void actWallpapers() {
     	String pkg = getResources().getString(R.string.pkg);
-    	Intent wallpapers = new Intent(Intent.ACTION_SET_WALLPAPER);
-    	wallpapers.putExtra(pkg,".wallpaper");
+    	Intent wallpapers = new Intent(Intent.ACTION_MAIN);
+    	wallpapers.setComponent(new ComponentName(pkg,pkg+".wallpaper"));
+
     	try {        
             startActivity(wallpapers);
+    		}
+    	catch (RuntimeException wall) {
+    		wall.printStackTrace();
+    	}
+    };
+    private void actIcons() {
+    	String pkg = getResources().getString(R.string.pkg);
+    	Intent icons = new Intent(Intent.ACTION_MAIN);
+    	icons.setComponent(new ComponentName(pkg,pkg+".wallpaper"));
+
+    	try {        
+            startActivity(icons);
     		}
     	catch (RuntimeException wall) {
     		wall.printStackTrace();
