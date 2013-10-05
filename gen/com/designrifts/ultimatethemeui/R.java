@@ -200,24 +200,23 @@ containing a value of this type.
     }
     public static final class id {
         public static final int ListView=0x7f0c0002;
-        public static final int apply=0x7f0c0012;
-        public static final int contact=0x7f0c0010;
-        public static final int day=0x7f0c000a;
-        public static final int gallery=0x7f0c000d;
-        public static final int icon_grid=0x7f0c0008;
-        public static final int imageView=0x7f0c0005;
-        public static final int inner_frame=0x7f0c0006;
-        public static final int menu_item_share=0x7f0c0011;
-        public static final int month=0x7f0c0009;
+        public static final int apply=0x7f0c0011;
+        public static final int contact=0x7f0c000f;
+        public static final int day=0x7f0c0009;
+        public static final int gallery=0x7f0c000c;
+        public static final int icon_grid=0x7f0c0007;
+        public static final int inner_frame=0x7f0c0005;
+        public static final int menu_item_share=0x7f0c0010;
+        public static final int month=0x7f0c0008;
         public static final int pager=0x7f0c0001;
         public static final int pagerStrip=0x7f0c0004;
-        public static final int set=0x7f0c000e;
+        public static final int set=0x7f0c000d;
         public static final int tabs=0x7f0c0000;
-        public static final int titleFrame=0x7f0c0007;
-        public static final int todo=0x7f0c000f;
+        public static final int titleFrame=0x7f0c0006;
+        public static final int todo=0x7f0c000e;
         public static final int txtExample=0x7f0c0003;
-        public static final int wallpaper=0x7f0c000c;
-        public static final int year=0x7f0c000b;
+        public static final int wallpaper=0x7f0c000b;
+        public static final int year=0x7f0c000a;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -228,16 +227,15 @@ containing a value of this type.
         public static final int fragment_pager=0x7f030005;
         public static final int fragment_text=0x7f030006;
         public static final int fragment_theme=0x7f030007;
-        public static final int iconsdisplay=0x7f030008;
-        public static final int list_item_card=0x7f030009;
-        public static final int list_item_card_nocontent=0x7f03000a;
-        public static final int list_item_header=0x7f03000b;
-        public static final int main=0x7f03000c;
-        public static final int silk_date_picker=0x7f03000d;
-        public static final int spinner_item=0x7f03000e;
-        public static final int spinner_item_dropdown=0x7f03000f;
-        public static final int wallpaper_chooser=0x7f030010;
-        public static final int wallpaper_item=0x7f030011;
+        public static final int list_item_card=0x7f030008;
+        public static final int list_item_card_nocontent=0x7f030009;
+        public static final int list_item_header=0x7f03000a;
+        public static final int main=0x7f03000b;
+        public static final int silk_date_picker=0x7f03000c;
+        public static final int spinner_item=0x7f03000d;
+        public static final int spinner_item_dropdown=0x7f03000e;
+        public static final int wallpaper_chooser=0x7f03000f;
+        public static final int wallpaper_item=0x7f030010;
     }
     public static final class menu {
         public static final int card_popup=0x7f0b0000;
@@ -263,7 +261,7 @@ containing a value of this type.
         public static final int basicsheader=0x7f080022;
         public static final int contact=0x7f080033;
         public static final int contactheader=0x7f080035;
-        public static final int default_wallpaper=0x7f080044;
+        public static final int default_wallpaper=0x7f080046;
         public static final int developerName=0x7f08000c;
         /**  This (optional) link will appear at the end of the theme description 
          */
@@ -284,6 +282,10 @@ containing a value of this type.
         public static final int gplus=0x7f080039;
         public static final int gplus_extra=0x7f08003a;
         public static final int icon=0x7f080025;
+        /**  Icon Tabs 
+         */
+        public static final int icon1=0x7f080044;
+        public static final int icon2=0x7f080045;
         public static final int icon_extra=0x7f080026;
         public static final int icon_title=0x7f080004;
         public static final int novalauncher=0x7f08001a;

@@ -145,9 +145,10 @@ public class FragmentExtras extends Fragment  implements Card.CardMenuListener<C
     	}
     };
     private void actIcons() {
+    	
     	String pkg = getResources().getString(R.string.pkg);
     	Intent icons = new Intent(Intent.ACTION_MAIN);
-    	icons.setComponent(new ComponentName(pkg,pkg+".wallpaper"));
+    	icons.setComponent(new ComponentName(pkg,pkg+".icons"));
 
     	try {        
             startActivity(icons);
@@ -166,11 +167,6 @@ public class FragmentExtras extends Fragment  implements Card.CardMenuListener<C
    		}
 
    }
-
-	private String getPackageName() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	private Context getApplicationContext() {
 		// TODO Auto-generated method stub

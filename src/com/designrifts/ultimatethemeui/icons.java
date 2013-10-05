@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,9 @@ public class icons extends Activity implements AdapterView.OnItemClickListener{
     public Uri CONTENT_URI;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // This is quick way of theming the action bar without using styles.xml (e.g. using ActionBar Style Generator)
+        getActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(android.R.color.holo_blue_dark)));
+        getActionBar().setDisplayShowHomeEnabled(false);
         super.onCreate(savedInstanceState);
         int iconSize=getResources().getDimensionPixelSize(android.R.dimen.app_icon_size);
         setContentView(R.layout.main);

@@ -2,5 +2,10 @@
 <resources>
     <string-array name="icon_pack">
         <item>icon</item>
+        <item>apps_actionlauncherpro</item>
+        <item>apps_novalauncher</item>
+        <item>apps_apexlauncher</item>
+        <item>apps_adwlauncher</item>
+        <item>apps_adwex</item>
     </string-array>
 </resources>

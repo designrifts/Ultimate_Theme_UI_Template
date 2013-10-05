@@ -3,8 +3,8 @@
 
     <!-- Basic theme information -->
     <string name="app_name">Ultimate Theme UI</string>
-    <string name="theme_title">Ultimate Theme U</string>
-    <string name="icon_title">Ultimate Theme U</string>
+    <string name="theme_title">Ultimate Theme UI</string>
+    <string name="icon_title">Ultimate Theme UI</string>
     <string name="developer_name">DesignRifts</string>
     <string name="pkg">com.designrifts.ultimatethemeui</string>
     <string name="apply_wallpaper">Apply</string>
@@ -93,5 +93,8 @@
     
     <!-- Text Tab -->
 	<string name="tab4">Text</string>
-        
+	
+	<!-- Icon Tabs -->
+	<string name="icon1">All</string>
+    <string name="icon2">New</string>    
 </resources>
