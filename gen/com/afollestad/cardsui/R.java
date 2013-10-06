@@ -46,11 +46,11 @@ public final class R {
 		public static final int card_menu_button = 0x7f020014;
 		public static final int card_selector = 0x7f020015;
 		public static final int card_shadow = 0x7f020016;
-		public static final int ic_menu_moreoverflow_card_dark_normal = 0x7f020018;
-		public static final int ic_menu_moreoverflow_card_dark_pressed = 0x7f020019;
-		public static final int list_focused = 0x7f02001c;
-		public static final int pressed_background = 0x7f02001d;
-		public static final int unpressed_background = 0x7f020022;
+		public static final int ic_menu_moreoverflow_card_dark_normal = 0x7f020019;
+		public static final int ic_menu_moreoverflow_card_dark_pressed = 0x7f02001a;
+		public static final int list_focused = 0x7f02001d;
+		public static final int pressed_background = 0x7f02001f;
+		public static final int unpressed_background = 0x7f020024;
 	}
 	public static final class id {
 		public static final int day = 0x7f0c0009;

@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="latesticons">
+        <item>icon</item>
+    </string-array>
+        <string-array name="systemicons">
+        <item>system_browser</item>
+        <item>system_gallery</item>
+    </string-array>
+        <string-array name="playicons">
+        <item>apps_actionlauncherpro</item>
+        <item>apps_novalauncher</item>
+        <item>apps_apexlauncher</item>
+        <item>apps_adwlauncher</item>
+        <item>apps_adwex</item>
+    </string-array>
+        <string-array name="gamesicons">
+        <item>games_templerun</item>
+    </string-array>
+        <string-array name="miscicons">
+        <item>misc_appdrawer_icsics</item>
+    </string-array>
     <string-array name="icon_pack">
         <item>icon</item>
         <item>apps_actionlauncherpro</item>

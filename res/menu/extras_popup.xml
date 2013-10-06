@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/latesticons" android:title="Latest Icons"/>
+    <item android:id="@+id/systemicons" android:title="System Apps"/>
+    <item android:id="@+id/playicons" android:title="Play Apps"/>
+    <item android:id="@+id/gamesicons" android:title="Games"/>
+    <item android:id="@+id/miscicons" android:title="Misc"/>
+
+</menu>

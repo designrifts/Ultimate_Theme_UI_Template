@@ -1,5 +1,6 @@
 package com.designrifts.ultimatethemeui;
 
+import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
@@ -7,14 +8,13 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Toast;
-import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
 
 import com.afollestad.cardsui.Card;
 import com.afollestad.cardsui.CardAdapter;
@@ -22,14 +22,145 @@ import com.afollestad.cardsui.CardBase;
 import com.afollestad.cardsui.CardHeader;
 import com.afollestad.cardsui.CardListView;
 import com.afollestad.cardsui.CardListView.CardClickListener;
+import com.designrifts.ultimatethemeui.R;
+
 
 
 public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Card> {
-	public String pkg;
-	
-	private final String [] THEMES = {"Action", "ADW", "Apex", "Nova", "G0"};
+
+
+	public final static String ACTION_MYTHEME = "com.gau.go.launcherex.MyThemes.mythemeaction";
+	public final static String ACTION_START_MY_THEMES = "com.gau.go.launcherex.action.start_my_themes";
+	public final String ACTION_APPLY_ICON_THEME = "com.teslacoilsw.launcher.APPLY_ICON_THEME";
+	public final String NOVA_PACKAGE = "com.teslacoilsw.launcher";
+	public final String EXTRA_ICON_THEME_PACKAGE = "com.teslacoilsw.launcher.extra.ICON_THEME_PACKAGE";
+	public final String EXTRA_ICON_THEME_TYPE = "com.teslacoilsw.launcher.extra.ICON_THEME_TYPE";
 
 	private CardListView list;
+	//* CLASS JUST FOR THE CUSTOM ALERT DIALOG
+	class CustomAlertDialog extends AlertDialog {
+		public CustomAlertDialog(Context context) {
+			super(context);
+		}
+
+		@Override
+		public boolean onKeyDown(int keyCode, KeyEvent event) {
+			boolean ret = super.onKeyDown(keyCode, event);
+			finish();
+			return ret;
+		}
+
+		private void finish() {
+			// TODO Auto-generated method stub
+			
+		}
+	}
+
+	//!! SUBS / METHODS / FUNCTIONS USED FOR info
+	//* MAKETOAST - GENERIC SUB TO TOAST ANYWHERE ANYTIME
+	public void makeToast(String msg) {
+		Context context = getActivity().getApplicationContext();
+		CharSequence text = msg;
+		int duration = Toast.LENGTH_LONG;
+		Toast toast = Toast.makeText(context, text, duration);
+		toast.show();
+	}
+	private void applyActionLauncherTheme(){
+		try {
+			Intent intent = getActivity().getPackageManager().getLaunchIntentForPackage("com.chrislacy.actionlauncher.pro");
+			if (intent != null) {
+	            // TODO BY YOU: set this package name as appropriate. Eg "kov.theme.stark"
+	            intent.putExtra("apply_icon_pack",getActivity().getPackageName());
+	            startActivity(intent);    // Action Launcher will take it from here...
+	        } else {
+	            // Direct users to get Action Launcher Pro
+	            String playStoreUrl = "https://play.google.com/store/apps/details?id=com.chrislacy.actionlauncher.pro";
+	            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(playStoreUrl)));
+	        }
+		} catch (ActivityNotFoundException e7) {
+			e7.printStackTrace();
+			makeToast("Action Launcher is not installed!");
+		}
+		//finish();
+	}
+	private void applyAdwTheme(){
+		try {
+			Intent intent = new Intent(Intent.ACTION_MAIN);
+	    	intent.setComponent(new ComponentName("org.adw.launcher","org.adw.launcher.Launcher"));
+	    	startActivity(intent);
+	    	makeToast("Apply with \"ADW Settings\" in Menu");
+		} catch (ActivityNotFoundException e4) {
+			e4.printStackTrace();
+			 makeToast("ADW Launcher is not installed!");
+		}
+
+	}
+	private void applyAdwExTheme(){
+		try {
+			Intent intent = new Intent("org.adw.launcher.SET_THEME");
+	        intent.putExtra("org.adw.launcher.theme.NAME",getActivity().getPackageName());
+	        startActivity(Intent.createChooser(intent,"ADW Not Installed"));
+		} catch (ActivityNotFoundException e5) {
+			e5.printStackTrace();
+			makeToast("ADW EX is not installed!");
+			applyAdwTheme();
+		}
+		//finish();
+	}
+	private void applyApexTheme() {
+		final String ACTION_SET_THEME = "com.anddoes.launcher.SET_THEME";
+		final String EXTRA_PACKAGE_NAME = "com.anddoes.launcher.THEME_PACKAGE_NAME";
+
+		Intent intent = new Intent(ACTION_SET_THEME);
+		intent.putExtra(EXTRA_PACKAGE_NAME, getActivity().getPackageName());
+		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		try {
+		    startActivity(intent);
+		} catch (ActivityNotFoundException e3) {
+			e3.printStackTrace();
+		    makeToast("Apex Launcher is not installed!");
+		}
+		//finish();
+	}
+	
+	private void applyNovaTheme(){
+		try {
+			Intent intent = new Intent(ACTION_APPLY_ICON_THEME);
+			intent.setPackage(NOVA_PACKAGE);
+			intent.putExtra(EXTRA_ICON_THEME_TYPE, "GO");
+			intent.putExtra(EXTRA_ICON_THEME_PACKAGE, getActivity().getPackageName());
+			startActivity(intent);
+
+		} catch (ActivityNotFoundException e6) {
+			e6.printStackTrace();
+			makeToast("Nova Launcher is not installed!");
+		}
+		//finish();
+	}
+	private void applyGoTheme() {
+		try {
+			Intent go = getActivity().getPackageManager().getLaunchIntentForPackage("com.gau.go.launcherex");
+			if (go != null) {
+				Intent intent = new Intent(ACTION_MYTHEME);
+				intent.putExtra("type", 1);
+				intent.putExtra("pkgname", getActivity().getPackageName());
+				getActivity().sendBroadcast(intent);
+				Toast appliedGo = Toast
+		                .makeText(getActivity().getBaseContext(), getResources().getString
+		                		(R.string.go_applied), Toast.LENGTH_LONG);
+						appliedGo.show();
+						startActivity(intent);
+	        } else {
+	            // Direct users to get Action Launcher Pro
+	            String playStoreUrl = "https://play.google.com/store/apps/details?id=com.gau.go.launcherex";
+	            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(playStoreUrl)));
+	        }
+		} catch (ActivityNotFoundException e7) {
+			e7.printStackTrace();
+			makeToast("Go is not installed!");
+		}
+		//finish();
+	}
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -46,29 +177,24 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 
 			@Override
 			public void onCardClick(int position, CardBase card, View view) {
-				switch(position){
-				case 1:
-					applyActionLauncherTheme();	
-					break;
-				case 2:
+				String str = card.getTitle();
+				if (str.equals(getString(R.string.actionlauncher))) {
+					applyActionLauncherTheme();
+				}
+				if (str.equals(getString(R.string.adwlauncher))) {
 					applyAdwExTheme();
-					break;
-				case 3:
-					applyApexTheme();	
-					break;
-				case 4:
-					applyNovaTheme();	
-					break;	
-				case 5:
-					applyGoTheme();	
-					break;		
+				}
+				if (str.equals(getString(R.string.apexlauncher))) {
+					applyApexTheme();
+				}
+				if (str.equals(getString(R.string.novalauncher))) {
+					applyNovaTheme();
+				}
+				if (str.equals(getString(R.string.golauncher))) {
+					applyGoTheme();
 				}
 			}
-			public int getCount() {
-				return THEMES.length;
-			}	
 		});
-
 		return view;
 	}
 
@@ -109,118 +235,4 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 	public void onMenuItemClick(Card card, MenuItem item) {
 	    Toast.makeText(getActivity(), card.getTitle() + ": " + item.getTitle(), Toast.LENGTH_SHORT).show();
 	}
-
-	
-private void applyActionLauncherTheme(){
-	String pkg = getResources().getString(R.string.pkg);
-	Intent action = getActivity().getPackageManager().getLaunchIntentForPackage("com.chrislacy.actionlauncher.pro");
-	action.putExtra("apply_icon_pack", pkg);
-	try {
-		startActivity(action);
-		} 	
-	catch (ActivityNotFoundException e) {
-		Intent actionMarket = new Intent(Intent.ACTION_VIEW);
-		actionMarket.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.chrislacy.actionlauncher.pro"));
-		startActivity(actionMarket);
-		makeToast("Action Launcher is not installed!");
-	}
-	//finish();
-};
-
-
-
-private void applyAdwTheme(){
-	    String pkg = getResources().getString(R.string.pkg);
-		Intent adw = new Intent("org.adw.launcher.SET_THEME");
-		adw.putExtra("org.adw.launcher.theme.NAME",	pkg);
-	try {
-		startActivity(Intent.createChooser(adw,	"activating theme..."));
-		} 
-	catch (ActivityNotFoundException e) {
-		Intent adwMarket = new Intent(Intent.ACTION_VIEW);
-		adwMarket.setData(Uri.parse("market://details?id=org.adw.launcher"));
-		startActivity(adwMarket);
-		makeToast("Can't Find ADW Launcher");
-	}
-	//finish();
-}; 
-
-private void applyAdwExTheme(){
-	    String pkg = getResources().getString(R.string.pkg);
-	    Intent adwex = new Intent("org.adw.launcher.SET_THEME");
-	    adwex.putExtra("org.adw.launcher.theme.NAME", pkg);
-	try {
-		startActivity(Intent.createChooser(adwex,"Starting ADWEX..."));
-		} 
-	catch (ActivityNotFoundException e) {
-		Intent apexMarket = new Intent(Intent.ACTION_VIEW);
-		apexMarket.setData(Uri.parse("market://details?id=org.adwfreak.launcher"));
-		startActivity(apexMarket);
-		makeToast("Can't Find AdwEX");
-	}
-	//finish();
- }; 
-
-private void applyApexTheme() {
-	    String pkg = getResources().getString(R.string.pkg);
-	    Intent apex = new Intent("com.anddoes.launcher.SET_THEME");
-	    apex.putExtra("com.anddoes.launcher.THEME_PACKAGE_NAME", pkg);
-	    apex.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-	try {
-		startActivity(apex);
-		} 
-	catch (ActivityNotFoundException e) {
-		Intent apexMarket = new Intent(Intent.ACTION_VIEW);
-		apexMarket.setData(Uri.parse("market://details?id=com.anddoes.launcher"));
-		startActivity(apexMarket);
-		makeToast("Can't Find Apex Launcher");
-	}
-	//finish();
- }; 
-
-private void applyNovaTheme(){
-		String pkg = getResources().getString(R.string.pkg);
-		Intent nova = new Intent("com.teslacoilsw.launcher.APPLY_ICON_THEME");
-		nova.setPackage("com.teslacoilsw.launcher");
-		nova.putExtra("com.teslacoilsw.launcher.extra.ICON_THEME_TYPE", "GO");
-		nova.putExtra("com.teslacoilsw.launcher.extra.ICON_THEME_PACKAGE",pkg);
-	try {
-			startActivity(nova);
-		} 
-	catch (ActivityNotFoundException e) {
-		Intent novaMarket = new Intent(Intent.ACTION_VIEW);
-		novaMarket.setData(Uri.parse("market://details?id=com.teslacoilsw.launcher"));
-		startActivity(novaMarket);
-		makeToast("Can't Nova Launcher");
-	}
-	//finish();
-};
-
-
-private void applyGoTheme() {
-        String pkg = getResources().getString(R.string.pkg);	
-	    Intent go = new Intent("com.gau.go.launcherex.MyThemes.mythemeaction");
-		go.putExtra("type", 1);
-		go.putExtra("pkgname",pkg);
-		sendBroadcast(go);	
-		Toast.makeText(getApplicationContext(), "Theme applied for GO LAUNCHER", Toast.LENGTH_SHORT).show();
-return;
-};
-
-private Context getApplicationContext() {
-	// TODO Auto-generated method stub
-	return null;
-}
-
-private void sendBroadcast(Intent intent) {
-	// TODO Auto-generated method stub
-	
-}
-
-
-private void makeToast(String string) {
-	// TODO Auto-generated method stub
-	
-}
-
 }

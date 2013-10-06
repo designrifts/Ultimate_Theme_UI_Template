@@ -1,7 +1,6 @@
 package com.designrifts.ultimatethemeui;
 
 import java.io.FileNotFoundException;
-import com.designrifts.ultimatethemeui.R;
 import android.content.ContentProvider;
 import android.content.ContentValues;
 import android.content.res.AssetFileDescriptor;

@@ -8,6 +8,7 @@
     <string name="developer_name">DesignRifts</string>
     <string name="pkg">com.designrifts.ultimatethemeui</string>
     <string name="apply_wallpaper">Apply</string>
+    <string name="go_applied">Theme Applied</string>
     
     <!-- Theme settings -->
     <bool name="config_iconpack">true</bool>
