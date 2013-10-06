@@ -41,7 +41,7 @@ public class IconActivity extends FragmentActivity{
 	private final Handler handler = new Handler();
 	private PagerSlidingTabStrip tabs;
 	private ViewPager pager;
-	private MyPagerAdapter adapter;
+	private IconPagerAdapter adapter;
 	private ShareActionProvider mShareActionProvider;
 	private Intent mShareIntent;
 	
@@ -62,7 +62,7 @@ public class IconActivity extends FragmentActivity{
 	        tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
 			ViewPager pager = (ViewPager) findViewById(R.id.pager);
 		
-			adapter = new MyPagerAdapter(getSupportFragmentManager());
+			adapter = new IconPagerAdapter(getSupportFragmentManager());
 
 			pager.setAdapter(adapter);
 			
@@ -94,11 +94,11 @@ public class IconActivity extends FragmentActivity{
 	}
 
 
-	public class MyPagerAdapter extends FragmentPagerAdapter {
+	public class IconPagerAdapter extends FragmentPagerAdapter {
 
 		private final int[] TITLES = { R.string.icon1, R.string.icon2 };
 
-		public MyPagerAdapter(FragmentManager fm) {
+		public IconPagerAdapter(FragmentManager fm) {
 			super(fm);
 		}
 
@@ -122,7 +122,7 @@ public class IconActivity extends FragmentActivity{
 				f= new FragmentNew();	
 				break;
 			case 1:
-				f= new FragmentNew();
+				f= new IconFragmentSystem();
 				break;
 			}
 			return f;

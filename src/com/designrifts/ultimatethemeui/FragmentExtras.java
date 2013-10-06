@@ -51,13 +51,13 @@ public class FragmentExtras extends Fragment  implements Card.CardMenuListener<C
     private void actIcons() {
     	String pkg = getResources().getString(R.string.pkg);
     	Intent iconfrag = new Intent(Intent.ACTION_MAIN);
-    	iconfrag.setComponent(new ComponentName(pkg,pkg+".IconsActivity"));
+    	iconfrag.setComponent(new ComponentName(pkg,pkg+".IconActivity"));
 
     	try {        
             startActivity(iconfrag);
     		}
-    	catch (RuntimeException wall) {
-    		wall.printStackTrace();
+    	catch (RuntimeException icons) {
+    		icons.printStackTrace();
     	}
     };
     private void actRequest() {
@@ -126,7 +126,7 @@ public class FragmentExtras extends Fragment  implements Card.CardMenuListener<C
 				); 
 		cardsAdapter.add(new Card(getString(R.string.icon), getString(R.string.icon_extra))
 				.setThumbnail(getActivity(), R.drawable.icon) // sets a thumbnail image from drawable resources
-				
+				.setPopupMenu(-1, null) // -1 disables the popup menu for this individual card
 				); 	
 		cardsAdapter.add(new Card(getString(R.string.request), getString(R.string.request_extra))
 				.setThumbnail(getActivity(), R.drawable.apps_androidactivities) // sets a thumbnail image from drawable resources
@@ -155,93 +155,9 @@ public class FragmentExtras extends Fragment  implements Card.CardMenuListener<C
 	}
 	
 
-    @Override
-    public void onMenuItemClick(Card card, MenuItem item) {
-        // Handle item selection
-        switch (item.getItemId()) {
-            case R.id.latesticons:
-                actLatestIcons();
-            break;
-            case R.id.systemicons:
-                actSystemIcons();
-            break;
-            case R.id.playicons:
-                actPlayIcons();
-            break;
-            case R.id.gamesicons:
-                actGamesIcons();
-            break;
-            case R.id.miscicons:
-                actMiscIcons();
-            break;
-        }
-    }
+	public void onMenuItemClick(Card card, MenuItem item) {
+	    Toast.makeText(getActivity(), card.getTitle() + ": " + item.getTitle(), Toast.LENGTH_SHORT).show();
+	}
     
-
-    private void actLatestIcons() {
-    	
-    	String pkg = getResources().getString(R.string.pkg);
-    	Intent latesticons = new Intent(Intent.ACTION_MAIN);
-    	latesticons.setComponent(new ComponentName(pkg,pkg+".iconslatest"));
-
-    	try {        
-            startActivity(latesticons);
-    		}
-    	catch (RuntimeException wall) {
-    		wall.printStackTrace();
-    	}
-    };
-    private void actSystemIcons() {
-    	
-    	String pkg = getResources().getString(R.string.pkg);
-    	Intent systemicons = new Intent(Intent.ACTION_MAIN);
-    	systemicons.setComponent(new ComponentName(pkg,pkg+".iconssystem"));
-
-    	try {        
-            startActivity(systemicons);
-    		}
-    	catch (RuntimeException wall) {
-    		wall.printStackTrace();
-    	}
-    };
-    private void actPlayIcons() {
-    	
-    	String pkg = getResources().getString(R.string.pkg);
-    	Intent playicons = new Intent(Intent.ACTION_MAIN);
-    	playicons.setComponent(new ComponentName(pkg,pkg+".iconsplay"));
-
-    	try {        
-            startActivity(playicons);
-    		}
-    	catch (RuntimeException wall) {
-    		wall.printStackTrace();
-    	}
-    };
-    private void actGamesIcons() {
-    	
-    	String pkg = getResources().getString(R.string.pkg);
-    	Intent gamesicons = new Intent(Intent.ACTION_MAIN);
-    	gamesicons.setComponent(new ComponentName(pkg,pkg+".iconsgames"));
-
-    	try {        
-            startActivity(gamesicons);
-    		}
-    	catch (RuntimeException wall) {
-    		wall.printStackTrace();
-    	}
-    };
-    private void actMiscIcons() {
-    	
-    	String pkg = getResources().getString(R.string.pkg);
-    	Intent miscicons = new Intent(Intent.ACTION_MAIN);
-    	miscicons.setComponent(new ComponentName(pkg,pkg+".iconsmisc"));
-
-    	try {        
-            startActivity(miscicons);
-    		}
-    	catch (RuntimeException wall) {
-    		wall.printStackTrace();
-    	}
-    };
     
 }
