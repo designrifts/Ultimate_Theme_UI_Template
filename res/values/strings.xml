@@ -96,6 +96,9 @@
 	<string name="tab4">Text</string>
 	
 	<!-- Icon Tabs -->
-	<string name="icon1">All</string>
-    <string name="icon2">New</string>    
+	<string name="icon1">Latest Icons</string>
+    <string name="icon2">System Icons</string>
+    <string name="icon3">Play Icons</string>
+    <string name="icon4">Games Icons</string>
+    <string name="icon5">Misc Icons</string>    
 </resources>

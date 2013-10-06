@@ -96,7 +96,7 @@ public class IconActivity extends FragmentActivity{
 
 	public class IconPagerAdapter extends FragmentPagerAdapter {
 
-		private final int[] TITLES = { R.string.icon1, R.string.icon2 };
+		private final int[] TITLES = { R.string.icon1, R.string.icon2, R.string.icon3, R.string.icon4, R.string.icon5 };
 
 		public IconPagerAdapter(FragmentManager fm) {
 			super(fm);
@@ -110,6 +110,12 @@ public class IconActivity extends FragmentActivity{
 				return getString(R.string.icon1).toUpperCase(l);
 			case 1:
 				return getString(R.string.icon2).toUpperCase(l);
+			case 2:
+				return getString(R.string.icon3).toUpperCase(l);
+			case 3:
+				return getString(R.string.icon4).toUpperCase(l);
+			case 4:
+				return getString(R.string.icon5).toUpperCase(l);	
 			}
 			return null;
 		}
@@ -124,6 +130,15 @@ public class IconActivity extends FragmentActivity{
 			case 1:
 				f= new IconFragmentSystem();
 				break;
+			case 2:
+				f= new FragmentNew();	
+				break;
+			case 3:
+				f= new FragmentNew();	
+				break;
+			case 4:
+				f= new FragmentNew();	
+				break;	
 			}
 			return f;
 		}

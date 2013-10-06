@@ -17,32 +17,21 @@ import java.util.ArrayList;
 	public class IconFragmentSystem extends Fragment implements AdapterView.OnItemClickListener{
 	    private static final String RESULT_OK = null;
 		public Uri CONTENT_URI;
-	    
+
 	    public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
-	    	
+
 			View view = inflater.inflate(R.layout.main, container, false);
 
 	        super.onCreate(savedInstanceState);
 	        int iconSize=getResources().getDimensionPixelSize(android.R.dimen.app_icon_size);
-	        
-	        GridView i=(GridView) findViewById(R.id.icon_grid);
-	        i.setNumColumns(GridView.AUTO_FIT);
-	        i.setColumnWidth(iconSize);
-	        i.setStretchMode(GridView.STRETCH_SPACING_UNIFORM);
-	        i.setVerticalSpacing(iconSize/3);
-	        i.setOnItemClickListener(this);
-	        IconAdapter adapter=new IconAdapter(this,iconSize);
-	        i.setAdapter(adapter);
-	        i.setOnItemClickListener(this);
+
+	        GridView gridview = (GridView) getActivity().findViewById(R.id.icon_grid);
+	        gridview.setAdapter(new IconAdapter(this, iconSize));
+	        gridview.setOnItemClickListener(this);
 	        CONTENT_URI=Uri.parse("content://"+iconsProvider.class.getCanonicalName());
 			return view;
 	    }
-
-	    private GridView findViewById(int iconGrid) {
-			// TODO Auto-generated method stub
-			return null;
-		}
 
 		@Override
 	    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -53,12 +42,12 @@ import java.util.ArrayList;
 	    }
 	    private void setResult(String resultOk, Intent result) {
 			// TODO Auto-generated method stub
-			
+
 		}
 
 		private void finish() {
 			// TODO Auto-generated method stub
-			
+
 		}
 		private class IconAdapter extends BaseAdapter{
 			private Context mContext;
@@ -128,4 +117,3 @@ import java.util.ArrayList;
 
 	    }
 	}
-
