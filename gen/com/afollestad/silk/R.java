@@ -25,10 +25,10 @@ public final class R {
 		public static final int year = 0x7f0c000a;
 	}
 	public static final class layout {
-		public static final int fragment_list = 0x7f030003;
-		public static final int fragment_pager = 0x7f030005;
-		public static final int silk_date_picker = 0x7f03000c;
-		public static final int spinner_item = 0x7f03000d;
-		public static final int spinner_item_dropdown = 0x7f03000e;
+		public static final int fragment_list = 0x7f030004;
+		public static final int fragment_pager = 0x7f030006;
+		public static final int silk_date_picker = 0x7f03000d;
+		public static final int spinner_item = 0x7f03000e;
+		public static final int spinner_item_dropdown = 0x7f03000f;
 	}
 }

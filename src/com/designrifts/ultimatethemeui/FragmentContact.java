@@ -28,11 +28,11 @@ public class FragmentContact extends Fragment implements
 	private CardListView list;
  
 	private void actGPlus() {
-		Uri twitteruriString = Uri.parse("http://gplus.to/designrifts");
-		Intent twitterIntent = new Intent("android.intent.action.VIEW",
-				twitteruriString);
+		Uri gplusuriString = Uri.parse("http://gplus.to/designrifts");
+		Intent gplusIntent = new Intent("android.intent.action.VIEW",
+				gplusuriString);
 		try {
-			startActivity(twitterIntent);
+			startActivity(gplusIntent);
 		} catch (ActivityNotFoundException e2) {
 			e2.printStackTrace();
 		}

@@ -28,9 +28,9 @@ public class FragmentExtras extends Fragment  implements Card.CardMenuListener<C
 	
     private void actPlay() {
     	String marketuriString = "market://search?q=designrifts";
-    	Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(marketuriString));
+    	Intent playintent = new Intent(Intent.ACTION_VIEW, Uri.parse(marketuriString));
     	try {
-    		startActivity(intent);
+    		startActivity(playintent);
     	} catch (ActivityNotFoundException e2) {
     		e2.printStackTrace();
     		Toast.makeText(getActivity().getApplicationContext(), "Play Store not found!", Toast.LENGTH_LONG).show();
@@ -43,6 +43,18 @@ public class FragmentExtras extends Fragment  implements Card.CardMenuListener<C
 
     	try {        
             startActivity(wallpapers);
+    		}
+    	catch (RuntimeException wall) {
+    		wall.printStackTrace();
+    	}
+    };
+    private void actIcons() {
+    	String pkg = getResources().getString(R.string.pkg);
+    	Intent iconfrag = new Intent(Intent.ACTION_MAIN);
+    	iconfrag.setComponent(new ComponentName(pkg,pkg+".IconsActivity"));
+
+    	try {        
+            startActivity(iconfrag);
     		}
     	catch (RuntimeException wall) {
     		wall.printStackTrace();
@@ -80,6 +92,9 @@ public class FragmentExtras extends Fragment  implements Card.CardMenuListener<C
 				}
 				if (str.equals(getString(R.string.wallpaper))) {
 					actWallpapers();
+				}
+				if (str.equals(getString(R.string.icon))) {
+					actIcons();
 				}
 				if (str.equals(getString(R.string.request))) {
 					actRequest();

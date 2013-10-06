@@ -1,6 +1,6 @@
 package com.designrifts.ultimatethemeui;
 
-	import com.designrifts.ultimatethemeui.R;
+import com.designrifts.ultimatethemeui.R;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -106,4 +106,3 @@ import java.util.ArrayList;
 
 	    }
 	}
-

@@ -29,7 +29,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.ShareCompat;
 import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.PageTransformer;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -37,10 +36,9 @@ import android.widget.ShareActionProvider;
 import com.astuetz.viewpager.extensions.PagerSlidingTabStrip;
 
 
-public class ThemeActivity extends FragmentActivity{
+public class IconActivity extends FragmentActivity{
 
 	private final Handler handler = new Handler();
-
 	private PagerSlidingTabStrip tabs;
 	private ViewPager pager;
 	private MyPagerAdapter adapter;
@@ -55,7 +53,7 @@ public class ThemeActivity extends FragmentActivity{
 	        getActionBar().setDisplayShowHomeEnabled(false);
 
 	        super.onCreate(savedInstanceState);
-	        setContentView(R.layout.activity_main);
+	        setContentView(R.layout.activity_icon);
 			mShareIntent = new Intent();
 			mShareIntent.setAction(Intent.ACTION_SEND);
 			mShareIntent.setType("text/plain");
@@ -98,7 +96,7 @@ public class ThemeActivity extends FragmentActivity{
 
 	public class MyPagerAdapter extends FragmentPagerAdapter {
 
-		private final int[] TITLES = { R.string.tab1, R.string.tab2, R.string.tab3, R.string.tab4 };
+		private final int[] TITLES = { R.string.icon1, R.string.icon2 };
 
 		public MyPagerAdapter(FragmentManager fm) {
 			super(fm);
@@ -109,13 +107,9 @@ public class ThemeActivity extends FragmentActivity{
 			Locale l = Locale.getDefault();
 			switch (position) {
 			case 0:
-				return getString(R.string.tab1).toUpperCase(l);
+				return getString(R.string.icon1).toUpperCase(l);
 			case 1:
-				return getString(R.string.tab2).toUpperCase(l);
-			case 2:
-				return getString(R.string.tab3).toUpperCase(l);
-			case 3:
-				return getString(R.string.tab4).toUpperCase(l);	
+				return getString(R.string.icon2).toUpperCase(l);
 			}
 			return null;
 		}
@@ -125,17 +119,11 @@ public class ThemeActivity extends FragmentActivity{
 			Fragment f = new Fragment();
 			switch(position){
 			case 0:
-				f= new FragmentTheme();	
+				f= new FragmentNew();	
 				break;
 			case 1:
-				f= new FragmentExtras();
+				f= new FragmentNew();
 				break;
-			case 2:
-				f= new FragmentContact();	
-				break;
-			case 3:
-				f= new FragmentText();	
-				break;	
 			}
 			return f;
 		}

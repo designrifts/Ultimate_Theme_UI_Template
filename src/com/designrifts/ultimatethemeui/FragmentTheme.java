@@ -67,11 +67,11 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 	}
 	private void applyActionLauncherTheme(){
 		try {
-			Intent intent = getActivity().getPackageManager().getLaunchIntentForPackage("com.chrislacy.actionlauncher.pro");
-			if (intent != null) {
+			Intent actionlauncherIntent = getActivity().getPackageManager().getLaunchIntentForPackage("com.chrislacy.actionlauncher.pro");
+			if (actionlauncherIntent != null) {
 	            // TODO BY YOU: set this package name as appropriate. Eg "kov.theme.stark"
-	            intent.putExtra("apply_icon_pack",getActivity().getPackageName());
-	            startActivity(intent);    // Action Launcher will take it from here...
+				actionlauncherIntent.putExtra("apply_icon_pack",getActivity().getPackageName());
+	            startActivity(actionlauncherIntent);    // Action Launcher will take it from here...
 	        } else {
 	            // Direct users to get Action Launcher Pro
 	            String playStoreUrl = "https://play.google.com/store/apps/details?id=com.chrislacy.actionlauncher.pro";
@@ -85,9 +85,9 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 	}
 	private void applyAdwTheme(){
 		try {
-			Intent intent = new Intent(Intent.ACTION_MAIN);
-	    	intent.setComponent(new ComponentName("org.adw.launcher","org.adw.launcher.Launcher"));
-	    	startActivity(intent);
+			Intent adwlauncherIntent = new Intent(Intent.ACTION_MAIN);
+			adwlauncherIntent.setComponent(new ComponentName("org.adw.launcher","org.adw.launcher.Launcher"));
+	    	startActivity(adwlauncherIntent);
 	    	makeToast("Apply with \"ADW Settings\" in Menu");
 		} catch (ActivityNotFoundException e4) {
 			e4.printStackTrace();
@@ -97,9 +97,9 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 	}
 	private void applyAdwExTheme(){
 		try {
-			Intent intent = new Intent("org.adw.launcher.SET_THEME");
-	        intent.putExtra("org.adw.launcher.theme.NAME",getActivity().getPackageName());
-	        startActivity(Intent.createChooser(intent,"ADW Not Installed"));
+			Intent adwexlauncherIntent = new Intent("org.adw.launcher.SET_THEME");
+			adwexlauncherIntent.putExtra("org.adw.launcher.theme.NAME",getActivity().getPackageName());
+	        startActivity(Intent.createChooser(adwexlauncherIntent,"ADW Not Installed"));
 		} catch (ActivityNotFoundException e5) {
 			e5.printStackTrace();
 			makeToast("ADW EX is not installed!");
@@ -111,11 +111,11 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 		final String ACTION_SET_THEME = "com.anddoes.launcher.SET_THEME";
 		final String EXTRA_PACKAGE_NAME = "com.anddoes.launcher.THEME_PACKAGE_NAME";
 
-		Intent intent = new Intent(ACTION_SET_THEME);
-		intent.putExtra(EXTRA_PACKAGE_NAME, getActivity().getPackageName());
-		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		Intent apexlauncherIntent = new Intent(ACTION_SET_THEME);
+		apexlauncherIntent.putExtra(EXTRA_PACKAGE_NAME, getActivity().getPackageName());
+		apexlauncherIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		try {
-		    startActivity(intent);
+		    startActivity(apexlauncherIntent);
 		} catch (ActivityNotFoundException e3) {
 			e3.printStackTrace();
 		    makeToast("Apex Launcher is not installed!");
@@ -125,11 +125,11 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 	
 	private void applyNovaTheme(){
 		try {
-			Intent intent = new Intent(ACTION_APPLY_ICON_THEME);
-			intent.setPackage(NOVA_PACKAGE);
-			intent.putExtra(EXTRA_ICON_THEME_TYPE, "GO");
-			intent.putExtra(EXTRA_ICON_THEME_PACKAGE, getActivity().getPackageName());
-			startActivity(intent);
+			Intent novalauncherIntent = new Intent(ACTION_APPLY_ICON_THEME);
+			novalauncherIntent.setPackage(NOVA_PACKAGE);
+			novalauncherIntent.putExtra(EXTRA_ICON_THEME_TYPE, "GO");
+			novalauncherIntent.putExtra(EXTRA_ICON_THEME_PACKAGE, getActivity().getPackageName());
+			startActivity(novalauncherIntent);
 
 		} catch (ActivityNotFoundException e6) {
 			e6.printStackTrace();
