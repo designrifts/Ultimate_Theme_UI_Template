@@ -1,3 +1,9 @@
+/* This program is free software. It comes without any warranty, to
+ * the extent permitted by applicable law. You can redistribute it
+ * and/or modify it under the terms of the Do What The Fuck You Want
+ * To Public License, Version 2, as published by Sam Hocevar. See
+ * http://sam.zoy.org/wtfpl/COPYING for more details. */
+
 package com.designrifts.ultimatethemeui;
 
 import com.designrifts.ultimatethemeui.R;
@@ -22,7 +28,7 @@ import java.util.ArrayList;
 	    public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
 
-			View view = inflater.inflate(R.layout.main, container, false);
+			View view = inflater.inflate(R.layout.icon_main, container, false);
 	        int iconSize=getResources().getDimensionPixelSize(android.R.dimen.app_icon_size);
 	        GridView gridview = (GridView) view.findViewById(R.id.icon_grid);
 	        gridview.setNumColumns(GridView.AUTO_FIT);

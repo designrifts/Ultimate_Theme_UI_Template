@@ -1,3 +1,18 @@
+/*
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package com.designrifts.ultimatethemeui;
 
 import android.app.AlertDialog;
@@ -224,6 +239,10 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 				.setThumbnail(getActivity(),R.drawable.apps_novalauncher) // sets a thumbnail image from drawable resources
 				.setPopupMenu(-1, null) // -1 disables the popup menu for this individual card
 				); 
+		cardsAdapter.add(new Card(getString(R.string.smartlauncher), getString(R.string.smartlauncher_extra))
+				.setThumbnail(getActivity(),R.drawable.apps_smartlauncher) // sets a thumbnail image from drawable resources
+				.setPopupMenu(-1, null) // -1 disables the popup menu for this individual card
+				);
 		cardsAdapter.add(new Card(getString(R.string.golauncher), getString(R.string.golauncher_extra))
 				.setThumbnail(getActivity(),R.drawable.apps_golauncher) // sets a thumbnail image from drawable resources
 				.setPopupMenu(-1, null) // -1 disables the popup menu for this individual card

@@ -2,12 +2,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true" >
     
-              
-    <GridView
-        android:id="@+id/icon_grid"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
+		<Button
+        	android:id="@+id/button"
+        	android:text="@string/begin_activity_scan"
+        	style="@style/bttn" 
+        	android:background="@drawable/info_btn" />
+
+		<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+			style="@style/scan_description"
+		    android:layout_below="@+id/button"
+		    android:text="@string/scan_note" />
 
 </RelativeLayout>

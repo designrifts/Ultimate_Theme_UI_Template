@@ -1,3 +1,18 @@
+/*
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package com.designrifts.ultimatethemeui;
  
 
@@ -28,7 +43,7 @@ public class FragmentContact extends Fragment implements
 	private CardListView list;
  
 	private void actGPlus() {
-		Uri gplusuriString = Uri.parse("http://gplus.to/designrifts");
+		Uri gplusuriString = Uri.parse(getString(R.string.gplus_link));
 		Intent gplusIntent = new Intent("android.intent.action.VIEW",
 				gplusuriString);
 		try {
@@ -39,7 +54,7 @@ public class FragmentContact extends Fragment implements
 	}
  
 	private void actTwitter() {
-		Uri twitteruriString = Uri.parse("http://twitter.com/designrifts");
+		Uri twitteruriString = Uri.parse(getString(R.string.twitter_link));
 		Intent twitterIntent = new Intent("android.intent.action.VIEW",
 				twitteruriString);
 		try {
@@ -50,7 +65,7 @@ public class FragmentContact extends Fragment implements
 	}
  
 	private void actFacebook() {
-		Uri facebookuriString = Uri.parse("http://facebook.com");
+		Uri facebookuriString = Uri.parse(getString(R.string.facebook_link));
 		Intent facebookIntent = new Intent("android.intent.action.VIEW",
 				facebookuriString);
 		try {
@@ -60,19 +75,8 @@ public class FragmentContact extends Fragment implements
 		}
 	}
 	
-	private void actPlay() {
-		Uri playuriString = Uri.parse("http://play.google.com/store/apps/developer?id=DesignRifts");
-		Intent playIntent = new Intent("android.intent.action.VIEW",
-				playuriString);
-		try {
-			startActivity(playIntent);
-		} catch (ActivityNotFoundException e2) {
-			e2.printStackTrace();
-		}
-	}
- 
 	private void actEmail() {
-		Uri emailuriString = Uri.parse("mailto:designrifts@gmail.com");
+		Uri emailuriString = Uri.parse(getString(R.string.email_link));
 		Intent emailIntent = new Intent("android.intent.action.VIEW",
 				emailuriString);
 		try {
@@ -83,7 +87,7 @@ public class FragmentContact extends Fragment implements
 	}
  
 	private void actWeb() {
-		Uri weburiString = Uri.parse("http://designrifts.com/");
+		Uri weburiString = Uri.parse(getString(R.string.web_link));
 		Intent webIntent = new Intent("android.intent.action.VIEW",
 				weburiString);
 		try {
@@ -124,9 +128,6 @@ public class FragmentContact extends Fragment implements
 				}
 				if (str.equals(getString(R.string.web))) {
 					actWeb();
-				}
-				if (str.equals(getString(R.string.play))) {
-					actPlay();
 				}
 			}
 		});
@@ -171,13 +172,7 @@ public class FragmentContact extends Fragment implements
 				.setThumbnail(getActivity(), R.drawable.system_browser) // sets a thumbnail image from drawable resources
 				.setPopupMenu(-1, null) // -1 disables the popup menu for this individual card
 				); 
-		// drawable resources
-		cardsAdapter.add(new CardHeader(getActivity(), R.string.playheader));
-		cardsAdapter.add(new Card(getString(R.string.play),
-				getString(R.string.play_extra))
-				.setThumbnail(getActivity(), R.drawable.apps_googleplaystore) // sets a thumbnail image from drawable resources
-				.setPopupMenu(-1, null) // -1 disables the popup menu for this individual card
-				); 
+
 		list.setAdapter(cardsAdapter);
 	}
  

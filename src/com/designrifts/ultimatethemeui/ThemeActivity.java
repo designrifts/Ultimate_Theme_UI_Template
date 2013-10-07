@@ -52,7 +52,7 @@ public class ThemeActivity extends FragmentActivity{
 	    public void onCreate(Bundle savedInstanceState) {
 	        // This is quick way of theming the action bar without using styles.xml (e.g. using ActionBar Style Generator)
 	        getActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(android.R.color.holo_blue_dark)));
-	        getActionBar().setDisplayShowHomeEnabled(false);
+	        getActionBar().setDisplayShowHomeEnabled(true); //setting false will make the actionbar hide your app icon
 
 	        super.onCreate(savedInstanceState);
 	        setContentView(R.layout.activity_main);

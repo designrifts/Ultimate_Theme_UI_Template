@@ -22,7 +22,7 @@ public class icons extends Activity implements AdapterView.OnItemClickListener{
         getActionBar().setDisplayShowHomeEnabled(false);
         super.onCreate(savedInstanceState);
         int iconSize=getResources().getDimensionPixelSize(android.R.dimen.app_icon_size);
-        setContentView(R.layout.main);
+        setContentView(R.layout.icon_main);
         GridView i=(GridView) findViewById(R.id.icon_grid);
         i.setNumColumns(GridView.AUTO_FIT);
         i.setColumnWidth(iconSize);

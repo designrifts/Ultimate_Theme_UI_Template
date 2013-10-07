@@ -34,7 +34,7 @@ public class IconPack extends Activity implements OnItemClickListener {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         int iconSize=getResources().getDimensionPixelSize(android.R.dimen.app_icon_size);
-        setContentView(R.layout.main);
+        setContentView(R.layout.icon_main);
         GridView g=(GridView) findViewById(R.id.icon_grid);
         g.setNumColumns(GridView.AUTO_FIT);
         g.setColumnWidth(iconSize);

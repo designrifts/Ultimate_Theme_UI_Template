@@ -1,3 +1,18 @@
+/*
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package com.designrifts.ultimatethemeui;
 
 import android.content.ActivityNotFoundException;
@@ -27,8 +42,8 @@ public class FragmentExtras extends Fragment  implements Card.CardMenuListener<C
 	private CardListView list;
 	
     private void actPlay() {
-    	String marketuriString = "market://search?q=designrifts";
-    	Intent playintent = new Intent(Intent.ACTION_VIEW, Uri.parse(marketuriString));
+    	Uri marketuriString = Uri.parse(getString(R.string.play_link)); 
+    	Intent playintent = new Intent(Intent.ACTION_VIEW, marketuriString);
     	try {
     		startActivity(playintent);
     	} catch (ActivityNotFoundException e2) {
@@ -61,15 +76,58 @@ public class FragmentExtras extends Fragment  implements Card.CardMenuListener<C
     	}
     };
     private void actRequest() {
-     	 Uri requesturiString = Uri.parse("https://docs.google.com/document/d/1yhf2KysfD9T6sToJs7iI8QxH8_SA5ZYEevjFLXvCdio/edit?usp=sharing");
-          Intent requestIntent = new Intent("android.intent.action.VIEW", requesturiString);
-          try {
-     		  startActivity(requestIntent);
+    	String pkg = getResources().getString(R.string.pkg);
+    	Intent iconrequest = new Intent(Intent.ACTION_MAIN);
+    	iconrequest.setComponent(new ComponentName(pkg,pkg+".IconRequest"));
+
+    	try {        
+            startActivity(iconrequest);
+    		}
+    	catch (RuntimeException icons) {
+    		icons.printStackTrace();
+    	}
+    };
+    private void actUCCW() {
+   	 Uri uccwuriString = Uri.parse(getString(R.string.uccw_link)); 
+      Intent uccwIntent = new Intent("android.intent.action.VIEW", uccwuriString);
+      try {
+   		  startActivity(uccwIntent);
+   		} catch (ActivityNotFoundException e2) {
+   		  e2.printStackTrace();
+   		}
+
+   };
+   private void actZooper() {
+	   	 Uri zooperuriString = Uri.parse(getString(R.string.zooper_link)); 
+	      Intent zooperIntent = new Intent("android.intent.action.VIEW", zooperuriString);
+	      try {
+	   		  startActivity(zooperIntent);
+	   		} catch (ActivityNotFoundException e2) {
+	   		  e2.printStackTrace();
+	   		}
+
+	};
+    private void actExtras1() {
+     	 Uri extras1uriString = Uri.parse(getString(R.string.extras1_link)); //use this to link to your UCCW skins on Play or Website
+        Intent extras1Intent = new Intent("android.intent.action.VIEW", extras1uriString);
+        try {
+     		  startActivity(extras1Intent);
      		} catch (ActivityNotFoundException e2) {
      		  e2.printStackTrace();
      		}
 
      };
+    private void actExtras2() {
+      	 Uri extras2uriString = Uri.parse(getString(R.string.extras2_link)); //use this to link to your UCCW skins on Play or Website
+         Intent extras2Intent = new Intent("android.intent.action.VIEW", extras2uriString);
+         try {
+      		  startActivity(extras2Intent);
+      		} catch (ActivityNotFoundException e2) {
+      		  e2.printStackTrace();
+      		}
+
+      };
+	   
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -98,6 +156,18 @@ public class FragmentExtras extends Fragment  implements Card.CardMenuListener<C
 				}
 				if (str.equals(getString(R.string.request))) {
 					actRequest();
+				}
+				if (str.equals(getString(R.string.uccw))) {
+					actUCCW();
+				}
+				if (str.equals(getString(R.string.zooper))) {
+					actZooper();
+				}
+				if (str.equals(getString(R.string.extras1))) {
+					actExtras1();
+				}
+				if (str.equals(getString(R.string.extras2))) {
+					actExtras2();
 				}
 			}
 		});

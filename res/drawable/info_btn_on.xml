@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <shape android:shape="rectangle" >
+
+            <!-- <corners android:radius="0dip" /> -->
+
+            <solid android:color="@color/Button_On" />
+
+            <stroke
+                android:width="1dip"
+                android:color="@color/Button_On" />
+
+            <corners
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="0dp"
+                android:topLeftRadius="0dp"
+                android:topRightRadius="0dp" />
+
+			 </shape>
+    </item>
+
+</layer-list>
