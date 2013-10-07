@@ -125,19 +125,19 @@ public class IconActivity extends FragmentActivity{
 			Fragment f = new Fragment();
 			switch(position){
 			case 0:
-				f= new FragmentNew();	
+				f= new IconFragmentLatest();	
 				break;
 			case 1:
 				f= new IconFragmentSystem();
 				break;
 			case 2:
-				f= new FragmentNew();	
+				f= new IconFragmentPlay();	
 				break;
 			case 3:
-				f= new FragmentNew();	
+				f= new IconFragmentGames();	
 				break;
 			case 4:
-				f= new FragmentNew();	
+				f= new IconFragmentMisc();	
 				break;	
 			}
 			return f;

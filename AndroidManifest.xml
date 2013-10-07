@@ -66,105 +66,13 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-    
-	    <activity
-	        android:name="iconslatest"
-	        android:icon="@drawable/icon"
-	        android:label="@string/icon_title">
-            
-	       <intent-filter>
-	           <action android:name="android.intent.action.GET_CONTENT" />
-	           <category android:name="android.intent.category.DEFAULT" />
-	           <category android:name="android.intent.category.OPENABLE" />
-	           <data android:mimeType="image/*" />
-	       </intent-filter>
-	       
-	       <intent-filter>
-	           <action android:name="android.intent.action.PICK" />
-	           <category android:name="android.intent.category.DEFAULT" />
-	           <data android:mimeType="image/*" />
-	        </intent-filter>
-	    </activity>
-	    <activity
-	        android:name="iconsmisc"
-	        android:icon="@drawable/icon"
-	        android:label="@string/icon_title">
-            
-	       <intent-filter>
-	           <action android:name="android.intent.action.GET_CONTENT" />
-	           <category android:name="android.intent.category.DEFAULT" />
-	           <category android:name="android.intent.category.OPENABLE" />
-	           <data android:mimeType="image/*" />
-	       </intent-filter>
-	       
-	       <intent-filter>
-	           <action android:name="android.intent.action.PICK" />
-	           <category android:name="android.intent.category.DEFAULT" />
-	           <data android:mimeType="image/*" />
-	        </intent-filter>
-	    </activity>
-		<activity
-	        android:name="iconssystem"
-	        android:icon="@drawable/icon"
-	        android:label="@string/icon_title">
-            
-	       <intent-filter>
-	           <action android:name="android.intent.action.GET_CONTENT" />
-	           <category android:name="android.intent.category.DEFAULT" />
-	           <category android:name="android.intent.category.OPENABLE" />
-	           <data android:mimeType="image/*" />
-	       </intent-filter>
-	       
-	       <intent-filter>
-	           <action android:name="android.intent.action.PICK" />
-	           <category android:name="android.intent.category.DEFAULT" />
-	           <data android:mimeType="image/*" />
-	        </intent-filter>
-	    </activity>
-	    <activity
-	        android:name="iconsplay"
-	        android:icon="@drawable/icon"
-	        android:label="@string/icon_title">
-            
-	       <intent-filter>
-	           <action android:name="android.intent.action.GET_CONTENT" />
-	           <category android:name="android.intent.category.DEFAULT" />
-	           <category android:name="android.intent.category.OPENABLE" />
-	           <data android:mimeType="image/*" />
-	       </intent-filter>
-	       
-	       <intent-filter>
-	           <action android:name="android.intent.action.PICK" />
-	           <category android:name="android.intent.category.DEFAULT" />
-	           <data android:mimeType="image/*" />
-	        </intent-filter>
-	    </activity>
-	    <activity
-	        android:name="iconsgames"
-	        android:icon="@drawable/icon"
-	        android:label="@string/icon_title">
-            
-	       <intent-filter>
-	           <action android:name="android.intent.action.GET_CONTENT" />
-	           <category android:name="android.intent.category.DEFAULT" />
-	           <category android:name="android.intent.category.OPENABLE" />
-	           <data android:mimeType="image/*" />
-	       </intent-filter>
-	       
-	       <intent-filter>
-	           <action android:name="android.intent.action.PICK" />
-	           <category android:name="android.intent.category.DEFAULT" />
-	           <data android:mimeType="image/*" />
-	        </intent-filter>
-	    </activity>	
-	    
- 
-               
+     
 	    <provider
 	        android:name="iconsProvider"
 	        android:authorities=".iconsProvider" 
 	    />
 	    
 	</application>
-
+	<!-- This allows UCCW skins to show in the app if you have added them (if this is a paid theme remove as you wont be able to access them, instead use the UCCW card to download) -->
+ 	<meta-data android:name="in.vineetsirohi.uccwtheme" android:value="2" />
 </manifest>

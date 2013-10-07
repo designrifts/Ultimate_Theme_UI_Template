@@ -1,52 +1,62 @@
 package com.designrifts.ultimatethemeui;
 
-	import com.designrifts.ultimatethemeui.R;
-import android.app.Activity;
+import com.designrifts.ultimatethemeui.R;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
-import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
+
 import java.util.ArrayList;
 
-	public class iconsmisc extends Activity implements AdapterView.OnItemClickListener{
-	    public Uri CONTENT_URI;
-	    @Override
-	    protected void onCreate(Bundle savedInstanceState) {
-	        // This is quick way of theming the action bar without using styles.xml (e.g. using ActionBar Style Generator)
-	        getActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(android.R.color.holo_blue_dark)));
-	        getActionBar().setDisplayShowHomeEnabled(false);
-	        super.onCreate(savedInstanceState);
+	public class IconFragmentPlay extends Fragment implements AdapterView.OnItemClickListener{
+	    private static final String RESULT_OK = null;
+		public Uri CONTENT_URI;
+
+	    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+				Bundle savedInstanceState) {
+
+			View view = inflater.inflate(R.layout.main, container, false);
 	        int iconSize=getResources().getDimensionPixelSize(android.R.dimen.app_icon_size);
-	        setContentView(R.layout.main);
-	        GridView i=(GridView) findViewById(R.id.icon_grid);
-	        i.setNumColumns(GridView.AUTO_FIT);
-	        i.setColumnWidth(iconSize);
-	        i.setStretchMode(GridView.STRETCH_SPACING_UNIFORM);
-	        i.setVerticalSpacing(iconSize/3);
-	        i.setOnItemClickListener(this);
-	        IconAdapter adapter=new IconAdapter(this,iconSize);
-	        i.setAdapter(adapter);
-	        i.setOnItemClickListener(this);
+	        GridView gridview = (GridView) view.findViewById(R.id.icon_grid);
+	        gridview.setNumColumns(GridView.AUTO_FIT);
+	        gridview.setColumnWidth(iconSize);
+	        gridview.setStretchMode(GridView.STRETCH_SPACING_UNIFORM);
+	        gridview.setVerticalSpacing(iconSize/3);
+	        gridview.setOnItemClickListener(this);
+	        gridview.setAdapter(new IconAdapter(getActivity(), iconSize));
+	        gridview.setOnItemClickListener(this);
 	        CONTENT_URI=Uri.parse("content://"+iconsProvider.class.getCanonicalName());
+			return view;
+			
 	    }
 
-	    @Override
+		@Override
 	    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 	        String icon=adapterView.getItemAtPosition(i).toString();
 	        Intent result = new Intent(null, Uri.withAppendedPath(CONTENT_URI,icon));
 	        setResult(RESULT_OK, result);
 	        finish();
 	    }
-	    private class IconAdapter extends BaseAdapter{
+	    private void setResult(String resultOk, Intent result) {
+			// TODO Auto-generated method stub
+
+		}
+
+		private void finish() {
+			// TODO Auto-generated method stub
+
+		}
+		private class IconAdapter extends BaseAdapter{
 			private Context mContext;
 			private int mIconSize;
 			public IconAdapter(Context mContext, int iconsize) {
-				super();
 				this.mContext = mContext;
 				this.mIconSize = iconsize;
 				loadIcon();
@@ -86,9 +96,9 @@ import java.util.ArrayList;
 	            mThumbs = new ArrayList<Integer>();
 
 	            final Resources resources = getResources();
-	            final String packageName = getApplication().getPackageName();
+	            final String packageName = getActivity().getApplication().getPackageName();
 
-	            addIcon(resources, packageName, R.array.miscicons);
+	            addIcon(resources, packageName, R.array.playicons);
 
 	        }
 	        private void addIcon(Resources resources, String packageName, int list) {
@@ -106,4 +116,3 @@ import java.util.ArrayList;
 
 	    }
 	}
-

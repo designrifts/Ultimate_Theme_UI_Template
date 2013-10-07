@@ -1,6 +1,7 @@
 package com.designrifts.ultimatethemeui;
 
 import com.designrifts.ultimatethemeui.R;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -22,15 +23,18 @@ import java.util.ArrayList;
 				Bundle savedInstanceState) {
 
 			View view = inflater.inflate(R.layout.main, container, false);
-
-	        super.onCreate(savedInstanceState);
 	        int iconSize=getResources().getDimensionPixelSize(android.R.dimen.app_icon_size);
-
-	        GridView gridview = (GridView) getActivity().findViewById(R.id.icon_grid);
-	        gridview.setAdapter(new IconAdapter(this, iconSize));
+	        GridView gridview = (GridView) view.findViewById(R.id.icon_grid);
+	        gridview.setNumColumns(GridView.AUTO_FIT);
+	        gridview.setColumnWidth(iconSize);
+	        gridview.setStretchMode(GridView.STRETCH_SPACING_UNIFORM);
+	        gridview.setVerticalSpacing(iconSize/3);
+	        gridview.setOnItemClickListener(this);
+	        gridview.setAdapter(new IconAdapter(getActivity(), iconSize));
 	        gridview.setOnItemClickListener(this);
 	        CONTENT_URI=Uri.parse("content://"+iconsProvider.class.getCanonicalName());
 			return view;
+			
 	    }
 
 		@Override
@@ -53,17 +57,12 @@ import java.util.ArrayList;
 			private Context mContext;
 			private int mIconSize;
 			public IconAdapter(Context mContext, int iconsize) {
-				super();
 				this.mContext = mContext;
 				this.mIconSize = iconsize;
 				loadIcon();
 			}
 
-	        public IconAdapter(IconFragmentSystem iconssystem, int iconSize) {
-				// TODO Auto-generated constructor stub
-			}
-
-			@Override
+	        @Override
 	        public int getCount() {
 	            return mThumbs.size();
 	        }
