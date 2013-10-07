@@ -75,7 +75,7 @@ public class IconRequest extends Activity {
 				pbarDialog = ProgressDialog.show(IconRequest.this,
 						"Please wait...", "Gathering application info...", true);
 
-				Thread kovThread = new Thread()
+				Thread designriftsThread = new Thread()
 				{
 					@Override
 					public void run()
@@ -135,7 +135,7 @@ public class IconRequest extends Activity {
 						handler.sendEmptyMessage(0);
 					}
 				};
-				kovThread.start();				
+				designriftsThread.start();				
 			}
 
 		});
