@@ -35,6 +35,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ShareActionProvider;
 import com.astuetz.viewpager.extensions.PagerSlidingTabStrip;
+import com.designrifts.ultimatethemeui.fragments.FragmentContact;
+import com.designrifts.ultimatethemeui.fragments.FragmentExtras;
+import com.designrifts.ultimatethemeui.fragments.FragmentAbout;
+import com.designrifts.ultimatethemeui.fragments.FragmentTheme;
 
 
 public class ThemeActivity extends FragmentActivity{
@@ -134,7 +138,7 @@ public class ThemeActivity extends FragmentActivity{
 				f= new FragmentContact();	
 				break;
 			case 3:
-				f= new FragmentText();	
+				f= new FragmentAbout();	
 				break;	
 			}
 			return f;

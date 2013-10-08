@@ -17,6 +17,10 @@
 package com.designrifts.ultimatethemeui;
 
 import com.designrifts.ultimatethemeui.R;
+import com.designrifts.ultimatethemeui.R.id;
+import com.designrifts.ultimatethemeui.R.layout;
+import com.designrifts.ultimatethemeui.R.string;
+
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.BufferedWriter;

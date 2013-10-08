@@ -10,10 +10,7 @@
     <string name="apply_wallpaper">Apply</string>
     <string name="go_applied">Theme Applied</string>
     
-    <!-- Theme settings -->
-    <bool name="config_iconpack">true</bool>
-    <bool name="config_apexskin">true</bool>
-    
+   
     <!-- The feature graphic will appear above the theme description -->
     <string name="theme_feature">feature</string>
     
@@ -22,94 +19,19 @@
     <string name="theme_preview2">preview2</string>
     
     <!-- Theme properties -->
-	<bool name="enableIconPack">true</bool>
-	<bool name="enableDockPack">true</bool>
 	<string name="authorName">DesignRifts</string>
 	<string name="developerName">DesignRifts</string>
 	<string name="authorLink">http://designrifts.com</string>
         
     <!-- Share Button -->
+    <!-- This is additional text that is attached to your package when sharing the link -->
     <string name="share_this">Check This Shit Out Homie </string> 
    
     <!-- This (optional) link will appear at the end of the theme description -->
     <string name="developer_link">http://www.designrifts.com/</string>
     <string name="theme_description">It is Fresh</string>
-      
-    <!-- Theme Tab -->
-    <string name="tab1">Theme</string>
-    <string name="themeheader">How Would You Like To Apply?</string>
-	<string name="apply">Apply</string>
-    <string name="actionlauncher">Action</string>
-    <string name="actionlauncher_extra">Launcher has bastard children on Jupiter</string>
-    <string name="adwlauncher">ADW</string>
-    <string name="adwlauncher_extra">Launcher was the tits</string>
-    <string name="apexlauncher">Apex</string>
-    <string name="apexlauncher_extra">Launcher is a spy from Pluto</string>
-    <string name="novalauncher">Nova</string>
-    <string name="novalauncher_extra">Launcher touched me inapropriately</string>
-    <string name="smartlauncher">Smart</string>
-    <string name="smartlauncher_extra">Launcher aint so fuckin smart now</string>
-    <string name="golauncher">Go</string>
-    <string name="golauncher_extra">Launcher needs to conform their mask</string>
-   
-    <!-- Extras Tab -->
-    <string name="tab2">Extras</string>
-    <string name="playheader">I Need That Diaper Money</string>
-    <string name="play">Google Play</string>
-    <string name="play_extra">Buy Moar Themes</string> 
-    <string name="play_link">http://play.google.com/store/apps/developer?id=DesignRifts</string>
-    <string name="basicsheader">The Basics</string>    
-    <string name="wallpaper">Wallpapers</string>
-    <string name="wallpaper_extra">Are Sexy</string> 
-    <string name="icon">Icons</string>
-    <string name="icon_extra">See What is Included</string> 
-    <string name="request">Want to Request an Icon?</string>
-    <string name="request_extra">This will scan your device for the apps installed and sent us the names</string>
-    <string name="extrasheader">What Do We Have Here?</string>    
-    <string name="uccw">UCCW</string>
-    <string name="uccw_extra">To Match Ya Draws</string>
-    <!-- Use this to link to your UCCW skins on Play or Website, or remove the card in FragmentExtras  -->
-    <string name="uccw_link">Sorry No UCCW downloads available</string> 
-    <string name="zooper">Zooper</string>
-    <string name="zooper_extra">To Match Ya Socks</string>
-    <!-- Use this to link to your Zooper skins on Play or Website, or remove the card in FragmentExtras  -->
-    <string name="zooper_link">Sorry No UCCW downloads available</string>       
-    <string name="extras1">Your Mom</string>
-    <string name="extras1_extra">Loves Me!</string>
-    <string name="extras1_link">http://twitter.com/jaithemes</string>           
-    <string name="extras2">This Guy</string>
-    <string name="extras2_extra">Loves Dildroid!</string>
-    <string name="extras2_link">https://play.google.com/store/apps/details?id=com.tracedeweb.core</string>     
-    
-    <!-- Contact Tab -->
-    <string name="tab3">Contact</string>
-    <string name="contact">Contact Us</string>
-    <string name="action_contact">Contact</string>
-    <string name="contactheader">Want To See More of Me?</string>
-    <string name="socialheader">Stalker!</string>
-    <string name="emailheader">Wanna Get Personal?</string>
-    <string name="webheader">That WWW Life Son!</string>
-    <string name="gplus">Google Plus</string>
-    <string name="gplus_extra">Is Whats Up</string>
-    <string name="gplus_link">http://gplus.to/designrifts</string>
-    <string name="twitter">Twitter</string>
-    <string name="twitter_extra">Is Where I post My Nudes</string>
-    <string name="twitter_link">http://twitter.com/designrifts</string>
-    <string name="facebook">Facebook</string>
-    <string name="facebook_extra">Is Where I Pretend We Are Friends</string>
-    <string name="facebook_link">http://facebook.com</string>
-    <string name="email">Gmail</string>
-    <string name="email_extra">Me For Feet Pics</string>
-    <string name="email_link">mailto:designrifts@gmail.com</string>
-    <string name="web">The Interwebz</string>
-    <string name="web_extra">Is Always Right</string>
-    <string name="web_link">http://designrifts.com/</string>
-              
-    
-    <!-- Text Tab -->
-	<string name="tab4">Text</string>
-	
-	<!-- Icon Tabs -->
+    	
+	<!-- Icon Catergories Tabs -->
 	<string name="icon1">Latest Icons</string>
     <string name="icon2">System Icons</string>
     <string name="icon3">Play Icons</string>

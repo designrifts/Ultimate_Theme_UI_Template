@@ -39,6 +39,9 @@ import java.io.InputStream;
 import java.util.ArrayList;
 
 import com.designrifts.ultimatethemeui.R;
+import com.designrifts.ultimatethemeui.R.array;
+import com.designrifts.ultimatethemeui.R.id;
+import com.designrifts.ultimatethemeui.R.layout;
 
 
 public class wallpaper extends Activity implements AdapterView.OnItemSelectedListener,

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--This data is what fills the Theme Tab information -->
+    <string name="tab1">Theme</string>
+    <string name="themeheader">How Would You Like To Apply?</string>
+	<string name="apply">Apply</string>
+    <string name="actionlauncher">Action</string>
+    <string name="actionlauncher_extra">Launcher has bastard children on Jupiter</string>
+    <string name="adwlauncher">ADW</string>
+    <string name="adwlauncher_extra">Launcher was the tits</string>
+    <string name="apexlauncher">Apex</string>
+    <string name="apexlauncher_extra">Launcher is a spy from Pluto</string>
+    <string name="novalauncher">Nova</string>
+    <string name="novalauncher_extra">Launcher touched me inapropriately</string>
+    <string name="smartlauncher">Smart</string>
+    <string name="smartlauncher_extra">Launcher aint so fuckin smart now</string>
+    <string name="golauncher">Go</string>
+    <string name="golauncher_extra">Launcher needs to conform their mask</string>    
+</resources>

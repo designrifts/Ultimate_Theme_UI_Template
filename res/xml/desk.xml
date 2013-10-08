@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Desk Version="1.0" VersionCode="1" Wallpaper="default_wallpaper" ScollWallpaper="false" WallpaperFill="0">
+    <CommonStyles>
+        <IconStyle>
+            <ShowItemLayer Valign="" Halign="" Width="" Height="" Margins="{1,1,0,0}">
+                <Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins="" />
+                <Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins="" />
+            </ShowItemLayer>
+            <Layer Width="" Height="" Valign="" Halign="" Margins="{1,1,0,0}" />
+            <ShowItemLayer Valign="" Halign="" Width="" Height="" Margins="{1,1,0,0}">
+                <Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins="" />
+                <Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins="" />
+            </ShowItemLayer>
+        </IconStyle>
+    </CommonStyles>
+    <Screen Source="screen.xml">
+        <ScreenStyles>
+            <ScreenIconStyle ShowLightMode="1" Width="" Height="" Valign="" Halign="" Margins="{1,1,0,0}" TextValign="" TextHalign="">
+                <Wallpaper Identity="Text_bg" Color="" Image="application_background" Fill="1" Border="1" BorderColor="#59c1e8" BorderLine="" Margins="" />
+            </ScreenIconStyle>
+            <FolderStyle>
+                <Wallpaper Color="" Image="appfunc_folderback" Fill="1" Border="1" BorderColor="" BorderLine="" Margins="" />
+                <Wallpaper Identity="OpenFolder" Color="" Image="folder_open" Fill="1" Border="1" BorderColor="" BorderLine="" Margins="" />
+                <Wallpaper Identity="ColseFolder" Color="" Image="folder_close_up" Fill="1" Border="1" BorderColor="" BorderLine="" Margins="" />
+            </FolderStyle>
+            <Light Color="" Image="" Size="" />
+            <Font Color="" Size="" />
+            <TrashStyle Color="">
+                <Trashing Margins="{1,1,0,0}" Image="ic_delete" Valign="" Halign="">
+                    <Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins="" />
+                </Trashing>
+                <Trashed Margins="{1,1,0,0}" Image="ic_delete" Valign="" Halign="">
+                    <Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins="" />
+                </Trashed>
+            </TrashStyle>
+        </ScreenStyles>
+    </Screen>
+    <Indicator Source="indicator.xml">
+        <IndicatorStyles ShowMode="1" WhenScreenCount="">
+            <IndicatorItem Identity="Dots" Margins="{1,1,0,0}" Width="24" Height="24">
+                <Wallpaper Identity="Selected" Color="" Image="screennow" Fill="1" Border="1" BorderColor="" BorderLine="" Margins="" />
+                <Wallpaper Identity="UnSelected" Color="" Image="screenother" Fill="1" Border="1" BorderColor="" BorderLine="" Margins="" />
+            </IndicatorItem>
+            <IndicatorItem Identity="Slide" Margins="{1,1,0,0}" Width="" Height="">
+                <Wallpaper Identity="Selected" Color="" Image="screennow" Fill="1" Border="1" BorderColor="" BorderLine="" Margins="" />
+            </IndicatorItem>
+        </IndicatorStyles>
+    </Indicator>
+    <Preview Source="preview.xml">
+        <PreviewStyles LineItemCount="3">
+            <Card Identity="CurrentScreen">
+                <Item>
+                    <Wallpaper Identity="Background" Image="preview_border_light" />
+                </Item>
+            </Card>
+            <Card Identity="NomalScreen">
+                <Item>
+                    <Wallpaper Identity="Background" Image="preview_border" />
+                </Item>
+            </Card>
+            <Card Identity="AddScreen">
+                <Item>
+                    <Wallpaper Identity="Background" Image="preview_addscreen" />
+                </Item>
+            </Card>
+            <Card Identity="FocusScreen">
+                <Item>
+                    <Wallpaper Identity="Background" Image="preview_border_light" />
+                </Item>
+            </Card>
+            <Card Identity="FocusAddScreen">
+                <Item>
+                    <Wallpaper Identity="Background" Image="preview_addscreen_light" />
+                </Item>
+            </Card>
+            <Card Identity="DeleteScreen">
+                <Item>
+                    <Wallpaper Identity="Background" Image="preview_deletescreen" />
+                </Item>
+            </Card>
+            <Wallpaper Identity="Home" Image="preview_home_btn_light" />
+            <Wallpaper Identity="NotHome" Image="preview_home_btn" />
+            <Wallpaper Identity="Colseing" Image="preview_del_btn_light" />
+            <Wallpaper Identity="Colsed" Image="preview_del_btn" />
+        </PreviewStyles>
+    </Preview>
+    <Dock Source="dock.xml">
+        <DockSetting RowCount="2" IsBackground="true" Background="dock" BackgroundFill="1" />
+        <Notifys>
+            <NotifyItem Key="SMS" Value="true" KeyWord=".SMS" />
+            <NotifyItem Key="CALL" Value="true" KeyWord=".CALL" />
+            <NotifyItem Key="GMAIL" Value="true" KeyWord=".GMAIL" />
+        </Notifys>
+        <DockStyles Color="#00000000" Width="" Height="" LineItemCount="5">
+            <DockIconStyle Width="" Height="" Valign="" Halign="" Margins="{1,1,0,0}" />
+            <SymtemDefualt>
+                <SymtemDockItem GestureIntent="" Index="0">
+                    <Wallpaper Color="" Image="phone" Fill="1" Border="1" BorderColor="" BorderLine="" Margins="" />
+                </SymtemDockItem>
+                <SymtemDockItem GestureIntent="" Index="1">
+                    <Wallpaper Color="" Image="contacts" Fill="1" Border="1" BorderColor="" BorderLine="" Margins="" />
+                </SymtemDockItem>
+                <SymtemDockItem GestureIntent="" Index="2">
+                    <Wallpaper Color="" Image="d_home" Fill="1" Border="1" BorderColor="" BorderLine="" Margins="" />
+                </SymtemDockItem>
+                <SymtemDockItem GestureIntent="" Index="3">
+                    <Wallpaper Color="" Image="messaging" Fill="1" Border="1" BorderColor="" BorderLine="" Margins="" />
+                </SymtemDockItem>
+                <SymtemDockItem GestureIntent="" Index="4">
+                    <Wallpaper Color="" Image="browser" Fill="1" Border="1" BorderColor="" BorderLine="" Margins="" />
+                </SymtemDockItem>
+            </SymtemDefualt>
+            <NoApplicationIcon GestureIntent="">
+                <Wallpaper Color="" Image="d_add" Fill="1" Border="1" BorderColor="" BorderLine="" Margins="" />
+            </NoApplicationIcon>
+            <NullIcon GestureIntent="">
+                <Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins="" />
+            </NullIcon>
+            <NotifyStyle Valign="" Halign="" TextValign="" TextHalign="" Margins="{1,1,0,0}">
+                <Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins="" />
+            </NotifyStyle>
+        </DockStyles>
+    </Dock>
+    <GlMenu Identity="desk" Row="" Column="" TextColor="#80000000" SelectTextColor="#ffc81310" UnselectTextColor="#ff4f4f4f">
+        <Wallpaper Identity="Background" Image="glmenu_bg" />
+        <Wallpaper Identity="ItemBackground" Image="application_background" />
+        <Wallpaper Identity="SelectTabLine" Image="glmenu_select_topline" />
+        <Wallpaper Identity="UnSelectTabLine" Image="glmenu_unselect_topline" />
+        <Wallpaper Identity="Itemline" Image="glmenu_item_line" />
+        <Item Id="100">
+            <Wallpaper Image="menuitem_add" />
+        </Item>
+        <Item Id="101">
+            <Wallpaper Image="menuitem_wallpaper" />
+        </Item>
+        <Item Id="102">
+            <Wallpaper Image="menuitem_theme" />
+        </Item>
+        <Item Id="103">
+            <Wallpaper Image="menuitem_gostore" />
+        </Item>
+        <Item Id="104">
+            <Wallpaper Image="menuitem_screenedit" />
+        </Item>
+        <Item Id="105">
+            <Wallpaper Image="menuitem_preference" />
+        </Item>
+        <Item Id="106">
+            <Wallpaper Image="menuitem_syssetting" />
+        </Item>
+        <Item Id="107">
+            <Wallpaper Image="menuitem_effect" />
+        </Item>
+        <Item Id="108">
+            <Wallpaper Image="menuitem_golocker" />
+        </Item>
+        <Item Id="109">
+            <Wallpaper Image="menuitem_gowidget" />
+        </Item>
+        <Item Id="110">
+            <Wallpaper Image="menuitem_notification" />
+        </Item>
+        <Item Id="111">
+            <Wallpaper Image="menuitem_language" />
+        </Item>
+        <Item Id="112">
+            <Wallpaper Image="menuitem_update" />
+        </Item>
+        <Item Id="113">
+            <Wallpaper Image="menuitem_share" />
+        </Item>
+        <Item Id="114">
+            <Wallpaper Image="menuitem_grade" />
+        </Item>
+        <Item Id="115">
+            <Wallpaper Image="menuitem_fb" />
+        </Item>
+        <Item Id="116">
+            <Wallpaper Image="menuitem_restart" />
+        </Item>
+        <Item Id="117">
+            <Wallpaper Image="menuitem_notificationbar" />
+        </Item>
+        <Item Id="118">
+            <Wallpaper Image="menuitem_desklock" />
+        </Item>
+        <Item Id="119">
+            <Wallpaper Image="menuitem_deskunlock" />
+        </Item>
+        <Item Id="120">
+            <Wallpaper Image="menuitem_message" />
+        </Item>
+        <Item Id="121">
+            <Wallpaper Image="menuitem_gobackup" />
+        </Item>
+        <Item Id="124">
+            <Wallpaper Image="menuitem_gohandbook" />
+        </Item>
+        <Item Id="125">
+            <Wallpaper Image="menuitem_snapshot" />
+        </Item>
+        <Item Id="130">
+            <Wallpaper Image="menuitem_appcenter" />
+        </Item>
+        <Item Id="131">
+            <Wallpaper Image="menuitem_gamezone" />
+        </Item>
+        <Item Id="200">
+            <Wallpaper Image="menuitem_sort" />
+        </Item>
+        <Item Id="201">
+            <Wallpaper Image="menuitem_newfolder" />
+        </Item>
+        <Item Id="202">
+            <Wallpaper Image="menuitem_hideapp" />
+        </Item>
+        <Item Id="203">
+            <Wallpaper Image="menuitem_preference" />
+        </Item>
+        <Item Id="300">
+            <Wallpaper Image="menuitem_desklock" />
+        </Item>
+    </GlMenu>
+</Desk>

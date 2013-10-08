@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- This data is what fills the Contact Tab information-->
+    <string name="tab3">Contact</string>
+    <string name="contact">Contact Us</string>
+    <string name="action_contact">Contact</string>
+    <string name="contactheader">Want To See More of Me?</string>
+    <string name="socialheader">Stalker!</string>
+    <string name="emailheader">Wanna Get Personal?</string>
+    <string name="webheader">That WWW Life Son!</string>
+    <string name="gplus">Google Plus</string>
+    <string name="gplus_extra">Is Whats Up</string>
+    <string name="gplus_link">http://gplus.to/designrifts</string>
+    <string name="twitter">Twitter</string>
+    <string name="twitter_extra">Is Where I post My Nudes</string>
+    <string name="twitter_link">http://twitter.com/designrifts</string>
+    <string name="facebook">Facebook</string>
+    <string name="facebook_extra">Is Where I Pretend We Are Friends</string>
+    <string name="facebook_link">http://facebook.com</string>
+    <string name="email">Gmail</string>
+    <string name="email_extra">Me For Feet Pics</string>
+    <string name="email_link">mailto:designrifts@gmail.com</string>
+    <string name="web">The Interwebz</string>
+    <string name="web_extra">Is Always Right</string>
+    <string name="web_link">http://designrifts.com/</string>    
+</resources>

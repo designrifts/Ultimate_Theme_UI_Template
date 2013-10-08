@@ -34,6 +34,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ShareActionProvider;
 import com.astuetz.viewpager.extensions.PagerSlidingTabStrip;
+import com.designrifts.ultimatethemeui.iconfragment.IconFragmentGames;
+import com.designrifts.ultimatethemeui.iconfragment.IconFragmentLatest;
+import com.designrifts.ultimatethemeui.iconfragment.IconFragmentMisc;
+import com.designrifts.ultimatethemeui.iconfragment.IconFragmentPlay;
+import com.designrifts.ultimatethemeui.iconfragment.IconFragmentSystem;
 
 
 public class IconActivity extends FragmentActivity{

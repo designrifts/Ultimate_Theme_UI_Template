@@ -2,9 +2,9 @@
 <resources>
     <version>1</version>
     <iconupon img1="iconupon" />
-    <iconback img1="iconback1" />
-    <iconmask img1="iconmask" />
-    <scale factor="1.0" />
+    <iconback img1="iconback" />
+<!--     <iconmask img1="iconmask" /> --> 
+    <scale factor="0.95" />
     <!-- Examples -->
     <item component="ComponentInfo{com.designrifts.ultimatethemeui/ultimatethemeui.themeactivity}" drawable="icon" />
     <item component="ComponentInfo{com.chrislacy.actionlauncher.pro/com.chrislacy.launcher.Launcher}" drawable="apps_actionlauncherpro" />
@@ -14,5 +14,4 @@
     <item component="ComponentInfo{com.anddoes.launcher.pro/com.anddoes.launcher.pro.ApexLauncherProActivity}" drawable="apps_apexlauncher" />
     <item component="ComponentInfo{org.adw.launcher/org.adw.launcherlib.Launcher}" drawable="apps_adwlauncher" />
     <item component="ComponentInfo{org.adwfreak.launcher/org.adw.launcherlib.Launcher}" drawable="apps_adwex" />     
-    
 </resources>

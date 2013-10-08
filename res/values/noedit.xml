@@ -1,0 +1,44 @@
+<resources>
+
+    <integer name="min_version">59</integer>
+
+    <string-array name="clocknames">
+    <item>@string/app_name</item>
+    </string-array>
+
+    <item name="hour" type="id"/>
+    <item name="ampm" type="id"/>  
+    <item name="date" type="id"/>
+
+    <string-array name="clockpreviews">
+        <item>clockpreview</item>
+    </string-array>
+    
+    <string-array name="clockcolors">
+    <item>@string/clockcolor</item>
+    </string-array>
+    
+    <string-array name="clockshadows">
+        <item>@string/clockshadow</item>
+    </string-array>
+    
+    <string-array name="clockfonts">
+        <item>clock.ttf/clock.ttf/date.ttf</item>
+    </string-array>
+
+    <integer-array name="bubblecolors">
+        <item>0xffffffff</item>
+    </integer-array>
+    
+    <integer-array name="bubblepaddings">
+        <item>@integer/bubblepadding</item>
+    </integer-array>
+    
+    <string-array name="bubblenames">
+        <item>@string/app_name</item>
+    </string-array>
+    <string-array name="bubbleresources">
+        <item>bubble</item>
+    </string-array>
+    
+</resources>

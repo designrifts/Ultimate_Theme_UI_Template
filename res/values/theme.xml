@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Colors are in format 0xAARRGGBB  (alpha,red,green,blue) -->
+    <!-- Drawer background and title color -->
+    <integer name="home_background">0x22000000</integer>
+    <integer name="drawer_background">0x99000000</integer>
+    <integer name="drawer_titlecolor">0xffffffff</integer>
+
+    <!-- Text and text's shadow color -->
+    <integer name="icon_textcolor">0xffffffff</integer>
+    <integer name="icon_shadowcolor">0xff000000</integer>
+
+    <!-- Space between the bubble and the icon -->
+    <integer name="bubblepadding">24</integer>
+
+    <!-- Clock text and text's shadow color -->
+    <string name="clockcolor">#ffffffff</string>
+    <string name="clockshadow">3/0/0/#55000000</string>
+
+    <!-- A suggested iconPack for drawer, insert here the packagename of the app you'd like to suggest -->
+    <string name="iconpack">@string/pkg</string>
+
+</resources>

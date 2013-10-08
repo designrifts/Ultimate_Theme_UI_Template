@@ -6,29 +6,48 @@
 
     <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="18"/>
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
-    <supports-screens android:anyDensity="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" android:resizeable="true" android:smallScreens="true"/>        
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> 
+    <supports-screens android:anyDensity="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" android:resizeable="true" android:smallScreens="true"/>
+       
 
     <application android:label="@string/app_name" 
         		 android:icon="@drawable/icon"
-                 android:theme="@android:style/Theme.Holo.Light.DarkActionBar">
+                 android:theme="@android:style/Theme.Holo.Light.DarkActionBar"
+                 android:allowBackup="false">
                  
         <activity android:name=".ThemeActivity"
-                  android:label="@string/app_name">
-                  
+                  android:label="@string/theme_title" >                
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>         
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="com.gau.go.launcherex.theme" />
+                <category android:name="android.intent.category.DEFAULT" />
+	        </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.INFO" />
             </intent-filter>
-            
            	<intent-filter>
 	        	<action android:name="android.intent.action.MAIN" />
 	            <category android:name="com.anddoes.launcher.THEME" />
-	        </intent-filter>
-	        
-	        <intent-filter>
-	            <action android:name="com.gau.go.launcherex.theme" />
-	            <category android:name="android.intent.category.DEFAULT" />
-	        </intent-filter>
+	        </intent-filter> 
+	        <intent-filter >
+	        	<action android:name="ginlemon.smartlauncher.THEMES" />
+<!--                 Delete if you don't want to set a new bubble background
+                <action android:name="ginlemon.smartlauncher.BUBBLESTYLE" />
+ -->                
+<!--                 Delete if you don't want to set a new bubble icons theme
+                <action android:name="ginlemon.smartlauncher.BUBBLEICONS" />
+ -->                
+<!--                 Delete if you don't want to set a clock theme 
+                <action android:name="ginlemon.smartlauncher.CLOCKS" />
+                <action android:name="ginlemon.smartlauncher.CLOCKFONTS" /> 
+-->             
+				<category android:name="android.intent.category.DEFAULT" />   
+             </intent-filter>         
 	    </activity>
 	    
 	    <activity android:name=".adw"
@@ -37,8 +56,7 @@
 	            <action android:name="android.intent.action.MAIN" />
 	            <action android:name="org.adw.launcher.THEMES" />
 	            <category android:name="android.intent.category.DEFAULT" />                
-	        </intent-filter>
-	        
+	        </intent-filter>      
 	        <intent-filter>
 	            <action android:name="org.adw.launcher.icons.ACTION_PICK_ICON" />
 	            <category android:name="android.intent.category.DEFAULT" />
@@ -46,7 +64,7 @@
         </activity>
         
         <activity
-            android:name="wallpaper"
+            android:name=".wallpaper"
             android:icon="@drawable/icon"
             android:screenOrientation="nosensor"
             android:finishOnCloseSystemDialogs="true" 

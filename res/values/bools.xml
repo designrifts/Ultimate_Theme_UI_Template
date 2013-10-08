@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <!-- Theme settings -->
+    <bool name="enableIconPack">true</bool>
+    <bool name="enableDockPack">false</bool>
+    <bool name="dock_reflections">false</bool>
+    <!-- Theme properties -->
+	<bool name="enableIconPack">true</bool>
+	<bool name="enableDockPack">true</bool>    
+    <bool name="config_iconpack">true</bool>
+    <bool name="config_apexskin">true</bool>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- COLORS AND STYLES -->
+<!-- sample config 
+<color name="folder_shadow_color">#8833b5e5</color>
+<color name="folder_text_color">#FF000000</color>
+<color name="desktop_indicator_shadowcolor">#66FF0000</color>
+<color name="desktop_indicator_fgcolor">#FFFF0000</color>
+<color name="desktop_indicator_color">#FF33b5e5</color>
+
+<string name="actionbar_style">1</string>
+<string name="config_desktop_indicator_type">4</string>
+<string name="folder_preview_style">2</string>
+-->
+
+
+
+
+<!-- DRAWABLES -->
+
+</resources>
