@@ -3,4 +3,7 @@
     <color name="background_window">#FFE5E5E5</color>
     <color name="Button_Off">#FF3F9FE0</color>
     <color name="Button_On">#FF000000</color>
+    <color name="smart_date">#FF3F9FE0</color>
+    <color name="smart_hour">#FF3F9FE0</color>
+    <color name="smart_ampm">#FF3F9FE0</color>
 </resources>

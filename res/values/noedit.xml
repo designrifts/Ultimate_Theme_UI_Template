@@ -27,7 +27,7 @@
     </string-array>
 
     <integer-array name="bubblecolors">
-        <item>0xffffffff</item>
+        <item>0xFF3F9FE0</item>
     </integer-array>
     
     <integer-array name="bubblepaddings">

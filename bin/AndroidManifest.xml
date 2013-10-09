@@ -95,8 +95,8 @@
         </activity>        
      
 	    <provider
-	        android:name="iconsProvider"
-	        android:authorities=".iconsProvider" 
+	        android:name=".iconsProvider"
+	        android:authorities="com.designrifts.ultimatethemeui.iconsProvider" 
 	    />
 	    
 	</application>
