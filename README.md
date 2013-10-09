@@ -3,9 +3,7 @@ Ultimate_Theme_UI_Template
 
 The ultimate open source Android theme and icon pack template
 
-Screenshot
-==========================
-http://designrifts.com/wp-content/uploads/2013/10/Screenshot_2013-10-07-07-58-21.png
+![Screenshot] (http://designrifts.com/wp-content/uploads/2013/10/Screenshot_2013-10-07-07-58-21.png)
 
 This is utilizing tabs and a card listview to provide 3 (or more) swipable tabs that each have their own cardui listview for different actions.
 
