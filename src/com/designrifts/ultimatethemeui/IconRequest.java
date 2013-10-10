@@ -107,11 +107,7 @@ public class IconRequest extends Activity {
 							final String pkgName = info.activityInfo.packageName;
 							final String className = info.activityInfo.name;
 
-							sb.append(label);
-							sb.append("\n");
-							sb.append("  package: " + pkgName);
-							sb.append("\n");
-							sb.append("  class: " + className);
+							sb.append("<!-- " + label + " -->\n<item component=\""+pkgName+"/"+className+"\" drawable=\""+label+"\" />");
 							sb.append("\n");
 							sb.append("\n");
 
@@ -127,7 +123,7 @@ public class IconRequest extends Activity {
 						}
 
 						try {
-							FileWriter fstream = new FileWriter(SAVE_LOC + "/package_info.txt");
+							FileWriter fstream = new FileWriter(SAVE_LOC + "/+appfilter.xml");
 							BufferedWriter out = new BufferedWriter(fstream);
 							out.write(sb.toString());
 							out.close();
