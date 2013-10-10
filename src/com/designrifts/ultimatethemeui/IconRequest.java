@@ -58,7 +58,7 @@ public class IconRequest extends Activity {
 
 	private static final String TAG = "Pkg";
 	private static final String SD = Environment.getExternalStorageDirectory().getAbsolutePath();
-	private static final String SAVE_LOC = SD + "/activitytool";
+	private static final String SAVE_LOC = SD + "/designriftsrequest";
 	private static final int BUFFER = 2048;
 	private ProgressDialog pbarDialog;
 

@@ -11,6 +11,8 @@ The tabs are utilizing https://github.com/astuetz/PagerSlidingTabStrip
 
 The cards are utilizing https://github.com/afollestad/Cards-UI
 
+Please ensure you grab the Silk library from the Cards-UI library as well.
+
 At the current moment, I am not including the libraries in the code so you will need to import them in order for this to work. I will include the libraries in the future.
 
 A brief explanation of the functionality:
