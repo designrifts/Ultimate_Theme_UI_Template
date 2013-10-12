@@ -2,7 +2,7 @@
 <resources>
      <!-- This data is what fills the Extras Tab information-->
     <string name="tab2">Extras</string>
-    <string name="playheader">I Need That Diaper Money</string>
+    <string name="playheader">Find More Of Our Themes</string>
     <string name="play">Google Play</string>
     <string name="play_extra">Buy Moar Themes</string> 
     <string name="play_link">http://play.google.com/store/apps/developer?id=DesignRifts</string>

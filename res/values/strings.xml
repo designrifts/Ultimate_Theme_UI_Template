@@ -25,7 +25,7 @@
         
     <!-- Share Button -->
     <!-- This is additional text that is attached to your package when sharing the link -->
-    <string name="share_this">Check This Shit Out Homie </string> 
+    <string name="share_this">This Template Is Da Bomb </string> 
    
     <!-- This (optional) link will appear at the end of the theme description -->
     <string name="developer_link">http://www.designrifts.com/</string>

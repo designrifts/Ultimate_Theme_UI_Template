@@ -406,14 +406,14 @@ containing a value of this type.
          */
         public static final int developer_link=0x7f080010;
         public static final int developer_name=0x7f080005;
-        public static final int email=0x7f08002d;
-        public static final int email_extra=0x7f08002e;
-        public static final int email_link=0x7f08002f;
+        public static final int email=0x7f08002c;
+        public static final int email_extra=0x7f08002d;
+        public static final int email_link=0x7f08002e;
         /**  Icon Request data 
          */
         public static final int email_subject=0x7f080017;
         public static final int email_text=0x7f080018;
-        public static final int emailheader=0x7f080022;
+        public static final int emailheader=0x7f08002b;
         public static final int extras1=0x7f080046;
         public static final int extras1_extra=0x7f080047;
         public static final int extras1_link=0x7f080048;
@@ -421,15 +421,15 @@ containing a value of this type.
         public static final int extras2_extra=0x7f08004a;
         public static final int extras2_link=0x7f08004b;
         public static final int extrasheader=0x7f08003f;
-        public static final int facebook=0x7f08002a;
-        public static final int facebook_extra=0x7f08002b;
-        public static final int facebook_link=0x7f08002c;
+        public static final int facebook=0x7f080028;
+        public static final int facebook_extra=0x7f080029;
+        public static final int facebook_link=0x7f08002a;
         public static final int go_applied=0x7f080008;
         public static final int golauncher=0x7f08005d;
         public static final int golauncher_extra=0x7f08005e;
-        public static final int gplus=0x7f080024;
-        public static final int gplus_extra=0x7f080025;
-        public static final int gplus_link=0x7f080026;
+        public static final int gplus=0x7f080022;
+        public static final int gplus_extra=0x7f080023;
+        public static final int gplus_link=0x7f080024;
         public static final int icon=0x7f08003b;
         /**  Icon Catergories Tabs 
          */
@@ -487,9 +487,9 @@ containing a value of this type.
         public static final int theme_title=0x7f080003;
         public static final int themeheader=0x7f080051;
         public static final int todo=0x7f080001;
-        public static final int twitter=0x7f080027;
-        public static final int twitter_extra=0x7f080028;
-        public static final int twitter_link=0x7f080029;
+        public static final int twitter=0x7f080025;
+        public static final int twitter_extra=0x7f080026;
+        public static final int twitter_link=0x7f080027;
         public static final int uccw=0x7f080040;
         public static final int uccw_extra=0x7f080041;
         /**  Use this to link to your UCCW skins on Play or Website, or remove the card in FragmentExtras  
@@ -500,7 +500,7 @@ containing a value of this type.
         public static final int web=0x7f080030;
         public static final int web_extra=0x7f080031;
         public static final int web_link=0x7f080032;
-        public static final int webheader=0x7f080023;
+        public static final int webheader=0x7f08002f;
         public static final int zooper=0x7f080043;
         public static final int zooper_extra=0x7f080044;
         /**  Use this to link to your Zooper skins on Play or Website, or remove the card in FragmentExtras  
@@ -511,6 +511,7 @@ containing a value of this type.
         public static final int ActionBarStyle=0x7f09000f;
         public static final int AppBaseTheme=0x7f09000d;
         public static final int AppTheme=0x7f09000e;
+        public static final int about=0x7f090012;
         public static final int bttn=0x7f090010;
         public static final int card_content=0x7f090008;
         public static final int card_header_inner=0x7f09000a;

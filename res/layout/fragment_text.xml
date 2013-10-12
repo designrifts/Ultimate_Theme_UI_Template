@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:text="@string/author"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        style="@style/scan_description"
+        style="@style/about"
          />
     <TextView
         android:id="@+id/txtCredit"
@@ -19,7 +19,7 @@
         android:text="@string/credit"
         android:layout_below="@+id/txtAbout"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        style="@style/scan_description"
+        style="@style/about"
          />
     <TextView
         android:id="@+id/txtBullshit"
@@ -28,7 +28,7 @@
         android:text="@string/just_some_bullshit"
         android:layout_below="@+id/txtCredit"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        style="@style/scan_description" 
+        style="@style/about" 
         />
 
 </RelativeLayout>

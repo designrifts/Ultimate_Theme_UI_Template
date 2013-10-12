@@ -89,7 +89,7 @@ public class ThemeActivity extends FragmentActivity{
 	    MenuItem item = menu.findItem(R.id.menu_item_share);
 	    mShareActionProvider = (ShareActionProvider) item.getActionProvider();
 	    // Create the share Intent
-	    String playStoreLink = "https://play.google.com/store/apps/details?id=" +
+	    String playStoreLink = " https://play.google.com/store/apps/details?id=" +
 	        getPackageName();
 	    String yourShareText = getString(R.string.share_this) + playStoreLink;
 	    Intent shareIntent = ShareCompat.IntentBuilder.from(this)
