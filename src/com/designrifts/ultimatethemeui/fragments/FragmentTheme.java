@@ -15,7 +15,10 @@
 
 package com.designrifts.ultimatethemeui.fragments;
 
+import java.io.IOException;
+
 import android.app.AlertDialog;
+import android.app.WallpaperManager;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
@@ -86,6 +89,7 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 		Toast toast = Toast.makeText(context, text, duration);
 		toast.show();
 	}
+	//The below items are the actions attached to the cards, i.e. what the cards will do, if you will not be using a card, you can remove the act	
 	private void applyActionLauncherTheme(){
 		try {
 			Intent actionlauncherIntent = getActivity().getPackageManager().getLaunchIntentForPackage("com.chrislacy.actionlauncher.pro");
@@ -145,16 +149,18 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 	}
 	
 	private void applyNovaTheme(){
+		WallpaperManager setDefaultWallpaper = WallpaperManager.getInstance(getActivity().getApplicationContext());
 		try {
 			Intent novalauncherIntent = new Intent(ACTION_APPLY_ICON_THEME);
 			novalauncherIntent.setPackage(NOVA_PACKAGE);
 			novalauncherIntent.putExtra(EXTRA_ICON_THEME_TYPE, "GO");
 			novalauncherIntent.putExtra(EXTRA_ICON_THEME_PACKAGE, getActivity().getPackageName());
 			startActivity(novalauncherIntent);
+			setDefaultWallpaper.setResource(R.drawable.wallpaper_designrifts);
 
-		} catch (ActivityNotFoundException e6) {
-			e6.printStackTrace();
-			makeToast("Nova Launcher is not installed!");
+		} catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
 		}
 		//finish();
 	}
@@ -217,7 +223,7 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 			public void onCardClick(AdapterView<?> adapter, View view, int position, long arg) {
 				Object listItem = list.getItemAtPosition(position);
 			}
-
+			//The below section is what tells the card to perform the above action when clicked, make sure to remove the if of any card you are not using
 			@Override
 			public void onCardClick(int position, CardBase card, View view) {
 				String str = card.getTitle();
@@ -243,7 +249,7 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 		});
 		return view;
 	}
-
+	//The below are the cards to be displayed, if there is a launcher you are not going to support, remove the card as well as the act and OnCardClick if statement
 	@Override
 	public void onStart() {
 		super.onStart();

@@ -50,7 +50,7 @@ public class IconActivity extends FragmentActivity{
 	private ShareActionProvider mShareActionProvider;
 	private Intent mShareIntent;
 	
-	
+		//This activity is what displays the icon fragments (the icon categories) see iconfragment for the tabs themselves
 	   @Override
 	    public void onCreate(Bundle savedInstanceState) {
 	        // This is quick way of theming the action bar without using styles.xml (e.g. using ActionBar Style Generator)

@@ -42,15 +42,15 @@ public final class R {
 		public static final int spinner_item_text = 0x7f060001;
 	}
 	public static final class drawable {
-		public static final int card_header_selector = 0x7f020014;
-		public static final int card_menu_button = 0x7f020015;
-		public static final int card_selector = 0x7f020016;
-		public static final int card_shadow = 0x7f020017;
-		public static final int ic_menu_moreoverflow_card_dark_normal = 0x7f02001a;
-		public static final int ic_menu_moreoverflow_card_dark_pressed = 0x7f02001b;
-		public static final int list_focused = 0x7f020025;
-		public static final int pressed_background = 0x7f020027;
-		public static final int unpressed_background = 0x7f02002c;
+		public static final int card_header_selector = 0x7f020015;
+		public static final int card_menu_button = 0x7f020016;
+		public static final int card_selector = 0x7f020017;
+		public static final int card_shadow = 0x7f020018;
+		public static final int ic_menu_moreoverflow_card_dark_normal = 0x7f020030;
+		public static final int ic_menu_moreoverflow_card_dark_pressed = 0x7f020031;
+		public static final int list_focused = 0x7f02004f;
+		public static final int pressed_background = 0x7f020057;
+		public static final int unpressed_background = 0x7f02006e;
 	}
 	public static final class id {
 		public static final int day = 0x7f0c000f;

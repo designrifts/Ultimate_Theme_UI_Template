@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dock_pack" translatable="false">
+			    	<item>dock_touch_of_color</item>		    	
+    </string-array>
+</resources>

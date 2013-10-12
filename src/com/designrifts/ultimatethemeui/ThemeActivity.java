@@ -82,7 +82,7 @@ public class ThemeActivity extends FragmentActivity{
 	    }
 	
 
-
+	   //This is the share menu
 	public boolean onCreateOptionsMenu(Menu menu) {
 	    // Inflate the menu; this adds items to the action bar if it is present.
 	    getMenuInflater().inflate(R.menu.share_menu, menu);
@@ -101,13 +101,13 @@ public class ThemeActivity extends FragmentActivity{
 
 
 	public class MyPagerAdapter extends FragmentPagerAdapter {
-
+		//This calls the titles, if you remove a fragment, remove its string
 		private final int[] TITLES = { R.string.tab1, R.string.tab2, R.string.tab3, R.string.tab4 };
 
 		public MyPagerAdapter(FragmentManager fm) {
 			super(fm);
 		}
-
+		//This displays tab names and how to switch, if you remove a tab, remove its case below but make sure to keep the order (0,1,2)
 		@Override
 		public CharSequence getPageTitle(int position) {
 			Locale l = Locale.getDefault();
@@ -123,7 +123,7 @@ public class ThemeActivity extends FragmentActivity{
 			}
 			return null;
 		}
-
+		//These are the tabs in the main display, if you remove a tab (fragment) you must remove it from below. also, ensure you keep the cases in order or it will not know what to do
 		@Override
 		public Fragment getItem(int position) {
 			Fragment f = new Fragment();

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <!-- Nova's dock customization is done via patterns. This allows a high quality and detailed background
+         on any device screen size or orientation.
+         -->
+    <!-- For gray scale images, Nova can apply a user-specified color to achieve a more custom look.
+         Enable this by setting canColor="true". Alternatively if you have a full color pattern then
+         disable this customization by setting it to false -->
+    <item drawable="@drawable/dock_touch_of_color" canColor="true" />
+    <item drawable="@drawable/iconback" canColor="false" />
+
+</resources>

@@ -45,7 +45,7 @@ import com.designrifts.ultimatethemeui.R.string;
 public class FragmentExtras extends Fragment  implements Card.CardMenuListener<Card> {
 	
 	private CardListView list;
-	
+	//The below items are the actions attached to the cards, i.e. what the cards will do, if you will not be using a card, you can remove the act
     private void actPlay() {
     	Uri marketuriString = Uri.parse(getString(R.string.play_link)); 
     	Intent playintent = new Intent(Intent.ACTION_VIEW, marketuriString);
@@ -146,7 +146,8 @@ public class FragmentExtras extends Fragment  implements Card.CardMenuListener<C
 			public void onCardClick(AdapterView<?> adapter, View view, int position, long arg) {
 				Object listItem = list.getItemAtPosition(position);
 			}
-
+			
+			//The below section is what tells the card to perform the above action when clicked
 			@Override
 			public void onCardClick(int position, CardBase card, View view) {
 				String str = card.getTitle();
@@ -204,19 +205,24 @@ public class FragmentExtras extends Fragment  implements Card.CardMenuListener<C
 				.setPopupMenu(-1, null) // -1 disables the popup menu for this individual card
 				); 	
 		cardsAdapter.add(new Card(getString(R.string.request), getString(R.string.request_extra))
-				.setThumbnail(getActivity(), R.drawable.apps_androidactivities) // sets a thumbnail image from drawable resources
+				.setThumbnail(getActivity(), R.drawable.apps_iconrequest) // sets a thumbnail image from drawable resources
 				.setPopupMenu(-1, null) // -1 disables the popup menu for this individual card
 				); 
 		cardsAdapter.add(new CardHeader(getActivity(), R.string.extrasheader)
 				);
+		//If you are not going to link to a UCCW theme, either direct or through Play, remove the action above
+		//in the OnCardClick. so it doesnt try to do anything. Optionally and recommended would be to remove actUCCW and the card
 		cardsAdapter.add(new Card(getString(R.string.uccw), getString(R.string.uccw_extra))
 				.setThumbnail(getActivity(),R.drawable.apps_uccw) // sets a thumbnail image from drawable resources
 				.setPopupMenu(-1, null) // -1 disables the popup menu for this individual card
-				); 						
+				); 	
+		//If you are not going to link to a Zooper widget, either direct or through Play, remove the action above
+		//in the OnCardClick. so it doesnt try to do anything. Optionally and recommended would be to remove actZooper and the card
 		cardsAdapter.add(new Card(getString(R.string.zooper), getString(R.string.zooper_extra))
 				.setThumbnail(getActivity(),R.drawable.apps_zooperwidget) // sets a thumbnail image from drawable resources
 				.setPopupMenu(-1, null) // -1 disables the popup menu for this individual card
-				); 								
+				); 			
+		//Below are example cards to a link if you wanted additional extras
 		cardsAdapter.add(new Card(getString(R.string.extras1), getString(R.string.extras1_extra))
 				.setThumbnail(getActivity(), R.drawable.jai) // sets a thumbnail image from drawable resources
 				.setPopupMenu(-1, null) // -1 disables the popup menu for this individual card

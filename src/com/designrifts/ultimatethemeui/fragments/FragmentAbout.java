@@ -27,7 +27,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class FragmentAbout extends Fragment {
-
+	//This card is text only, feel free to do what you want with it or remove it. If you remove it, make sure to also remove it from ThemeActivity
 	private TextView About;
 
 	@Override

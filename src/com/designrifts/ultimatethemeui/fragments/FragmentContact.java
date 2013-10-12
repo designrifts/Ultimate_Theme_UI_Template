@@ -46,7 +46,7 @@ public class FragmentContact extends Fragment implements
   	Card.CardMenuListener<Card> {
  
 	private CardListView list;
- 
+	//The below items are the actions attached to the cards, i.e. what the cards will do, if you will not be using a card, you can remove the act	
 	private void actGPlus() {
 		Uri gplusuriString = Uri.parse(getString(R.string.gplus_link));
 		Intent gplusIntent = new Intent("android.intent.action.VIEW",
@@ -115,7 +115,7 @@ public class FragmentContact extends Fragment implements
 					int position, long arg) {
  
 			}
- 
+			//The below section is what tells the card to perform the above action when clicked, make sure to remove the if of any card you are not using
 			@Override
 			public void onCardClick(int position, CardBase card, View view) {
 				String str = card.getTitle();
@@ -138,7 +138,7 @@ public class FragmentContact extends Fragment implements
 		});
 		return view;
 	}
- 
+	//The below are the cards to be displayed, if there is a social network you are not going to support, remove the card as well as the act and OnCardClick if statement
 	@Override
 	public void onStart() {
 		super.onStart();

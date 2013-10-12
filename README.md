@@ -30,6 +30,7 @@ The Contact included cards for social media, email and web.
 The Icon Activity
 ==========================
 The IconActivity calls to the different icon category tabs.
+The iconfragment displays each category using a string-array located in the icon_pack.xml in values
 The icon section will be modified in the future. I will be implementing new code that will auto display based on file name (i.e. apps_, system_,misc_) which will get rid of the strin-arrays.
 
 Feel free to contact me for questions via the Gplus or FB links. Do not ask me how to make a theme, I will not help you. I will however provide direction to using the template.
