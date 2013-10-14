@@ -156,7 +156,7 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 			novalauncherIntent.putExtra(EXTRA_ICON_THEME_TYPE, "GO");
 			novalauncherIntent.putExtra(EXTRA_ICON_THEME_PACKAGE, getActivity().getPackageName());
 			startActivity(novalauncherIntent);
-			setDefaultWallpaper.setResource(R.drawable.wallpaper_designrifts);
+			setDefaultWallpaper.setResource(R.drawable.wallpaper_default);
 
 		} catch (IOException e) {
             // TODO Auto-generated catch block
@@ -165,6 +165,7 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 		//finish();
 	}
 	private void applySmartTheme(){
+		WallpaperManager setDefaultWallpaper = WallpaperManager.getInstance(getActivity().getApplicationContext());
 		try {
 			Intent smart = getActivity().getPackageManager().getLaunchIntentForPackage("ginlemon.flowerfree");
 			Intent smartpro = getActivity().getPackageManager().getLaunchIntentForPackage("ginlemon.flowerpro");
@@ -172,21 +173,23 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 				Intent smartlauncherIntent = new Intent(SMART_PACKAGE);
 				smartlauncherIntent.putExtra("package", getActivity().getPackageName());
 				startActivity(smartlauncherIntent);  
+				setDefaultWallpaper.setResource(R.drawable.wallpaper_default);
 			}else if (smartpro !=null) {
 				Intent smartlauncherIntent = new Intent(SMART_PACKAGE);
 				smartlauncherIntent.putExtra("package", getActivity().getPackageName());
 				startActivity(smartlauncherIntent); 
+				setDefaultWallpaper.setResource(R.drawable.wallpaper_default);
 			} else {
 	            // Direct users to get Smart Launcher
 	            String playStoreUrl = "https://play.google.com/store/apps/details?id=ginlemon.flowerfree";
 	            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(playStoreUrl)));
 			}
-		} catch (ActivityNotFoundException e8) {
-			e8.printStackTrace();
-			makeToast("Smart Launcher is not installed!");	
+		} catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
 		}
 		//finish();
-	}
+	}	
 	private void applyGoTheme() {
 		try {
 			Intent go = getActivity().getPackageManager().getLaunchIntentForPackage("com.gau.go.launcherex");

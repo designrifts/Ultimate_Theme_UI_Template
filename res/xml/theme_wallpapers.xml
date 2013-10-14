@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item drawable="@drawable/wallpaper_designrifts" />
+    <item drawable="@drawable/wallpaper_default" />
 </resources>
