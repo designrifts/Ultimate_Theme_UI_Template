@@ -41,7 +41,13 @@ By agreeing to use this source, you are agreeing you have a sense of humour.
 
 Whats Planned
 ==========================
-I have moved most items to be strings and will expand more as well as expand supported launchers and their additional features (Go features, Smart features etc).
+I have moved most items to be strings and will expand more as well as expand supported launchers and their additional features (Go features etc).
+
+More Notes
+==========================
+The purpose of using the wallpaper_defualt is because Nova does not have an action to apply a default wallpaper and Smart Launcher uses Wall0 for theirs.
+In the FragmentTheme it applies the wallpaper_default on Nova or Smart apply. You can use this as well to be your default for the rest so you don't duplicate an image.
+If you are smart, you would convert the Smart Launcher images to xml files and point them to images you already have instead of duplicating images.
 
 
 
