@@ -13,17 +13,16 @@ The cards are utilizing: https://github.com/afollestad/Cards-UI
 
 Please ensure you grab the Silk library from the Cards-UI library as well.
 
-At the current moment, I am not including the libraries in the code so you will need to import them in order for this to work. I will include the libraries in the future.
-
-A brief explanation of the functionality:
+At the current moment, I am not including the libraries in the code so you will need to import them in order for this to work. I will include the libraries in the future. A brief explanation of the functionality:
 
 The Theme Activity
 ==========================
 
 The `ThemeActivity` contains the main functionality and calls to the tabs...
 The tabs are "Theme", "Extras", "Contact" and "About." 
+
 **Theme** includes cards to apply in multiple launchers (Action Launcher, ADWEX Launcher, Apex Launcher, Nova Launcher, Smart Launcher and Go Launcher EX).
-**Extras** includes cards for your Play Store link, Wallpapers, Icons (this displays icons included using string-arrays in the icon_pack), an activity that will scan the device it is installed on, capture the activity names and their icons and zip it to send).
+**Extras** includes cards for your Play Store link, Wallpapers, Icons (this displays icons included using `string-arrays` in the `icon_pack`), an activity that will scan the device it is installed on, capture the activity names and their icons and zip it to send.
 It also includes Cards to do with as your choice, I have added UCCW and Zooper in their as place holders as well as some fun.
 **Contact** included cards for social media, email and web.
 
