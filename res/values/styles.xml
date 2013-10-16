@@ -1,15 +1,20 @@
 <resources>
 
-    <style name="AppBaseTheme" parent="android:Theme.Light"></style>
+    <style name="DesignRiftsTheme" parent="android:style/Theme.Holo.Light.DarkActionBar"></style>
 
-    <style name="AppTheme" parent="AppBaseTheme">
+    <style name="DesignRifts" parent="DesignRiftsTheme">
         <item name="android:windowBackground">@color/background_window</item>
         <item name="android:actionBarStyle">@style/ActionBarStyle</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle</item>
     </style>
 
     <style name="ActionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
-        <item name="android:icon">@drawable/ic_launcher_actionbar</item>
-        <item name="android:background">#FF3F9FE0</item>
+        <item name="android:icon">@drawable/icon</item>
+        <item name="android:background">@color/actionbar</item>
+    </style>
+    
+    <style name="ActionBarTabStyle" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab</item>
     </style>
     
      <style name="bttn">

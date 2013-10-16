@@ -56,6 +56,39 @@ public class FragmentExtras extends Fragment  implements Card.CardMenuListener<C
     		Toast.makeText(getActivity().getApplicationContext(), "Play Store not found!", Toast.LENGTH_LONG).show();
     	}
     };
+    //The following act relates to the information to link to the github and forum posts of this template, you are free to remove 
+    private void actGithub() {
+    	 Uri extras1uriString = Uri.parse(getString(R.string.github_link)); //use this to link to your UCCW skins on Play or Website
+       Intent extras1Intent = new Intent("android.intent.action.VIEW", extras1uriString);
+       try {
+    		  startActivity(extras1Intent);
+    		} catch (ActivityNotFoundException e2) {
+    		  e2.printStackTrace();
+    		}
+
+    };
+    //The following act relates to the information to link to the github and forum posts of this template, you are free to remove 
+    private void actRootzwiki() {
+    	 Uri extras1uriString = Uri.parse(getString(R.string.rootzwiki_link)); //use this to link to your UCCW skins on Play or Website
+       Intent extras1Intent = new Intent("android.intent.action.VIEW", extras1uriString);
+       try {
+    		  startActivity(extras1Intent);
+    		} catch (ActivityNotFoundException e2) {
+    		  e2.printStackTrace();
+    		}
+
+    };
+    //The following act relates to the information to link to the github and forum posts of this template, you are free to remove 
+    private void actXDA() {
+    	 Uri extras1uriString = Uri.parse(getString(R.string.xda_link)); //use this to link to your UCCW skins on Play or Website
+       Intent extras1Intent = new Intent("android.intent.action.VIEW", extras1uriString);
+       try {
+    		  startActivity(extras1Intent);
+    		} catch (ActivityNotFoundException e2) {
+    		  e2.printStackTrace();
+    		}
+
+    };
     private void actWallpapers() {
     	String pkg = getResources().getString(R.string.pkg);
     	Intent wallpapers = new Intent(Intent.ACTION_MAIN);
@@ -154,6 +187,18 @@ public class FragmentExtras extends Fragment  implements Card.CardMenuListener<C
 				if (str.equals(getString(R.string.play))) {
 					actPlay();
 				}
+				//The following if relates to the information to link to the github and forum posts of this template, you are free to remove 
+				if (str.equals(getString(R.string.github))) {
+					actGithub();
+				}
+				//The following act relates to the information to link to the github and forum posts of this template, you are free to remove 
+				if (str.equals(getString(R.string.rootzwiki))) {
+					actRootzwiki();
+				}
+				//The following act relates to the information to link to the github and forum posts of this template, you are free to remove 
+				if (str.equals(getString(R.string.xda))) {
+					actXDA();
+				}
 				if (str.equals(getString(R.string.wallpaper))) {
 					actWallpapers();
 				}
@@ -185,7 +230,7 @@ public class FragmentExtras extends Fragment  implements Card.CardMenuListener<C
 		super.onStart();
 
 		CardAdapter<Card> cardsAdapter = new CardAdapter<Card>(getActivity())
-				.setAccentColorRes(android.R.color.holo_blue_light)
+				.setAccentColorRes(R.color.card_text)
 				.setPopupMenu(R.menu.extras_popup, this);
 
 		cardsAdapter.add(new CardHeader(getActivity(), R.string.playheader)
@@ -193,7 +238,21 @@ public class FragmentExtras extends Fragment  implements Card.CardMenuListener<C
 		cardsAdapter.add(new Card(getString(R.string.play), getString(R.string.play_extra))
 				.setThumbnail(getActivity(),R.drawable.apps_googleplaystore) // sets a thumbnail image from drawable resources
 				.setPopupMenu(-1, null) // -1 disables the popup menu for this individual card
-				);	
+				);
+		cardsAdapter.add(new CardHeader(getActivity(), R.string.template_header)
+				);
+		cardsAdapter.add(new Card(getString(R.string.github), getString(R.string.github_extra))
+				.setThumbnail(getActivity(),R.drawable.apps_github)  // sets a thumbnail image from drawable resources
+				.setPopupMenu(-1, null) // -1 disables the popup menu for this individual card
+				); 
+		cardsAdapter.add(new Card(getString(R.string.rootzwiki), getString(R.string.rootzwiki_extra))
+				.setThumbnail(getActivity(), R.drawable.apps_rootzwiki) // sets a thumbnail image from drawable resources
+				.setPopupMenu(-1, null) // -1 disables the popup menu for this individual card
+				); 	
+		cardsAdapter.add(new Card(getString(R.string.xda), getString(R.string.xda_extra))
+				.setThumbnail(getActivity(), R.drawable.apps_xda) // sets a thumbnail image from drawable resources
+				.setPopupMenu(-1, null) // -1 disables the popup menu for this individual card
+				); 
 		cardsAdapter.add(new CardHeader(getActivity(), R.string.basicsheader)
 				);
 		cardsAdapter.add(new Card(getString(R.string.wallpaper), getString(R.string.wallpaper_extra))

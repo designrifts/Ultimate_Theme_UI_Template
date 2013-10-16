@@ -54,9 +54,6 @@ public class ThemeActivity extends FragmentActivity{
 	
 	   @Override
 	    public void onCreate(Bundle savedInstanceState) {
-	        // This is quick way of theming the action bar without using styles.xml (e.g. using ActionBar Style Generator)
-	        getActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(android.R.color.holo_blue_dark)));
-	        getActionBar().setDisplayShowHomeEnabled(true); //setting false will make the actionbar hide your app icon
 
 	        super.onCreate(savedInstanceState);
 	        setContentView(R.layout.activity_main);
@@ -64,7 +61,7 @@ public class ThemeActivity extends FragmentActivity{
 			mShareIntent.setAction(Intent.ACTION_SEND);
 			mShareIntent.setType("text/plain");
 			mShareIntent.putExtra(Intent.EXTRA_TEXT, "From me to you, this text is new.");
-	        
+
 	        tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
 			ViewPager pager = (ViewPager) findViewById(R.id.pager);
 		
@@ -78,10 +75,12 @@ public class ThemeActivity extends FragmentActivity{
 			pager.setPageMargin(pageMargin);
 
 			tabs.setViewPager(pager);
-
+			
 	    }
-	
+	   
 
+	
+	   
 	   //This is the share menu
 	public boolean onCreateOptionsMenu(Menu menu) {
 	    // Inflate the menu; this adds items to the action bar if it is present.

@@ -11,10 +11,10 @@ public final class R {
 		public static final int months = 0x7f070000;
 	}
 	public static final class color {
-		public static final int card_gray = 0x7f050004;
-		public static final int card_pressed = 0x7f050002;
-		public static final int dark_gray = 0x7f050001;
-		public static final int header_button_default = 0x7f050003;
+		public static final int card_gray = 0x7f050003;
+		public static final int card_pressed = 0x7f050001;
+		public static final int dark_gray = 0x7f050000;
+		public static final int header_button_default = 0x7f050002;
 	}
 	public static final class dimen {
 		public static final int card_content = 0x7f06000d;
@@ -42,15 +42,15 @@ public final class R {
 		public static final int spinner_item_text = 0x7f060001;
 	}
 	public static final class drawable {
-		public static final int card_header_selector = 0x7f020032;
-		public static final int card_menu_button = 0x7f020033;
-		public static final int card_selector = 0x7f020034;
-		public static final int card_shadow = 0x7f020035;
-		public static final int ic_menu_moreoverflow_card_dark_normal = 0x7f020059;
-		public static final int ic_menu_moreoverflow_card_dark_pressed = 0x7f02005a;
-		public static final int list_focused = 0x7f020079;
-		public static final int pressed_background = 0x7f020081;
-		public static final int unpressed_background = 0x7f020098;
+		public static final int card_header_selector = 0x7f020033;
+		public static final int card_menu_button = 0x7f020034;
+		public static final int card_selector = 0x7f020035;
+		public static final int card_shadow = 0x7f020036;
+		public static final int ic_menu_moreoverflow_card_dark_normal = 0x7f02005a;
+		public static final int ic_menu_moreoverflow_card_dark_pressed = 0x7f02005b;
+		public static final int list_focused = 0x7f02007a;
+		public static final int pressed_background = 0x7f020082;
+		public static final int unpressed_background = 0x7f02009e;
 	}
 	public static final class id {
 		public static final int day = 0x7f0c000f;
@@ -59,7 +59,6 @@ public final class R {
 		public static final int pager = 0x7f0c0004;
 		public static final int pagerStrip = 0x7f0c0006;
 		public static final int titleFrame = 0x7f0c000c;
-		public static final int todo = 0x7f0c0014;
 		public static final int year = 0x7f0c0010;
 	}
 	public static final class layout {
@@ -72,12 +71,8 @@ public final class R {
 		public static final int spinner_item = 0x7f03000f;
 		public static final int spinner_item_dropdown = 0x7f030010;
 	}
-	public static final class menu {
-		public static final int card_popup = 0x7f0d0000;
-	}
 	public static final class string {
 		public static final int see_more = 0x7f080000;
-		public static final int todo = 0x7f080001;
 	}
 	public static final class style {
 		public static final int card_content = 0x7f090008;

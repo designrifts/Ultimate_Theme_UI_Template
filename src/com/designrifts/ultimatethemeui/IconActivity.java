@@ -49,13 +49,12 @@ public class IconActivity extends FragmentActivity{
 	private IconPagerAdapter adapter;
 	private ShareActionProvider mShareActionProvider;
 	private Intent mShareIntent;
+	private int indicatorColor = 0xFF3F9FE0;
+	private int tabTextColor = 0xFF666666;
 	
 		//This activity is what displays the icon fragments (the icon categories) see iconfragment for the tabs themselves
 	   @Override
 	    public void onCreate(Bundle savedInstanceState) {
-	        // This is quick way of theming the action bar without using styles.xml (e.g. using ActionBar Style Generator)
-	        getActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(android.R.color.holo_blue_dark)));
-	        getActionBar().setDisplayShowHomeEnabled(true);
 
 	        super.onCreate(savedInstanceState);
 	        setContentView(R.layout.activity_icon);
@@ -63,6 +62,7 @@ public class IconActivity extends FragmentActivity{
 			mShareIntent.setAction(Intent.ACTION_SEND);
 			mShareIntent.setType("text/plain");
 			mShareIntent.putExtra(Intent.EXTRA_TEXT, "From me to you, this text is new.");
+
 	        
 	        tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
 			ViewPager pager = (ViewPager) findViewById(R.id.pager);

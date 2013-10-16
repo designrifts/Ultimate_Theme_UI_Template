@@ -28,4 +28,15 @@
     <string name="extras2">This Guy</string>
     <string name="extras2_extra">Loves Dildroid!</string>
     <string name="extras2_link">https://play.google.com/store/apps/details?id=com.tracedeweb.core</string>      
+    <!-- This is for information on the template, I would remove this as well as all association in the FramgmentExtra -->
+    <string name="template_header">For More Information On This Template</string>
+    <string name="github">Github</string>
+    <string name="github_extra">See the code</string>
+    <string name="github_link">https://github.com/designrifts/Ultimate_Theme_UI_Template</string>
+    <string name="rootzwiki">Rootzwiki</string>
+    <string name="rootzwiki_extra">Browse the Rootwiki forum post</string>
+    <string name="rootzwiki_link">http://rootzwiki.com/topic/105569-open-source-ultimate-icon-theme-ux/</string>
+    <string name="xda">XDA</string>
+    <string name="xda_extra">Browse the XDA forum post</string>    
+    <string name="xda_link">http://forum.xda-developers.com/showthread.php?t=2483425</string>    
 </resources>

@@ -11,7 +11,7 @@ public final class R {
 		public static final int months = 0x7f070000;
 	}
 	public static final class color {
-		public static final int dark_gray = 0x7f050001;
+		public static final int dark_gray = 0x7f050000;
 	}
 	public static final class dimen {
 		public static final int empty_text_size = 0x7f060000;

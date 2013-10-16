@@ -143,7 +143,7 @@ public class FragmentContact extends Fragment implements
 	public void onStart() {
 		super.onStart();
 		CardAdapter<Card> cardsAdapter = new CardAdapter<Card>(getActivity())
-				.setAccentColorRes(android.R.color.holo_blue_light)
+				.setAccentColorRes(R.color.card_text)
 				.setPopupMenu(R.menu.contact_popup, this);
 		cardsAdapter.add(new CardHeader(getActivity(), R.string.socialheader)
 				);

@@ -21,10 +21,10 @@ public final class R {
 		public static final int underlineHeight = 0x7f010004;
 	}
 	public static final class color {
-		public static final int background_tab_pressed = 0x7f050000;
+		public static final int background_tab_pressed = 0x7f050004;
 	}
 	public static final class drawable {
-		public static final int background_tab = 0x7f02002d;
+		public static final int background_tab = 0x7f020030;
 	}
 	public static final class styleable {
 		public static final int[] PagerSlidingTabStrip = { 0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003, 0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007, 0x7f010008, 0x7f010009, 0x7f01000a };

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="background_window">#FFE5E5E5</color>
+    <color name="actionbar">#FF3F9FE0</color>
+    <color name="background_window">#FFDEDEDE</color>
+    <color name="background_tabs">#FFE5E5E5</color>
+    <color name="card_unpressed">#FFFFFFFF</color>
+    <color name="card_pressed">#FF3F9FE0</color>
+    <color name="card_text">#FF3F9FE0</color>
     <color name="Button_Off">#FF3F9FE0</color>
     <color name="Button_On">#FF000000</color>
     <color name="smart_date">#FF3F9FE0</color>
