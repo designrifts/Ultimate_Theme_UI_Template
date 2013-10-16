@@ -34,9 +34,21 @@ The icon section will be modified in the future; I will be implementing new code
 
 Feel free to contact me for questions via the Google+ or Facebook links. Do not ask me how to make a theme, I will not help you. I will however provide direction to using the template.
 
+UI Customization
+==========================
+With the Oct. 16th update, I have added the ability to customize many items inside the app, these include:
+Action Bar
+Card Background
+Background
+Tab Color
+Card Color
+Card Title Color
+
+The properties for these items are located in 'colors.xml'. To properly implement, you also need to update your CardsUI library
+
 You Must
 ==========================
-By agreeing to use this source, you are agreeing you have a sense of humour. 
+By agreeing to use this source, you are agreeing you have a sense of humor. 
 
 What's Planned
 ==========================
