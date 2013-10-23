@@ -123,7 +123,7 @@ public class IconRequest extends Activity {
 						}
 
 						try {
-							FileWriter fstream = new FileWriter(SAVE_LOC + "/+appfilter.xml");
+							FileWriter fstream = new FileWriter(SAVE_LOC + "/appfilter.xml");
 							BufferedWriter out = new BufferedWriter(fstream);
 							out.write(sb.toString());
 							out.close();

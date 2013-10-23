@@ -129,11 +129,12 @@ containing a value of this type.
     }
     public static final class bool {
         public static final int config_apexskin=0x7f0a0004;
+        /**  Theme properties 
+         */
         public static final int config_iconpack=0x7f0a0003;
         public static final int dock_reflections=0x7f0a0002;
         public static final int enableDockPack=0x7f0a0001;
         /**  Theme settings 
- Theme properties 
          */
         public static final int enableIconPack=0x7f0a0000;
     }
