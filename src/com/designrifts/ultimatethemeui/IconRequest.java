@@ -107,7 +107,7 @@ public class IconRequest extends Activity {
 							final String pkgName = info.activityInfo.packageName;
 							final String className = info.activityInfo.name;
 
-							sb.append("<!-- " + label + " -->\n<item component=\""+pkgName+"/"+className+"\" drawable=\""+label+"\" />");
+							sb.append("<!-- " + label + " -->\n<!-- " + pkgName + " -->\n<item component=\""+pkgName+"/"+className+"\" drawable=\""+label.replace(" ", "")+"\" />");
 							sb.append("\n");
 							sb.append("\n");
 
