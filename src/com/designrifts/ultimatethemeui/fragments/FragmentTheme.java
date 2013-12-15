@@ -92,7 +92,7 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 	//The below items are the actions attached to the cards, i.e. what the cards will do, if you will not be using a card, you can remove the act	
 	private void applyActionLauncherTheme(){
 		try {
-			Intent actionlauncherIntent = getActivity().getPackageManager().getLaunchIntentForPackage("com.chrislacy.actionlauncher.pro");
+			Intent actionlauncherIntent = getActivity().getPackageManager().getLaunchIntentForPackage("com.actionlauncher.playstore");
 			if (actionlauncherIntent != null) {
 	            // TODO BY YOU: set this package name as appropriate. Eg "kov.theme.stark"
 				actionlauncherIntent.putExtra("apply_icon_pack",getActivity().getPackageName());
