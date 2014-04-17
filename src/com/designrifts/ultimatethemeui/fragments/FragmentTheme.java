@@ -41,11 +41,6 @@ import com.afollestad.cardsui.CardHeader;
 import com.afollestad.cardsui.CardListView;
 import com.afollestad.cardsui.CardListView.CardClickListener;
 import com.designrifts.ultimatethemeui.R;
-import com.designrifts.ultimatethemeui.R.drawable;
-import com.designrifts.ultimatethemeui.R.id;
-import com.designrifts.ultimatethemeui.R.layout;
-import com.designrifts.ultimatethemeui.R.menu;
-import com.designrifts.ultimatethemeui.R.string;
 
 
 
@@ -59,7 +54,9 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 	public final String EXTRA_ICON_THEME_PACKAGE = "com.teslacoilsw.launcher.extra.ICON_THEME_PACKAGE";
 	public final String EXTRA_ICON_THEME_TYPE = "com.teslacoilsw.launcher.extra.ICON_THEME_TYPE";
 	public final String SMART_PACKAGE = "ginlemon.smartlauncher.setGSLTHEME";
-
+	public final String ACTION_SET_THEME = "com.tul.aviate.SET_THEME";
+	public final String THEME_PACKAGE = "com.tul.aviate";
+	  
 	private CardListView list;
 	//* CLASS JUST FOR THE CUSTOM ALERT DIALOG
 	class CustomAlertDialog extends AlertDialog {
@@ -79,7 +76,6 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 			
 		}
 	}
-
 	//!! SUBS / METHODS / FUNCTIONS USED FOR info
 	//* MAKETOAST - GENERIC SUB TO TOAST ANYWHERE ANYTIME
 	public void makeToast(String msg) {
@@ -90,6 +86,17 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 		toast.show();
 	}
 	//The below items are the actions attached to the cards, i.e. what the cards will do, if you will not be using a card, you can remove the act	
+	private void applyAviateTheme(){
+	  Intent intent = new Intent("com.tul.aviate.SET_THEME");
+	  intent.putExtra("THEME_PACKAGE", getActivity().getPackageName());
+	  intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+	  try {
+	    startActivity(intent);
+	  } catch (ActivityNotFoundException e) {
+		  e.printStackTrace();
+	        makeToast("Aviate is not installed!");}
+	  }
+	  //finish();
 	private void applyActionLauncherTheme(){
 		try {
 			Intent actionlauncherIntent = getActivity().getPackageManager().getLaunchIntentForPackage("com.actionlauncher.playstore");
@@ -147,7 +154,6 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 		}
 		//finish();
 	}
-	
 	private void applyNovaTheme(){
 		WallpaperManager setDefaultWallpaper = WallpaperManager.getInstance(getActivity().getApplicationContext());
 		try {
@@ -156,11 +162,10 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 			novalauncherIntent.putExtra(EXTRA_ICON_THEME_TYPE, "GO");
 			novalauncherIntent.putExtra(EXTRA_ICON_THEME_PACKAGE, getActivity().getPackageName());
 			startActivity(novalauncherIntent);
-			setDefaultWallpaper.setResource(R.drawable.wallpaper_default);
 
-		} catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+		} catch (ActivityNotFoundException e3) {
+			e3.printStackTrace();
+		    makeToast("Nova Launcher is not installed!");
 		}
 		//finish();
 	}
@@ -173,12 +178,12 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 				Intent smartlauncherIntent = new Intent(SMART_PACKAGE);
 				smartlauncherIntent.putExtra("package", getActivity().getPackageName());
 				startActivity(smartlauncherIntent);  
-				setDefaultWallpaper.setResource(R.drawable.wallpaper_default);
+				setDefaultWallpaper.setResource(R.drawable.wall_1);
 			}else if (smartpro !=null) {
 				Intent smartlauncherIntent = new Intent(SMART_PACKAGE);
 				smartlauncherIntent.putExtra("package", getActivity().getPackageName());
 				startActivity(smartlauncherIntent); 
-				setDefaultWallpaper.setResource(R.drawable.wallpaper_default);
+				setDefaultWallpaper.setResource(R.drawable.wall_1);
 			} else {
 	            // Direct users to get Smart Launcher
 	            String playStoreUrl = "https://play.google.com/store/apps/details?id=ginlemon.flowerfree";
@@ -213,7 +218,77 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 		}
 		//finish();
 	}
-
+	private void applyNextTheme()
+	  {
+	    try
+	    {
+	      Intent localIntent1 = getActivity().getPackageManager().getLaunchIntentForPackage("com.gtp.nextlauncher");
+	      if (getActivity().getPackageManager().getLaunchIntentForPackage("com.gtp.nextlauncher.trial") != null)
+	      {
+	        Intent localIntent2 = new Intent("com.gau.go.launcherex.MyThemes.mythemeaction");
+	        localIntent2.putExtra("type", 1);
+	        localIntent2.putExtra("pkgname", getActivity().getPackageName());
+	        getActivity().sendBroadcast(localIntent2);
+	        Toast.makeText(getActivity().getBaseContext(), getResources().getString(2131230794), 1).show();
+	      }
+	      else if (localIntent1 != null)
+	      {
+	        Intent localIntent3 = new Intent("com.gau.go.launcherex.MyThemes.mythemeaction");
+	        localIntent3.putExtra("type", 1);
+	        localIntent3.putExtra("pkgname", getActivity().getPackageName());
+	        getActivity().sendBroadcast(localIntent3);
+	        Toast.makeText(getActivity().getBaseContext(), getResources().getString(R.string.nextlauncher), Toast.LENGTH_SHORT);
+	      }
+	    }
+	    catch (ActivityNotFoundException localActivityNotFoundException)
+	    {
+	      localActivityNotFoundException.printStackTrace();
+	    }
+	    makeToast("Next Launcher is not installed!");
+	    startActivity(new Intent("android.intent.action.VIEW", Uri.parse("https://play.google.com/store/apps/details?id=com.gtp.nextlauncher.trial")));
+	  }
+	  private void applyMiniTheme()
+	  {
+	    try
+	    {
+	      if (getActivity().getPackageManager().getLaunchIntentForPackage("com.jiubang.go.mini.launcher") != null)
+	      {
+	        Toast.makeText(getActivity().getBaseContext(), getResources().getString(R.string.minilauncher), Toast.LENGTH_SHORT);
+	      }
+	      else
+	      {
+	        makeToast("Mini Launcher is not installed!");
+	        startActivity(new Intent("android.intent.action.VIEW", Uri.parse("https://play.google.com/store/apps/details?id=com.jiubang.go.mini.launcher")));
+	      }
+	    }
+	    catch (ActivityNotFoundException localActivityNotFoundException)
+	    {
+	      localActivityNotFoundException.printStackTrace();
+	    }
+	  }
+	private void applyHolohdTheme()
+	  {
+	    try
+	    {
+	      if (getActivity().getPackageManager().getLaunchIntentForPackage("com.mobint.hololauncher") != null)
+	      {
+	        Toast.makeText(getActivity().getBaseContext(), getResources().getString(R.string.holo), Toast.LENGTH_SHORT);
+	      }
+	      else
+	      {
+	        makeToast("Holo Launcher HD is not installed!");
+	        startActivity(new Intent("android.intent.action.VIEW", Uri.parse("https://play.google.com/store/apps/details?id=com.mobint.hololauncher.hd")));
+	      }
+	    }
+	    catch (ActivityNotFoundException localActivityNotFoundException)
+	    {
+	      localActivityNotFoundException.printStackTrace();
+	    }
+	  }
+	private String getPackageName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -230,6 +305,9 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 			@Override
 			public void onCardClick(int position, CardBase card, View view) {
 				String str = card.getTitle();
+				if (str.equals(getString(R.string.aviate))) {
+					applyAviateTheme();
+				}
 				if (str.equals(getString(R.string.actionlauncher))) {
 					applyActionLauncherTheme();
 				}
@@ -248,6 +326,15 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 				if (str.equals(getString(R.string.golauncher))) {
 					applyGoTheme();
 				}
+				if (str.equals(getString(R.string.holo))) {
+					applyHolohdTheme();
+				}
+			        if (str.equals(getString(R.string.nextlauncher))) {
+					applyNextTheme();
+				}
+			        if (str.equals(getString(R.string.minilauncher))) {
+					applyMiniTheme();
+				}
 			}
 		});
 		return view;
@@ -263,6 +350,10 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 
 		cardsAdapter.add(new CardHeader(getActivity(), R.string.themeheader)
 				);
+		cardsAdapter.add(new Card(getString(R.string.aviate), getString(R.string.aviate_extra))
+	                        .setThumbnail(getActivity(),R.drawable.apps_aviate) // sets a thumbnail image from drawable resources
+		                .setPopupMenu(-1, null) // -1 disables the popup menu for this individual card
+		                );
 		cardsAdapter.add(new Card(getString(R.string.actionlauncher), getString(R.string.actionlauncher_extra))
 				.setThumbnail(getActivity(),R.drawable.apps_actionlauncherpro) // sets a thumbnail image from drawable resources
 				.setPopupMenu(-1, null) // -1 disables the popup menu for this individual card
@@ -287,10 +378,20 @@ public class FragmentTheme extends Fragment  implements Card.CardMenuListener<Ca
 				.setThumbnail(getActivity(),R.drawable.apps_golauncher) // sets a thumbnail image from drawable resources
 				.setPopupMenu(-1, null) // -1 disables the popup menu for this individual card
 				);
-
+		cardsAdapter.add(new Card(getString(R.string.nextlauncher), getString(R.string.nextlauncher_extra))
+                                .setThumbnail(getActivity(),R.drawable.apps_nextlauncher) // sets a thumbnail image from drawable resources
+                                .setPopupMenu(-1, null) // -1 disables the popup menu for this individual card
+                                );
+		cardsAdapter.add(new Card(getString(R.string.holo), getString(R.string.holo_extra))
+		                .setThumbnail(getActivity(),R.drawable.apps_hololauncher) // sets a thumbnail image from drawable resources
+		                .setPopupMenu(-1, null) // -1 disables the popup menu for this individual card
+		                );
+		cardsAdapter.add(new Card(getString(R.string.minilauncher), getString(R.string.minilauncher_extra))
+		               .setThumbnail(getActivity(),R.drawable.apps_minilauncher) // sets a thumbnail image from drawable resources
+		               .setPopupMenu(-1, null) // -1 disables the popup menu for this individual card
+		                );
 		list.setAdapter(cardsAdapter);
 	}
-	
 	public void onMenuItemClick(Card card, MenuItem item) {
 	    Toast.makeText(getActivity(), card.getTitle() + ": " + item.getTitle(), Toast.LENGTH_SHORT).show();
 	}
