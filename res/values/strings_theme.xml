@@ -2,18 +2,26 @@
 <resources>
     <!--This data is what fills the Theme Tab information -->
     <string name="tab1">Theme</string>
-    <string name="themeheader">How Would You Like To Apply?</string>
-	<string name="apply">Apply</string>
-    <string name="actionlauncher">Action</string>
-    <string name="actionlauncher_extra">Launcher has bastard children on Jupiter</string>
-    <string name="adwlauncher">ADW</string>
-    <string name="adwlauncher_extra">Launcher was the tits</string>
-    <string name="apexlauncher">Apex</string>
-    <string name="apexlauncher_extra">Launcher is a spy from Pluto</string>
-    <string name="novalauncher">Nova</string>
-    <string name="novalauncher_extra">Launcher touched me inapropriately</string>
-    <string name="smartlauncher">Smart</string>
-    <string name="smartlauncher_extra">Launcher lost on Are You Smarter Than A 5th Grader</string>
-    <string name="golauncher">Go</string>
-    <string name="golauncher_extra">Launcher needs to conform their mask</string>    
+    <string name="themeheader">Apply</string>
+    <string name="apply">Apply</string>
+    <string name="actionlauncher">Action Launcher</string>
+    <string name="actionlauncher_extra">Settings - Display - Icon pack - Your Icon Pack</string>
+    <string name="adwlauncher">ADW Launcher</string>
+    <string name="adwlauncher_extra">ADW Settings - Themes - Your Icon Pack - Apply</string>
+    <string name="apexlauncher">Apex Launcher</string>
+    <string name="apexlauncher_extra">Apex settings - Theme settings - Your Icon Pack - Apply</string>
+    <string name="novalauncher">Nova Launcher</string>
+    <string name="novalauncher_extra">Nova Settings - Look and feel - Icon Theme - Your Icon Pack</string>
+    <string name="smartlauncher">Smart Launcher</string>
+    <string name="smartlauncher_extra">Menu - Preferences - Theme - Your Icon Pack - Set</string>
+    <string name="golauncher">Go Launcher</string>
+    <string name="golauncher_extra">Themes - Launcher - Installed - Your Icon Pack - Apply</string>
+    <string name="holo">Holo Launcher HD</string>
+    <string name="holo_extra">Appearance Settings - Icon pack - Your Icon Pack</string>
+    <string name="minilauncher">Mini Launcher</string>
+    <string name="minilauncher_extra">Mini Settings - Theme Manager - Installed - Your Icon Pack - Apply</string>
+    <string name="nextlauncher">Next Launcher 3D</string>
+    <string name="nextlauncher_extra">Themes - Launcher - Installed - Your Icon Pack - Apply</string>
+    <string name="aviate">Aviate</string>
+    <string name="aviate_extra">Settings - Set Icon Pack - Your Icon Pack</string>
 </resources>
